@@ -18,3 +18,8 @@ https://gagerain.github.io/AntiLegend/AntiLegend.html
 我们自己整理的一部分资料，请勿随意外传
 
 https://gagerain.github.io/AntiLegend/NetDisk.html
+
+
+### 3、C语言基础教程
+
+C语言-背景知识篇：https://gagerain.github.io/AntiLegend/C-Tutor-One.html
