@@ -9,7 +9,7 @@
 
 
 
-### 2、百度网盘资料集合
+### 2、网盘资料集合
 
 我们自己整理的一部分资料，请勿随意外传：[网盘资料整理](https://gagerain.github.io/AntiLegend/NetDisk.html)
 
