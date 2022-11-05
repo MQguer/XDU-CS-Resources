@@ -1,0 +1,25 @@
+double function(int n)
+
+{
+	
+	double a[1000]={0};
+	
+	a[0]=1.000000;
+	
+	void num(double a,double b);
+	
+	int i=0;
+	
+	scanf("%d",&n);
+	
+	for(i=1;i<=n-1;i++)
+{
+		
+		a[i]=1.000000/(a[i-1]+1);
+	
+	}
+
+	
+	return(a[n-1]);
+
+}
