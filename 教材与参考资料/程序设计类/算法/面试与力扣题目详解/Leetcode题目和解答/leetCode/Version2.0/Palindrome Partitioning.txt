@@ -1,0 +1,58 @@
+Given a string s, partition s such that every substring of the partition is a palindrome.
+
+Return all possible palindrome partitioning of s.
+
+For example, given s = "aab",
+Return
+
+  [
+    ["aa","b"],
+    ["a","a","b"]
+  ]
+
+===========================================
+
+DFS 
+
+Solution:
+
+public class Solution {
+    public ArrayList<ArrayList<String>> partition(String s) {
+        // Start typing your Java solution below
+        // DO NOT write main() function
+        ArrayList<ArrayList<String>> res = new ArrayList<ArrayList<String>>();
+        if(s.length() == 0){
+            return res;
+        }
+        ArrayList<String> adds = new ArrayList<String>();
+        dfs(s,0,adds,res);
+        return res;
+    }
+    
+    void dfs(String s, int index,ArrayList<String> adds,ArrayList<ArrayList<String>> res){
+        if(index == s.length()){
+            res.add(new ArrayList<String>(adds));
+            return;
+        }
+        for(int i = index + 1; i <= s.length() ;i++){
+            String nstr = s.substring(index,i);
+            if(valid(nstr)){
+                adds.add(nstr);
+                dfs(s,i,adds,res);
+                adds.remove(adds.size() -1);
+            }
+        }
+    }
+    
+    boolean valid(String str){
+        int left = 0;
+        int right = str.length() -1;
+        while(left < right){
+            if(str.charAt(left) != str.charAt(right)){
+                return false;
+            }
+            left++;right--;
+        }
+        return true;
+    }
+}

@@ -1,0 +1,53 @@
+/**
+ * Definition for binary tree
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode(int x) { val = x; }
+ * }
+ */
+public class Solution {
+    public int maxDepth(TreeNode root) {
+        // Note: The Solution object is instantiated only once and is reused by each test case.
+        return iterative(root);
+    }
+    
+    int recursive(TreeNode node){
+        if(node == null){
+            return 0;
+        }
+        int left = recursive(node.left);
+        int right = recursive(node.right);
+        return Math.max(left,right) + 1;
+    }
+    
+    int iterative(TreeNode node){
+        if(node == null){
+            return 0;
+        }
+        int level = 0;
+        int current = 1;
+        int next = 0;
+        Queue<TreeNode> ques = new LinkedList<TreeNode>();
+        ques.add(node);
+        while(ques.size() > 0){
+            TreeNode cur = ques.poll();
+            if(cur.left != null){
+                next++;
+                ques.add(cur.left);
+            }
+            if(cur.right != null){
+                next ++;
+                ques.add(cur.right);
+            }
+            current--;
+            if(current == 0){
+                level++;
+                current = next;
+                next = 0;
+            }
+        }
+        return level;
+    }
+}

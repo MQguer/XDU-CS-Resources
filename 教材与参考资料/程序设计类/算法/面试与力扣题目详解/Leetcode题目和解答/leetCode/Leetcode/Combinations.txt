@@ -1,0 +1,56 @@
+Given two integers n and k, return all possible combinations of k numbers out of 1 ... n.
+
+For example,
+If n = 4 and k = 2, a solution is:
+
+[
+  [2,4],
+  [3,4],
+  [2,3],
+  [1,2],
+  [1,3],
+  [1,4],
+]
+
+============================================
+
+take care, [1,2] and [2,1] is the same. different from permutations...
+just select index = i and from i + 1 get k -1
+
+Solutions:
+
+public class Solution {
+    public ArrayList<ArrayList<Integer>> combine(int n, int k) {
+        // Start typing your Java solution below
+        // DO NOT write main() function
+        ArrayList<ArrayList<Integer>> res = new ArrayList<ArrayList<Integer>>();
+        if(k == 0){
+            return res;
+        }
+        int[] num = new int[n];
+        for(int i = 0 ; i < n; i++){
+            num[i] = i + 1;
+        }
+        ArrayList<Integer> adds = new ArrayList<Integer>();
+        select(num,0,k,adds,res);
+        return res;        
+    }
+    
+    void select(int[] num, int index, int k,ArrayList<Integer> adds,ArrayList<ArrayList<Integer>> res){
+        if(k == 0){
+            res.add(new ArrayList<Integer>(adds));
+            return;
+        }
+        for(int i = index; i < num.length; i++){
+            adds.add(num[i]);
+            select(num,i+1,k-1,adds,res);
+            adds.remove(adds.size() -1);
+        }
+    }
+    
+    void swap(int[] num, int ia, int ib){
+        int tmp = num[ia];
+        num[ia] = num[ib];
+        num[ib] = tmp;
+    }
+}

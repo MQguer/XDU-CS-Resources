@@ -1,0 +1,94 @@
+Given a m x n matrix, if an element is 0, set its entire row and column to 0. Do it in place.
+
+Follow up:
+Did you use extra space?
+A straight forward solution using O(mn) space is probably a bad idea.
+A simple improvement uses O(m + n) space, but still not the best solution.
+Could you devise a constant space solution?
+
+========================================================================
+
+Complexity : time O(mn) space : O(1)
+
+take care : for O(1) space solution, start from matrix[1][1] not matrix[0][0]
+Solution:
+public class Solution {
+    public void setZeroes(int[][] matrix) {
+        // Start typing your Java solution below
+        // DO NOT write main() function
+        toSolve(matrix);
+    }
+    
+    //space o(1) time o(mn)
+    void toSolve(int[][] matrix){
+        if(matrix == null || matrix.length == 0){
+            return;
+        }
+        int n = matrix.length;
+        int m = matrix[0].length;
+        boolean col = false;
+        boolean row = false;
+        for(int i = 0 ; i < n;i++){
+            if(matrix[i][0] == 0){
+                col = true;
+            }
+        }
+        for(int j = 0 ; j< m; j++){
+            if(matrix[0][j] == 0){
+                row = true;
+            }
+        }
+        for(int i = 1 ; i < n ;i++){
+            for(int j = 1 ; j < m;j++){
+                if(matrix[i][j] == 0){
+                    matrix[0][j] = 0;
+                    matrix[i][0] = 0;
+                }
+            }
+        }
+        for(int i = 1 ; i < n; i++){
+            for(int j = 1 ; j < m; j++){
+                if(matrix[0][j] == 0 || matrix[i][0] == 0){
+                    matrix[i][j] = 0;
+                }
+            }
+        }
+        if(col){
+            for(int i = 0 ; i < n ; i++){
+                matrix[i][0] = 0;
+            }
+        }
+        if(row){
+            for(int i = 0 ; i < m;i++){
+                matrix[0][i] = 0;
+            }
+        }        
+    }
+    
+    
+    //space o(m+n) time o(mn)
+    void solve(int[][] matrix){
+        if(matrix == null || matrix.length == 0){
+            return ;
+        }
+        int n = matrix.length;
+        int m = matrix[0].length;
+        boolean[] rows = new boolean[n];
+        boolean[] cols = new boolean[m];
+        for(int i = 0 ; i < n;i++){
+            for(int j = 0 ; j < m;j++){
+                if(matrix[i][j] == 0){
+                    rows[i] = true;
+                    cols[j] = true;
+                }
+            }
+        }
+        for(int i = 0 ; i < n; i++){
+            for(int j = 0 ; j < m ;j++){
+                if(rows[i] || cols[j]){
+                    matrix[i][j] = 0;
+                }
+            }
+        }
+    }
+}

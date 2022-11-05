@@ -1,0 +1,54 @@
+Given two numbers represented as strings, return multiplication of the numbers as a string.
+
+Note: The numbers can be arbitrarily large and are non-negative.
+
+========================
+
+be careful of the
+1. "","" 
+2. "0" case
+3. multiply from tail of the two string
+
+Solution:
+
+ 
+public class Solution {
+    public String multiply(String num1, String num2) {
+        // Start typing your Java solution below
+        // DO NOT write main() function
+        List<Integer> res = new ArrayList<Integer>();
+        StringBuffer result = new StringBuffer();
+        if(num1.length() == 0 || num2.length() == 0){
+            return "";
+        }
+        int add = 0;
+        for(int i = num1.length() -1; i >= 0 ; i--){
+            for(int j = num2.length() -1; j>=0 ;j--){
+                int na = num1.charAt(i) - '0';
+                int nb = num2.charAt(j) - '0';
+                int index = (num1.length() - i) + num2.length() - j - 2;
+                if(res.size() < index+1){
+                    res.add(na*nb);
+                }else{
+                    res.set(index,res.get(index) + na*nb);
+                }
+            }
+        }
+        Stack<Integer> sts = new Stack<Integer>();
+        for(int i = 0 ; i < res.size();i++){
+            sts.push((res.get(i) + add ) % 10);
+            add = (res.get(i) + add )/10;
+        }
+        if(add > 0){
+            sts.push(add);
+        }
+        while(!sts.empty()){
+            result.append(sts.pop());
+        }
+        if(result.charAt(0) == '0'){
+            return "0";
+        }else{
+            return result.toString();
+        }        
+    }
+}

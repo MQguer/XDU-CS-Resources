@@ -1,0 +1,63 @@
+Implement wildcard pattern matching with support for '?' and '*'.
+
+'?' Matches any single character.
+'*' Matches any sequence of characters (including the empty sequence).
+
+The matching should cover the entire input string (not partial).
+
+The function prototype should be:
+bool isMatch(const char *s, const char *p)
+
+Some examples:
+isMatch("aa","a") ? false
+isMatch("aa","aa") ? true
+isMatch("aaa","aa") ? false
+isMatch("aa", "*") ? true
+isMatch("aa", "a*") ? true
+isMatch("ab", "?*") ? true
+isMatch("aab", "c*a*b") ? false
+
+===============================================
+
+use iterator to solve the problem
+take care the case "aa" "*" and "c","*?*"
+corresponding with that two case,
+when j == '*' j ++; i don't change
+
+
+Solution:
+
+public class Solution {
+    public boolean isMatch(String s, String p) {
+        // Start typing your Java solution below
+        // DO NOT write main() function
+        if(s == null){return p == null;}
+        return match(s,p);
+    }
+    boolean match(String s, String p){
+        
+        int is = 0 ; 
+        int ip = 0 ;
+        int markp = -1;
+        int marks = -1;
+        while(is < s.length()){
+            if(ip != p.length() && p.charAt(ip) == '*'){
+                markp = ip;
+                marks = is;
+                ip++;
+            }else{
+                if(ip != p.length() && (p.charAt(ip) == '?' || s.charAt(is) == p.charAt(ip)))
+                {
+                    ip++;is++;
+                }else if(markp >= 0){
+                    ip = markp + 1;  
+                    is = ++marks;
+                }else{
+                    return false;
+                }                
+            }
+        }
+        while(ip < p.length() && p.charAt(ip) == '*'){ip++;}
+        return is == s.length() && ip == p.length();
+    }
+}

@@ -1,0 +1,26 @@
+public class Solution {
+    public ArrayList<ArrayList<Integer>> combinationSum2(int[] num, int target) {
+        // Start typing your Java solution below
+        // DO NOT write main() function
+        ArrayList<ArrayList<Integer>> res = new ArrayList<ArrayList<Integer>>();
+        Arrays.sort(num);
+        ArrayList<Integer> adds = new ArrayList<Integer>();
+        dfs(num,target,0,adds,res);
+        return res;
+    }
+    
+    void dfs(int[] num,int target,int index,ArrayList<Integer> adds,ArrayList<ArrayList<Integer>> res){
+        if(target == 0){
+            res.add(new ArrayList<Integer>(adds));
+            return ;
+        }else if(target < 0){
+            return;
+        }
+        for(int i = index; i < num.length; i++){
+            if(i != index && num[i] == num[i - 1]){continue;}
+            adds.add(num[i]);
+            dfs(num,target - num[i],i+1,adds,res);
+            adds.remove(adds.size() -1);
+        }        
+    }
+}

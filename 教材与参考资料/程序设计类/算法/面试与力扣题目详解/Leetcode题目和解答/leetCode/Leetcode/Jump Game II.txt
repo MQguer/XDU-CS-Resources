@@ -1,0 +1,20 @@
+public class Solution {
+    public int jump(int[] A) {
+        // Start typing your Java solution below
+        // DO NOT write main() function
+        int step = 0;
+        if(A.length <= 1){
+            return step;
+        }
+        int max = A[0];
+        int last = A[0];
+        for(int i = 0 ; i < A.length; i++){
+            if(i > last){
+                step++;
+                last = max;
+            }
+            max = Math.max(max,A[i] + i);
+        }
+        return step + 1;
+    }
+}

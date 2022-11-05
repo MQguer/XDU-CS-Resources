@@ -1,0 +1,47 @@
+/**
+ * Definition for binary tree
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode(int x) { val = x; }
+ * }
+ */
+public class Solution {
+    public boolean isValidBST(TreeNode root) {
+        // Start typing your Java solution below
+        // DO NOT write main() function
+        //byinOrder(root);
+        return byMaxAndMin(root,null,null);
+    }
+    
+    boolean byMaxAndMin(TreeNode node,Integer max, Integer min){
+        if(node == null){
+            return true;
+        }
+        if((max != null && node.val >= max) || (min != null && node.val <= min)){
+            return false;
+        }
+        return byMaxAndMin(node.left,node.val,min) && byMaxAndMin(node.right,max,node.val); 
+    }
+    
+    boolean byinOrder(TreeNode root){
+        ArrayList<Integer> res = new ArrayList<Integer>();
+        inOrder(root,res);
+        for(int i = 0 ; i < res.size(); i++){
+            if(i != 0 && res.get(i) <= res.get(i -1)){
+                return false;
+            }
+        }
+        return true;
+    }
+    
+    void inOrder(TreeNode node, ArrayList<Integer> res){
+        if(node == null){
+            return;
+        }
+        inOrder(node.left,res);
+        res.add(node.val);
+        inOrder(node.right,res);
+    }
+}

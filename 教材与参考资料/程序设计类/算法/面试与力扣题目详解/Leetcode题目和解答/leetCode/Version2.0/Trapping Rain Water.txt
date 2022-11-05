@@ -1,0 +1,39 @@
+Given n non-negative integers representing an elevation map where the width of each bar is 1, compute how much water it is able to trap after raining.
+
+For example, 
+Given [0,1,0,2,1,0,1,3,2,1,2,1], return 6.
+
+=============================
+
+for each column, the volumn which it can contain is Math.min(bigleft,bigright) - height
+
+Solution:
+
+public class Solution {
+    public int trap(int[] A) {
+        // Start typing your Java solution below
+        // DO NOT write main() function
+        if(A.length <= 2){
+            return 0;
+        }
+        int n = A.length;
+        int[] max = new int[n];
+        for(int i = 1 ; i < n;i++){
+            if(A[i - 1] > max[i-1]){
+                max[i] = A[i - 1];
+            }else{
+                max[i] = max[i-1];
+            }
+        }
+        int res = 0;
+        int height = A[n-1];
+        for(int i = n - 2; i >= 0 ; i--){
+            int len = Math.max(Math.min(max[i],height) - A[i],0);
+            res += len;
+            if(A[i] > height){
+                height = A[i];
+            }
+        }
+        return res;
+    }
+}

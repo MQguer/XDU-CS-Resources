@@ -1,0 +1,91 @@
+Given a 2D board containing 'X' and 'O', capture all regions surrounded by 'X'.
+
+A region is captured by flipping all 'O's into 'X's in that surrounded region .
+
+For example,
+
+X X X X
+X O O X
+X X O X
+X O X X
+After running your function, the board should be:
+
+X X X X
+X X X X
+X X X X
+X O X X
+
+============================================================
+
+use dfs or bfs, search from edges.
+will not pass large set if use reccurence, use queue and bfs instead.
+
+Solutions:
+
+public class Solution {
+    public void solve(char[][] board) {
+        // Start typing your Java solution below
+        // DO NOT write main() function
+        if(board.length == 0 || board[0].length == 0){
+            return;
+        }   
+        int n = board.length;
+        int m = board[0].length;
+        for(int i = 0 ; i < m ; i++){
+            bfs(board,0,i);
+            bfs(board,n-1,i);
+        }
+        for(int j = 0 ; j < n ;j++){
+            bfs(board,j,0);
+            bfs(board,j,m-1);
+        }
+        for(int i = 0 ; i < n ;i++){
+            for(int j = 0 ; j < m ;j++){
+                if(board[i][j] == 'O'){
+                    board[i][j] = 'X';
+                }else if(board[i][j] == '+'){
+                    board[i][j] = 'O';
+                }
+            }
+        }
+    }
+    
+    void bfs(char[][] board,int i,int j){
+        Queue<Integer> ques = new LinkedList<Integer>();
+        visit(board,i,j,ques);
+        while(!ques.isEmpty()){
+            int tmp = ques.poll();
+            int ia = tmp / board[0].length;
+            int ib = tmp % board[0].length;
+            visit(board,ia+1,ib,ques);
+            visit(board,ia,ib+1,ques);
+            visit(board,ia-1,ib,ques);
+            visit(board,ia,ib-1,ques);
+        }
+    }
+    
+    void visit(char[][] board,int i, int j,Queue<Integer> ques){
+        if(i >= board.length || i < 0 || j >= board[0].length || j < 0){
+            return;
+        }
+        if(board[i][j] == 'O'){
+            board[i][j] = '+';
+            ques.add(i * board[0].length + j);
+        }
+    }
+        
+    ///dfs will not pass the large set
+    void dfs(char[][] board,int i,int j){
+       if(i >= board.length || i < 0 || j >= board[0].length || j < 0){
+            return;
+       } 
+       if(board[i][j] == 'O'){
+           board[i][j] = '+';
+           
+           dfs(board,i-1,j);
+           dfs(board,i+1,j);
+           dfs(board,i,j+1);
+           dfs(board,i,j-1);
+       }       
+    }
+}

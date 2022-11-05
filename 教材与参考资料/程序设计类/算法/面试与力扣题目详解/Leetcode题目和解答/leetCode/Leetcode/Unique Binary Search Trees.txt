@@ -1,0 +1,21 @@
+
+public class Solution {
+    public int numTrees(int n) {
+        // Start typing your Java solution below
+        // DO NOT write main() function
+        if(n <= 2){
+            return n;
+        }
+        int[] res = new int[n + 1];
+        res[0] = res[1] = 1;
+        res[2] = 2;
+        for(int i = 3; i <= n; i++){
+            int tmp = 0;
+            for(int j = 1; j <= i; j++){
+                tmp += res[j-1] * res[i-j];
+            }
+            res[i] = tmp;
+        }
+        return res[n];
+    }
+}

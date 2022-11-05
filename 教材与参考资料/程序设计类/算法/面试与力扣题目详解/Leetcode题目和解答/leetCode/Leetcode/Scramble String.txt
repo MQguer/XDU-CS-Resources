@@ -1,0 +1,65 @@
+public class Solution {
+    public boolean isScramble(String s1, String s2) {
+        // Start typing your Java solution below
+        // DO NOT write main() function
+        if(s1.equals(s2)){
+            return true;
+        }else if(s1.length() != s2.length()){
+            return false;
+        }
+        int n = s1.length();
+        boolean[][][] check = new boolean[n][n][n+1];
+        for(int i = 0 ; i < n; i++){
+            for(int j = 0 ; j < n ; j++){
+                check[i][j][0] = true;
+                check[i][j][1] = s1.charAt(i) == s2.charAt(j);
+            }
+        }
+        
+        for(int i = n -1; i >= 0; i--){
+            for(int j = n - 1; j >= 0; j--){
+                for(int len = 2; len <= Math.min(n-i,n-j);len++){
+                    for(int k = 1; k < len; k++){
+                        check[i][j][len] |= (check[i][j][k] && check[i+k][j+k][len - k]) || 
+                                            (check[i][j+len - k][k] && check[i+ k][j][len -k]);
+                    }
+                }
+            }
+        }
+        return check[0][0][n];
+    }
+}
+
+public class Solution {
+    public boolean isScramble(String s1, String s2) {
+        // Start typing your Java solution below
+        // DO NOT write main() function
+        if(s1.length() == 1){
+            return s1.equals(s2);
+        }else if(s1.length() != s2.length()){
+            return false;
+        }
+       int[] ck = new int[26];
+        for(int i = 0;i<s1.length();i++){
+            ck[s1.charAt(i) - 'a']++;
+            ck[s2.charAt(i) - 'a'] --;
+        }
+        for(int i = 0 ; i < ck.length;i++){
+            if(ck[i] != 0){
+                return false;
+            }
+        }
+        for(int i = 1; i < s1.length() ; i++){
+            String sub1 = s1.substring(0,i);
+            String left1 = s1.substring(i,s1.length());
+            String sub2 = s2.substring(0,i);
+            String left2 = s2.substring(i,s2.length());
+            boolean check = (isScramble(sub1,sub2) && isScramble(left1,left2)) || 
+                    (isScramble(sub1,s2.substring(s2.length() - i, s2.length())) && isScramble(left1,s2.substring(0,s2.length() - i)));
+            if(check){
+                return true;
+            }
+        }
+        return false;
+    }
+}

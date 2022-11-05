@@ -1,0 +1,26 @@
+public class Solution {
+    public int trap(int[] A) {
+        // Start typing your Java solution below
+        // DO NOT write main() function
+        int mid = 0;
+        int res = 0;
+        for(int i = 0 ; i < A.length; i++){
+            if(A[i] > A[mid]){
+                mid = i;
+            }
+        }
+        int maxl = 0;
+        for(int i = 1 ; i < mid; i++){
+            int high = Math.min(A[mid],A[maxl]);
+            res += Math.max(0,high - A[i]);
+            maxl = A[maxl] > A[i]?maxl:i;
+        }
+        int maxr = A.length -1;
+        for(int i = A.length -2; i > mid; i--){
+            int high = Math.min(A[mid],A[maxr]);
+            res += Math.max(0,high - A[i]);
+            maxr = A[maxr] > A[i]?maxr:i;
+        }
+        return res;
+    }
+}

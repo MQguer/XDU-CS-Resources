@@ -1,0 +1,44 @@
+Given an array of strings, return all groups of strings that are anagrams.
+
+Note: All inputs will be in lower-case.
+
+================================
+
+abcc ccba cbac is anagrams.
+
+Complexity : O(n) space O(n)
+
+use hashmap to record the string after sort by chars
+
+Solution:
+
+public class Solution {
+    public ArrayList<String> anagrams(String[] strs) {
+        // Start typing your Java solution below
+        // DO NOT write main() function
+        ArrayList<String> res = new ArrayList<String>();
+        if(strs.length <= 1){return res;}
+        Map<String,List<Integer>> checks = new HashMap<String,List<Integer>>();
+        
+        for(int i = 0 ; i < strs.length; i++){
+            char[] arrs = strs[i].toCharArray();
+            Arrays.sort(arrs);
+            String nstr = new String(arrs);
+            if(checks.containsKey(nstr)){
+                checks.get(nstr).add(i);
+            }else{
+                List<Integer> tmps = new ArrayList<Integer>();
+                tmps.add(i);
+                checks.put(nstr,tmps);
+            }
+        }
+        for(String t : checks.keySet()){
+            List<Integer> tmps = checks.get(t);
+            if(tmps.size() <= 1){continue;}
+            for(Integer index : tmps){
+                res.add(strs[index]);
+            }
+        }
+        return res;
+    }
+}

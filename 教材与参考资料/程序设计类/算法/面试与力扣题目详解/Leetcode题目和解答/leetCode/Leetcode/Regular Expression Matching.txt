@@ -1,0 +1,52 @@
+Implement regular expression matching with support for '.' and '*'.
+
+'.' Matches any single character.
+'*' Matches zero or more of the preceding element.
+
+The matching should cover the entire input string (not partial).
+
+The function prototype should be:
+bool isMatch(const char *s, const char *p)
+
+Some examples:
+isMatch("aa","a") ? false
+isMatch("aa","aa") ? true
+isMatch("aaa","aa") ? false
+isMatch("aa", "a*") ? true
+isMatch("aa", ".*") ? true
+isMatch("ab", ".*") ? true
+isMatch("aab", "c*a*b") ? true
+
+
+===========================================================
+
+take care of the terminal conditions.
+there are some rules to optimize the recurrence
+
+Solution:
+
+public class Solution {
+    public boolean isMatch(String s, String p) {
+        // Start typing your Java solution below
+        // DO NOT write main() function
+        if(s == null){return p == null;}
+        return match(s,0,p,0);
+    }
+    
+    boolean match(String s,int is, String p,int ip){
+        if(ip == p.length()){return is == s.length();}
+        if(ip == p.length() -1 || p.charAt(ip + 1) != '*'){
+            if(is == s.length()){return false;}
+            return (p.charAt(ip) == s.charAt(is) || p.charAt(ip) == '.') && match(s,is+1,p,ip+1);
+        }
+	// important rule to optimize the recurrence
+	// for a* and aaaa , first match i + 2 and j++, if not match than j++, when j != i return i + 2 , j
+	// reduce much calculations
+        while(is < s.length() && (p.charAt(ip) == '.' || p.charAt(ip) == s.charAt(is))){
+            if(match(s,is++,p,ip+2)){
+                return true;
+            }
+        }
+        return match(s,is,p,ip+2);
+    }
+}

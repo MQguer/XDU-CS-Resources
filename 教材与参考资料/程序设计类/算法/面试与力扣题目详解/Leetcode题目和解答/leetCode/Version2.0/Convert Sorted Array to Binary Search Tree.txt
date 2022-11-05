@@ -1,0 +1,42 @@
+Given an array where elements are sorted in ascending order, convert it to a height balanced BST.
+
+===============================
+
+be careful of the index of middle, start + len / 2 
+
+Solution:
+
+/**
+ * Definition for binary tree
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode(int x) { val = x; }
+ * }
+ */
+public class Solution {
+    public TreeNode sortedArrayToBST(int[] num) {
+        // Start typing your Java solution below
+        // DO NOT write main() function
+        if(num.length == 0){
+            return null;
+        }
+        return build(num,0,num.length -1);
+    }
+    
+    TreeNode build(int[] num, int start, int end){
+        if(start == end){
+            TreeNode node = new TreeNode(num[start]);
+            return node;
+        }
+        if( start > end){
+            return null;
+        }
+        int mid = (end - start) / 2 + start;
+        TreeNode node = new TreeNode(num[mid]);
+        node.left = build(num,start,mid-1);
+        node.right = build(num,mid+1,end);
+        return node;
+    }
+}

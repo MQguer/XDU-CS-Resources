@@ -1,0 +1,48 @@
+There are two sorted arrays A and B of size m and n respectively. Find the median of the two sorted arrays. The overall run time complexity should be O(log (m+n)).
+
+=========================
+
+Complexity: O(log(m+n))
+
+take care the terminal cases.
+
+
+
+Solution:
+
+
+
+public class Solution {
+    public double findMedianSortedArrays(int A[], int B[]) {
+        // Start typing your Java solution below
+        // DO NOT write main() function
+        int m = A.length;
+        int n = B.length;        
+        if((m + n) % 2 == 1){
+            return find(A,0,m-1,B,0,n-1,(m+n)/2 + 1);
+        }else{
+            return (find(A,0,m-1,B,0,n-1,(m+n)/2) + find(A,0,m-1,B,0,n-1,(m+n)/2+1)) / 2.0;
+        }
+    }
+    
+    int find(int[] a,int sa,int ea,int[] b, int sb,int eb,int k){
+        if(eb - sb > ea - sa){
+            return find(b,sb,eb,a,sa,ea,k);
+        }
+        if(sb > eb){
+            return a[sa + k - 1];
+        }
+        if(k == 1){
+            return Math.min(a[sa],b[sb]);
+        }
+        int pb = Math.min(k / 2, eb - sb + 1);
+        int pa = k - pb;
+        if(a[sa + pa -1] == b[sb + pb -1]){
+            return a[sa + pa -1];
+        }else if(a[sa + pa -1] > b[sb+pb-1]){
+            return find(a,sa,ea,b,sb+pb,eb,k-pb);
+        }else{
+            return find(a,sa+pa,ea,b,sb,eb,k-pa);
+        }
+    }
+}

@@ -1,0 +1,47 @@
+Given a collection of numbers that might contain duplicates, return all possible unique permutations.
+
+For example,
+[1,1,2] have the following unique permutations:
+[1,1,2], [1,2,1], and [2,1,1].
+
+==================================
+
+use a hashset to check the replicate item
+
+Solution:
+public class Solution {
+    public ArrayList<ArrayList<Integer>> permuteUnique(int[] num) {
+        // Start typing your Java solution below
+        // DO NOT write main() function
+        ArrayList<ArrayList<Integer>> res = new ArrayList<ArrayList<Integer>>();
+        if(num == null || num.length == 0){
+            return res;
+        }
+        ArrayList<Integer> adds = new ArrayList<Integer>();
+        dfs(num,0,adds,res);
+        return res;
+    }
+    
+    void dfs(int[] num, int index,ArrayList<Integer> adds,ArrayList<ArrayList<Integer>> res){
+        if(index == num.length ){
+            res.add(new ArrayList<Integer>(adds));
+            return;
+        }
+        Set<Integer> checks = new HashSet<Integer>();
+        for(int i = index; i < num.length; i++){
+            if(checks.contains(num[i])){continue;}
+            checks.add(num[i]);
+            swap(num,index,i);
+            adds.add(num[index]);
+            dfs(num,index+1,adds,res);
+            swap(num,index,i);
+            adds.remove(adds.size() -1);
+        }
+    }
+    
+    void swap(int[] num, int ia,int ib){
+        int tmp = num[ia];
+        num[ia] = num[ib];
+        num[ib] = tmp;
+    }
+}

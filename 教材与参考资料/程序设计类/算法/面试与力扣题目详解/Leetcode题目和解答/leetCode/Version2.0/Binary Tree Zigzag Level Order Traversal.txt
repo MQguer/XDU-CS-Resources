@@ -1,0 +1,77 @@
+Given a binary tree, return the zigzag level order traversal of its nodes' values. (ie, from left to right, then right to left for the next level and alternate between).
+
+For example:
+Given binary tree {3,9,20,#,#,15,7},
+
+    3
+   / \
+  9  20
+    /  \
+   15   7
+return its zigzag level order traversal as:
+
+[
+  [3],
+  [20,9],
+  [15,7]
+]
+
+=========================================
+
+Solution:
+
+
+/**
+ * Definition for binary tree
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode(int x) { val = x; }
+ * }
+ */
+public class Solution {
+    public ArrayList<ArrayList<Integer>> zigzagLevelOrder(TreeNode root) {
+        // Start typing your Java solution below
+        // DO NOT write main() function
+        ArrayList<ArrayList<Integer>> res = new ArrayList<ArrayList<Integer>>();
+        if(root == null){
+            return res;
+        }
+        Queue<TreeNode> que = new LinkedList<TreeNode>();
+        int cur = 1;
+        int next = 0;
+        int level = 0;
+        que.add(root);
+        List<Integer> adds = new ArrayList<Integer>();
+        while(!que.isEmpty()){
+            TreeNode node = que.poll();
+            cur--;
+            adds.add(node.val);
+            if(node.left != null){
+                que.add(node.left);
+                next++;
+            }
+            if(node.right != null){
+                que.add(node.right);
+                next++;
+            }
+            if(cur == 0){
+                if(level % 2 == 0){
+                    res.add(new ArrayList<Integer>(adds));
+                }else{
+                    ArrayList<Integer> tmp = new ArrayList<Integer>();
+                    for(int i = adds.size() -1; i>= 0;i--){
+                        tmp.add(adds.get(i));
+                    }
+                    res.add(tmp);
+                }
+                adds.clear();
+                cur = next;
+                next = 0;
+                level++;
+            }
+        }
+        return res;        
+    }
+}

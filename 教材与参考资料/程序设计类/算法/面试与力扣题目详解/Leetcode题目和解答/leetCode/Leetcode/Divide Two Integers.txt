@@ -1,0 +1,44 @@
+Divide two integers without using multiplication, division and mod operator.
+
+
+==================================
+
+1. be careful of sign of the two integer.
+2. be careful of the divisor == 0
+3. be careful of overflow when change Integer.MIN_VALUE to positive
+
+Solution:
+
+public class Solution {
+    public int divide(int dividend, int divisor) {
+        // Start typing your Java solution below
+        // DO NOT write main() function
+        // be careful of positive and negative integer
+        if(dividend == 0 || divisor == 0 ){
+            return 0;
+        }
+        long dend = dividend;
+        long sor = divisor;
+        boolean neg = false;
+        if(dividend < 0){
+            neg = neg == true?false:true;
+            dend = ~(dend - 1);
+        }
+        if(sor < 0){
+            neg = neg == true?false:true;
+            sor = ~(sor -1);
+        }
+        int res = 0;
+        int bits = 0;
+        while(dend >= (sor << bits)){ bits++;}
+        bits--;
+        while( bits >= 0){
+            if( dend - (sor << bits) >= 0){
+                dend = dend - (sor << bits);
+                res += 1 << bits;
+            }
+            bits--;
+        }
+        return neg?~ (res - 1):res;       
+    }
+}

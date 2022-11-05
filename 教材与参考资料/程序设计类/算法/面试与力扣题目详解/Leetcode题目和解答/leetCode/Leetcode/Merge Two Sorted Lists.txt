@@ -1,0 +1,58 @@
+
+Merge two sorted linked lists and return it as a new list. The new list should be made by splicing together the nodes of the first two lists.
+
+=========================================
+
+Complexity space O(1) time O(m+n)
+
+take care l1 maybe null and l2 maybe null
+
+Solution:
+/**
+ * Definition for singly-linked list.
+ * public class ListNode {
+ *     int val;
+ *     ListNode next;
+ *     ListNode(int x) {
+ *         val = x;
+ *         next = null;
+ *     }
+ * }
+ */
+public class Solution {
+    public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
+        // Start typing your Java solution below
+        // DO NOT write main() function
+        ListNode head = null;
+        ListNode tail = null;
+        while(l1 != null || l2 != null){
+            ListNode tmp = null;
+            if( l1 != null){
+                tmp = l1;
+            }
+            if( l2 != null){
+                if(tmp == null){
+                    tmp = l2;
+                    l2 = l2.next;
+                }else{
+                    if(tmp.val < l2.val){
+                        l1 = l1.next;
+                    }else{
+                        tmp = l2;
+                        l2 = l2.next;
+                    }
+                }
+            }else{
+                l1 = l1.next;
+            }
+            if(head == null){
+                head = tmp;
+                tail = tmp;
+            }else{
+                tail.next = tmp;
+                tail = tail.next;
+            }
+        }
+        return head;
+    }
+}

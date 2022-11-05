@@ -1,0 +1,43 @@
+Given an array and a value, remove all instances of that value in place and return the new length.
+
+The order of elements can be changed. It doesn't matter what you leave beyond the new length.
+
+
+====================================
+
+
+Solution:
+
+public class Solution {
+    public int removeElement(int[] num, int elem) {
+        // Start typing your Java solution below
+        // DO NOT write main() function
+        int pe = nextElem(num,elem,num.length -1);;
+        int pn = next(num,elem,num.length -1);;
+        while(pe >= 0){
+            if(pn == -1){return 0;}
+            if(pn < pe){
+                pe = nextElem(num,elem,pe-1);
+                continue;
+            }
+            num[pe] = num[pn];
+            pe = nextElem(num,elem,pe-1);
+            pn = next(num,elem,pn-1);
+        }
+        return pn+1;
+    }
+    
+    int nextElem(int[] num,int elem,int index){
+        for(int i = index; i >= 0 ; i--){
+            if(num[i] == elem){return i;}
+        }
+        return -1;
+    }
+    
+    int next(int[] num,int elem,int index){
+        for(int i = index ; i >= 0 ; i--){
+            if(num[i] != elem){return i;}
+        }
+        return -1;
+    }    
+}

@@ -1,0 +1,63 @@
+Given a string containing only digits, restore it by returning all possible valid IP address combinations.
+
+For example:
+Given "25525511135",
+
+return ["255.255.11.135", "255.255.111.35"]. (Order does not matter)
+
+===============
+
+be careful that, when size < 0 should return;
+
+Solution:
+
+public class Solution {
+    public ArrayList<String> restoreIpAddresses(String s) {
+        // Start typing your Java solution below
+        // DO NOT write main() function
+        ArrayList<String> res = new ArrayList<String>();
+        if(s.length() <= 3){
+            return res;
+        }
+        dfs(s,0,4,new StringBuffer(),res);
+        return res;
+    }
+    
+    void dfs(String s, int index , int size,StringBuffer add, ArrayList<String> res){
+        if(index == s.length()&& size == 0){
+            res.add(add.toString());
+            return;
+        }
+        for(int i = index + 1; i <= s.length() && i - index < 4;i++){
+            String ns = s.substring(index,i);
+            if(valid(ns) && size > 0){
+                StringBuffer tmp =new StringBuffer(add);
+                if(tmp.length() == 0){
+                    tmp.append(ns);
+                }else{
+                    tmp.append("." + ns);
+                }
+                dfs(s,i,size-1,tmp,res);
+            }
+        }
+    }
+    
+    boolean valid(String s){
+       if( s.length() > 3 || (s.length() == 2 && s.charAt(0) == '0')){
+            return false;
+       }else if(s.length() == 3){
+           if(s.charAt(0) == '0' || s.charAt(0) >='3'){
+               return false;
+           }
+           if(s.charAt(0) == '2'){
+               int tmp = (s.charAt(0) - '0' ) * 100 + (s.charAt(1) - '0') * 10 + s.charAt(2) - '0';
+               if(tmp > 255){
+                   return false;
+               }
+           }
+           return true;
+       }else{
+           return true;
+       }       
+    }
+}

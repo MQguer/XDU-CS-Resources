@@ -1,0 +1,49 @@
+Given preorder and inorder traversal of a tree, construct the binary tree.
+
+Note:
+You may assume that duplicates do not exist in the tree.
+
+
+========================================================
+
+Solution:
+
+/**
+ * Definition for binary tree
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode(int x) { val = x; }
+ * }
+ */
+public class Solution {
+    public TreeNode buildTree(int[] preorder, int[] inorder) {
+        // Start typing your Java solution below
+        // DO NOT write main() function
+        if(preorder.length != inorder.length){
+            return null;
+        }
+        return build(preorder,0,preorder.length -1,inorder,0,inorder.length-1);
+    }
+    
+    TreeNode build(int[] pre,int sp,int ep,int[] in, int si,int ei){
+        if(si == ei){
+            TreeNode node = new TreeNode(in[si]);
+            return node;
+        }
+        if(si > ei){
+            return null;
+        }
+        int i = si;
+        for(;i <= ei; i++){
+            if(in[i] == pre[sp]){
+                break;
+            }
+        }
+        TreeNode node = new TreeNode(in[i]);
+        node.left = build(pre,sp+1,sp + i - si,in,si,i-1);
+        node.right = build(pre,sp+i-si+1,ep,in,i+1,ei);
+        return node;
+    }
+}

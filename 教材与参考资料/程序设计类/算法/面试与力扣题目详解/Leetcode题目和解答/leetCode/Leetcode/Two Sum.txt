@@ -1,0 +1,72 @@
+
+public class Solution {
+    public int[] twoSum(int[] numbers, int target) {
+        // Start typing your Java solution below
+        // DO NOT write main() function
+        int[] res = new int[2];
+        res[0] = -1;
+        res[1] = -1;
+        if(numbers.length <= 1){
+            return res;
+        }
+        twoLoop(numbers,target,res);
+        return res;
+    }
+    
+    /// space O(n) , time O(n)
+    int[] hashMethod(int[] numbers,int target,int[] res){
+        HashMap<Integer,Integer> checks = new HashMap<Integer,Integer>();
+        for(int i = 0 ; i < numbers.length; i++){
+            if(checks.containsKey(numbers[i])){
+                res[0] = checks.get(numbers[i]) + 1;
+                res[1] = i + 1;
+                break;
+            }else{
+                checks.put(target - numbers[i], i);
+            }
+        }
+        return res;
+    }
+    
+    /// space O(1) , time O(n^2)
+    int[] twoLoop(int[] numbers,int target,int[] res){
+        for(int i = 0 ; i < numbers.length; i++){
+            for(int j = i + 1; j< numbers.length; j++){
+                if(numbers[i] + numbers[j] == target){
+                    res[0] = i + 1;
+                    res[1] = j + 1;
+                    break;
+                }
+            }
+        }
+        return res;
+    }
+    
+    
+    // if has duplicate number in the given array
+    // return multi solutions
+    // space O(n) , time O(n)
+    ArrayList<int[]> duplicateMethod(int[] numbers,int target){
+        ArrayList<int[]> res = new ArrayList<int[]>();
+        HashMap<Integer,List<Integer>> checks = new HashMap<Integer,List<Integer>>();
+        for(int i = 0 ; i < numbers.length; i++){
+            if(checks.containsKey(numbers[i])){
+                List<Integer> indexes = checks.get(numbers[i]);
+                for(Integer index : indexes){
+                    int[] tmps = new int[2];
+                    tmps[0] = index;
+                    tmps[1] = i;
+                    res.add(tmps);
+                }
+            }
+            if(checks.containsKey(target - numbers[i])){
+                checks.get(target - numbers[i]).add(i);
+            }else{
+                List<Integer> tmps = new ArrayList<Integer>();
+                tmps.add(i);
+                checks.put(target - numbers[i],tmps);
+            }
+        }
+        return res;
+    }    
+}

@@ -1,0 +1,51 @@
+Implement pow(x, n).
+
+
+===============================
+
+recurrence and iterative methods
+
+public class Solution {
+    public double pow(double x, int n) {
+        // Start typing your Java solution below
+        // DO NOT write main() function    
+        return powr(x,n);
+    }
+        
+    ///recurrence
+    double powr(double x, int n){
+        if(n == 0){
+            return 1;
+        }
+        double tmp = pow(x, n / 2);
+        if( n % 2 == 0){
+            return tmp * tmp;
+        }else{
+            if( n > 0){
+                return tmp * tmp * x;
+            }else{
+                return tmp * tmp / x;
+            }
+        }
+    }
+    
+    ///iterative
+    double powi(double x, int n){
+        double ret = 1;
+        long nn = n;
+        if(n < 0 ){
+            nn = ~(nn - 1);
+        }
+        while(nn > 0){
+            if((nn & 1)  == 1){
+                ret *= x;
+            }
+            x = x*x;
+            nn = nn >> 1;
+        }
+        if(n < 0 ){
+            ret = 1 / ret;
+        }
+        return ret;
+    }
+}

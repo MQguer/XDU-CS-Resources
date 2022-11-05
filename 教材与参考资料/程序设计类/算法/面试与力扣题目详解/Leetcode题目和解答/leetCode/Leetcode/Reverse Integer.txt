@@ -1,0 +1,50 @@
+Reverse digits of an integer.
+
+Example1: x = 123, return 321
+Example2: x = -123, return -321
+
+Have you thought about this?
+Here are some good questions to ask before coding. Bonus points for you if you have already thought through this!
+
+If the integer's last digit is 0, what should the output be? ie, cases such as 10, 100.
+
+Did you notice that the reversed integer might overflow? Assume the input is a 32-bit integer, then the reverse of 1000000003 overflows. How should you handle such cases?
+
+Throw an exception? Good, but what if throwing an exception is not an option? You would then have to re-design the function (ie, add an extra parameter).
+
+=====================================================
+
+be careful :
+
+1. negative or positive
+2. overflow or underflow
+
+Solution:
+
+public class Solution {
+    public int reverse(int x) {
+        // Start typing your Java solution below
+        // DO NOT write main() function
+        boolean neg = false;
+        long num = x;
+        if(x < 0){
+            neg = true;
+            num = -1 * num;
+        }
+        long res = 0;
+        while( num > 0){
+            res = res * 10 + num % 10;
+            num = num / 10;
+        }
+        if(neg){
+            res = res * -1;
+        }
+        if(res < Integer.MIN_VALUE){
+            return Integer.MIN_VALUE;
+        }else if(res > Integer.MAX_VALUE){
+            return Integer.MAX_VALUE;
+        }else{
+            return (int)res;
+        }
+    }
+}

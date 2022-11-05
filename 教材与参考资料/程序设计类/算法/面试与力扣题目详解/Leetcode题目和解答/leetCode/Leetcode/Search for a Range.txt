@@ -1,0 +1,72 @@
+Given a sorted array of integers, find the starting and ending position of a given target value.
+
+Your algorithm's runtime complexity must be in the order of O(log n).
+
+If the target is not found in the array, return [-1, -1].
+
+For example,
+Given [5, 7, 7, 8, 8, 10] and target value 8,
+return [3, 4].
+
+=============================
+
+Complexity: O(logn)
+
+Solution:
+
+public class Solution {
+    public int[] searchRange(int[] A, int target) {
+        // Start typing your Java solution below
+        // DO NOT write main() function
+        int[] res = new int[2];
+        res[0] = -1;
+        res[1] = -1;
+        if(A.length == 0){
+            return res;
+        }
+        res[0] = binarySearchLeft(A,target);
+        res[1] = binarySearchRight(A,target);
+        return res;
+    }
+    
+    int binarySearchLeft(int[] num,int target){
+        int low = 0; 
+        int high = num.length -1;
+        while(low <= high){
+            int mid = low + (high - low) /2;
+            if(num[mid] == target){
+                if(mid != 0 &&  num[mid - 1] == target){
+                    high = mid -1;
+                }else{
+                    return mid;
+                }
+            }else if(num[mid] > target){
+                high = mid -1;
+            }else{
+                low = mid + 1;
+            }
+        }
+        return -1;
+    }
+    
+    int binarySearchRight(int[] num,int target){
+        int low = 0; 
+        int high = num.length -1;
+        while(low <= high){
+            int mid = low + (high - low) /2;
+            if(num[mid] == target){
+                if(mid != num.length -1 &&  num[mid + 1] == target){
+                    low = mid +1;
+                }else{
+                    return mid;
+                }
+            }else if(num[mid] > target){
+                high = mid -1;
+            }else{
+                low = mid + 1;
+            }
+        }
+        return -1;
+    }  
+    
+}

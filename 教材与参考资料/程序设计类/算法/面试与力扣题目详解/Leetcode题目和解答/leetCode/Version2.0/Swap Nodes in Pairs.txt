@@ -1,0 +1,95 @@
+Given a linked list, swap every two adjacent nodes and return its head.
+
+For example,
+Given 1->2->3->4, you should return the list as 2->1->4->3.
+
+Your algorithm should use only constant space. You may not modify the values in the list, only nodes itself can be changed.
+
+=======================================
+
+take care:
+use three pointer to exchange the node postion and update the pointer
+
+
+Soltuion:
+/**
+ * Definition for singly-linked list.
+ * public class ListNode {
+ *     int val;
+ *     ListNode next;
+ *     ListNode(int x) {
+ *         val = x;
+ *         next = null;
+ *     }
+ * }
+ */
+public class Solution {
+    public ListNode swapPairs(ListNode head) {
+        // Start typing your Java solution below
+        // DO NOT write main() function
+        if(head == null || head.next == null){
+            return head;
+        }
+        return traversal2(head);
+    }
+    
+    //traversal solution with a extra node
+    ListNode traverse(ListNode head){
+        ListNode dm = new ListNode(0);
+        dm.next = head;
+        ListNode pre = dm;
+        ListNode cur = head;
+        ListNode next = head.next;
+        while(cur != null && next != null){
+            pre.next = next;
+            cur.next = next.next;
+            next.next = cur;
+            //update
+            pre = cur;
+            cur = cur.next;
+            if(cur == null){
+                break;
+            }else{
+                next = cur.next;
+            }
+        }
+        return dm.next;
+    }
+    
+    //recursive solution
+    ListNode recursive(ListNode head){
+        if(head == null || head.next == null){
+            return head;
+        }
+        ListNode next = recursive(head.next.next);
+        ListNode pre = head;
+        ListNode cur = head.next;
+        cur.next = pre;
+        pre.next = next;
+        return cur;
+    }
+    
+    //traversal solution without extra node
+    ListNode traversal2(ListNode head){
+        ListNode pre = null;
+        ListNode cur = head;
+        ListNode next = head.next;
+        while(next != null){
+            cur.next = next.next;
+            next.next = cur;
+            if(pre != null){
+                pre.next = next;
+            }else{
+                head = next;
+            }
+            pre = cur;
+            cur = cur.next;
+            if(cur != null){
+                next = cur.next;
+            }else{
+                next = null;
+            }
+        }
+        return head;
+    }
+}

@@ -1,0 +1,32 @@
+public class Solution {
+     public ArrayList<ArrayList<Integer>> permute(int[] num) {
+        // Start typing your Java solution below
+        // DO NOT write main() function
+        ArrayList<ArrayList<Integer>> res = new ArrayList<ArrayList<Integer>>();
+        ArrayList<Integer> adds = new ArrayList<Integer>();
+        Arrays.sort(num);
+        dfs(num,0,adds,res);
+        return res;        
+    }
+    
+    void dfs(int[] num,int index,ArrayList<Integer> adds,ArrayList<ArrayList<Integer>> res){
+        if(index == num.length){
+            res.add(new ArrayList<Integer>(adds));
+            return;
+        }
+        for(int i = index; i < num.length; i++){
+            if(i != index && num[i] == num[index]){continue;}
+            swap(num,index,i);
+            adds.add(num[index]);
+            dfs(num,index+1,adds,res);
+            adds.remove(adds.size() -1);
+            swap(num,index,i);
+        }
+    }
+    
+    void swap(int[] num,int ia, int ib){
+        int tmp = num[ib];
+        num[ib] = num[ia];
+        num[ia] = tmp;
+    }
+}

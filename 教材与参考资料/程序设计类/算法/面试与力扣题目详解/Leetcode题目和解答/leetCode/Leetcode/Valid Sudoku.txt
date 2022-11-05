@@ -1,0 +1,23 @@
+public class Solution {
+    public boolean isValidSudoku(char[][] board) {
+        // Start typing your Java solution below
+        // DO NOT write main() function
+        int n = board.length;
+        boolean[][] rows = new boolean[n][n];
+        boolean[][] cols = new boolean[n][n];
+        boolean[][] block = new boolean[n][n];
+        for(int i = 0 ; i < n; i++){
+            for(int j = 0 ; j < n; j++){
+                if(board[i][j] == '.'){continue;}
+                int num = board[i][j] - '0';
+                if(rows[i][num-1] == true || cols[j][num-1] == true || block[i - i % 3 + j / 3][num-1] == true){
+                    return false;
+                }
+                rows[i][num-1] = true;
+                cols[j][num-1] = true;
+                block[i - i % 3 + j / 3][num-1] = true;
+            }
+        }
+        return true;
+    }
+}
