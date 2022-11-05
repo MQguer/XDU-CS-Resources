@@ -1,27 +1,94 @@
-# Anti-Legend Association
+# [Anti-Legend Association](https://github.com/GageRain/Anti-Legend.git)
 
-本库均为**反传奇协会**上传的文件，用于学习交流。目前为止，我们已上传了以下文件：
+![GitHub repo size](https://img.shields.io/github/repo-size/GageRain/Anti-Legend)      ![GitHub forks](https://img.shields.io/github/forks/GageRain/Anti-Legend?style=social)       ![GitHub Repo stars](https://img.shields.io/github/stars/GageRain/Anti-Legend?style=social)
+
+---
+
+**目录结构**
+
+[TOC]
+
+---
+
+## 参与贡献
+
+:blush:本库欢迎各位同学参与贡献，只需按照以下流程：
+
+1. Fork 本仓库，即克隆本仓库为自己的库
+2. 在克隆的仓库进行修改
+3. 对本库新建 Pull Request（PR）
+4. 本库管理员会根据需要选择接受PR，进行合并操作
+
+---
+
+## 关于下载
+
+**:disappointed_relieved:**有人可能要说了，我只想下载其中一部分资料，并不想把整个库打包下载，但是Github本身不支持下载一部分文件啊，怎么办呢？
+
+:innocent:不要慌，不要慌，教你两个办法，都可以实现只下载一部分文件：
+
+**1、DownGit 网站**
+
+你只需先在Github上打开你想下载的文件夹，复制此时的网址，然后进入下面这个网站：
+
+https://www.itsvse.com/downgit/#/home
+
+在输入框里输入复制的网址，然后点击“下载”就可以直接打包下载对应的文件夹了
+
+如果上面的网址失效，也不要慌，直接百度DownGit，有很多可用的网站
+
+ <img src="https://my-typora-image-host.oss-cn-hangzhou.aliyuncs.com//img/image-20221105194832489.png" alt="image-20221105194832489" style="zoom: 50%;" />
+
+**2、Chrome插件 GitZip（推荐）** 
+
+在谷歌浏览器中安装插件GitZip即可，然后在Github双击对应的文件夹或文件即可直接下载
+
+---
+
+## 资料文件
+
+### 1、专业参考资料
+
+主要包括各类学科的专业教材或参考书，欢迎各位参与贡献补充：[点这里](https://github.com/GageRain/Anti-Legend/tree/main/%E6%95%99%E6%9D%90%E4%B8%8E%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99)
+
+### 2、考试复习资料
+
+主要包括各学科的期末复习资料，部分学科暂时缺少相应的资料，欢迎贡献：[点这里](https://github.com/GageRain/Anti-Legend/tree/main/%E6%95%99%E6%9D%90%E4%B8%8E%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99)
+
+### 3、实验实习资料
+
+主要包括各类实验（包括上机）或实习的资料，如课件、代码等：[点这里](https://github.com/GageRain/Anti-Legend/tree/main/%E5%AE%9E%E9%AA%8C%E5%AE%9E%E4%B9%A0%E8%B5%84%E6%96%99)
+
+### 4、考研与保研资料
+
+主要包括考研和保研的相关资料，目前主要针对计算机专业，欢迎贡献：点这里
+
+### 5、其他文件
 
 
-## 1、反传奇手册
+
+## 内部文件
+
+本部分均为**反传奇协会**上传的原创文件，用于学习交流。目前为止，我们已上传了以下文件：
+
+
+### 1、反传奇手册
 
 文件需要正确输入密码，由反传奇协会提供：[反传奇手册](https://gagerain.github.io/Anti-Legend/AntiLegend.html)
 
-## 2、网盘资料集合
+### 2、网盘资料集合
 
 自己整理的一部分网盘资料，请勿随意外传：[网盘资料整理](https://gagerain.github.io/Anti-Legend/NetDisk.html)
 
 各类网络资料的集合，比较杂乱，应有尽有：[杂余资料集合](https://gagerain.github.io/Anti-Legend/ManyResources.html)
 
-## 3、C语言基础教程
+### 3、C语言基础教程
 
 C语言-背景知识篇：[C语言基础之背景知识篇](https://gagerain.github.io/Anti-Legend/C-Tutor-One.html)
 
 C语言-编程基础篇：敬请期待
 
 C语言-数据结构篇：敬请期待
-
-
 
 ---
 
@@ -99,3 +166,10 @@ C语言-数据结构篇：敬请期待
   - [beihang-university](https://github.com/chengyong1/beihang-university)
 - 数一、数二解析（1999-2019）
   - [China-NPEE-math](https://github.com/fjh1997/China-NPEE-math)
+
+
+
+
+
+[返回顶部](# Anti-Legend Association)
+
