@@ -51,7 +51,9 @@ https://www.itsvse.com/downgit/#/home
 
 **2、Chrome插件 GitZip（推荐）** 
 
-在谷歌浏览器中安装插件GitZip即可，然后在Github双击对应的文件夹或文件即可直接下载
+在谷歌浏览器中安装插件GitZip即可，在对应的界面右键即可下载：
+
+ <img src="https://my-typora-image-host.oss-cn-hangzhou.aliyuncs.com//img/image-20221105222724642.png" alt="image-20221105222724642" style="zoom: 76.5%;" />
 
 ---
 
