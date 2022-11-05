@@ -1,0 +1,614 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+
+<style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; --title-bar-height:20px; }
+.mac-os-11 { --title-bar-height:28px; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body { margin: 0px; padding: 0px; height: auto; inset: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+  .CodeMirror-sizer { margin-left: 0px !important; }
+  .CodeMirror-gutters { display: none !important; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-fences-adv-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li blockquote { margin: 1rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  .typora-export #write { break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+  .typora-export-show-outline .typora-export-sidebar { display: none; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+.MathJax_ref { fill: currentcolor; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.6; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+.md-expand mark .md-meta { opacity: 0.3 !important; }
+mark .md-meta { color: rgb(0, 0, 0); }
+@media print {
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+}
+.md-diagram-panel .messageText { stroke: none !important; }
+.md-diagram-panel .start-state { fill: var(--node-fill); }
+.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
+.md-fences.md-fences-math { font-size: 1em; }
+.md-fences-advanced:not(.md-focus) { padding: 0px; white-space: nowrap; border: 0px; }
+.md-fences-advanced:not(.md-focus) { background: inherit; }
+.typora-export-show-outline .typora-export-content { max-width: 1440px; margin: auto; display: flex; flex-direction: row; }
+.typora-export-sidebar { width: 300px; font-size: 0.8rem; margin-top: 80px; margin-right: 18px; }
+.typora-export-show-outline #write { --webkit-flex:2; flex: 2 1 0%; }
+.typora-export-sidebar .outline-content { position: fixed; top: 0px; max-height: 100%; overflow: hidden auto; padding-bottom: 30px; padding-top: 60px; width: 300px; }
+@media screen and (max-width: 1024px) {
+  .typora-export-sidebar, .typora-export-sidebar .outline-content { width: 240px; }
+}
+@media screen and (max-width: 800px) {
+  .typora-export-sidebar { display: none; }
+}
+.outline-content li, .outline-content ul { margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px; list-style: none; }
+.outline-content ul { margin-top: 0px; margin-bottom: 0px; }
+.outline-content strong { font-weight: 400; }
+.outline-expander { width: 1rem; height: 1.42857rem; position: relative; display: table-cell; vertical-align: middle; cursor: pointer; padding-left: 4px; }
+.outline-expander::before { content: ""; position: relative; font-family: Ionicons; display: inline-block; font-size: 8px; vertical-align: middle; }
+.outline-item { padding-top: 3px; padding-bottom: 3px; cursor: pointer; }
+.outline-expander:hover::before { content: ""; }
+.outline-h1 > .outline-item { padding-left: 0px; }
+.outline-h2 > .outline-item { padding-left: 1em; }
+.outline-h3 > .outline-item { padding-left: 2em; }
+.outline-h4 > .outline-item { padding-left: 3em; }
+.outline-h5 > .outline-item { padding-left: 4em; }
+.outline-h6 > .outline-item { padding-left: 5em; }
+.outline-label { cursor: pointer; display: table-cell; vertical-align: middle; text-decoration: none; color: inherit; }
+.outline-label:hover { text-decoration: underline; }
+.outline-item:hover { border-color: rgb(245, 245, 245); background-color: var(--item-hover-bg-color); }
+.outline-item:hover { margin-left: -28px; margin-right: -28px; border-left: 28px solid transparent; border-right: 28px solid transparent; }
+.outline-item-single .outline-expander::before, .outline-item-single .outline-expander:hover::before { display: none; }
+.outline-item-open > .outline-item > .outline-expander::before { content: ""; }
+.outline-children { display: none; }
+.info-panel-tab-wrapper { display: none; }
+.outline-item-open > .outline-children { display: block; }
+.typora-export .outline-item { padding-top: 1px; padding-bottom: 1px; }
+.typora-export .outline-item:hover { margin-right: -8px; border-right: 8px solid transparent; }
+.typora-export .outline-expander::before { content: "+"; font-family: inherit; top: -1px; }
+.typora-export .outline-expander:hover::before, .typora-export .outline-item-open > .outline-item > .outline-expander::before { content: "−"; }
+.typora-export-collapse-outline .outline-children { display: none; }
+.typora-export-collapse-outline .outline-item-open > .outline-children, .typora-export-no-collapse-outline .outline-children { display: block; }
+.typora-export-no-collapse-outline .outline-expander::before { content: "" !important; }
+.typora-export-show-outline .outline-item-active > .outline-item .outline-label { font-weight: 700; }
+.md-inline-math-container mjx-container { zoom: 0.95; }
+
+
+/* 全局属性 */
+#write {
+  max-width: 860px;
+  font-size: 16px;
+  color: black;
+  padding: 0 10px;
+  line-height: 1.6;
+  word-spacing: 0px;
+  letter-spacing: 0px;
+  word-break: break-word;
+  word-wrap: break-word;
+  text-align: left;
+  font-family: Optima-Regular, Optima, PingFangSC-light, PingFangTC-light, 'PingFang SC', Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+/*段落*/
+#write p {
+  font-size: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  margin: 0;
+  line-height: 26px;
+  color: black;
+}
+
+
+/*标题*/
+#write h1,
+#write h2,
+#write h3,
+#write h4,
+#write h5,
+#write h6 {
+  margin-top: 30px;
+  margin-bottom: 15px;
+  padding: 0px;
+  font-weight: bold;
+  color: black;
+}
+#write h1 {
+  font-size: 1.5rem;
+}
+#write h2 {
+  font-size: 1.3rem;
+  border-bottom: 2px solid rgb(239, 112, 96);
+}
+#write h2 span {
+ display: inline-block;
+ font-weight: bold;
+ background: rgb(239, 112, 96);
+ color: #ffffff;
+ padding: 3px 10px 1px;
+ border-top-right-radius: 3px;
+ border-top-left-radius: 3px;
+ margin-right: 3px;
+}
+#write h2:after {
+ display: inline-block;
+ content: "";
+ vertical-align: bottom;
+ border-bottom: 36px solid #efebe9;
+ border-right: 20px solid transparent;
+}
+#write h3 {
+  font-size: 1.2rem;
+}
+#write h4 {
+  font-size: 1.1rem;
+}
+#write h5 {
+  font-size: 1rem;
+}
+#write h6 {
+  font-size: 1rem;
+}
+
+/*列表*/
+#write ul,
+#write ol {
+  margin-top: 8px;
+  margin-bottom: 8px;
+  padding-left: 25px;
+  color: black;
+}
+#write ul {
+  list-style-type: disc;
+}
+#write ul ul {
+  list-style-type: square;
+}
+#write ol {
+  list-style-type: decimal;
+}
+#write li section {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  line-height: 26px;
+  text-align: left;
+  color: rgb(1,1,1); /* 只要是纯黑色微信编辑器就会把color这个属性吞掉。。。*/
+  font-weight: 500;
+}
+
+/*引用*/
+#write blockquote {
+  display: block;
+  font-size: 0.9em;
+  overflow: auto;
+  overflow-scrolling: touch;
+  border-left: 3px solid rgb(239, 112, 96);
+  color: #6a737d;
+  padding: 10px 10px 10px 20px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  background: #fff9f9;
+}
+#write blockquote p {
+  margin: 0px;
+  color: black;
+  line-height: 26px;
+}
+
+/*链接*/
+#write a {
+  text-decoration: none;
+  word-wrap: break-word;
+  font-weight: bold;
+  border-bottom: 1px solid #1e6bb8;
+  color: rgb(239, 112, 96);
+  border-bottom: 1px solid rgb(239, 112, 96);
+}
+
+/*行内代码*/
+#write p code,
+#write li code {
+  font-size: 14px;
+  word-wrap: break-word;
+  padding: 2px 4px;
+  border-radius: 4px;
+  margin: 0 2px;
+  color:  rgb(239, 112, 96);;
+  background-color: rgba(27,31,35,.05);
+  font-family: Operator Mono, Consolas, Monaco, Menlo, monospace;
+  word-break: break-all;
+}
+
+/*图片*/
+#write img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+#write span img {
+  display: inline-block;
+  border-right: 0px;
+  border-left: 0px;
+}
+
+/*表格*/
+#write table {
+  display: table;
+  text-align: left;
+}
+#write tbody {
+  border: 0;
+}
+#write table tr {
+  border: 0;
+  border-top: 1px solid #ccc;
+  background-color: white;
+}
+#write table tr:nth-child(2n) {
+  background-color: #F8F8F8;
+}
+#write table tr th,
+#write table tr td {
+  font-size: 16px;
+  border: 1px solid #ccc;
+  padding: 5px 10px;
+  text-align: left;
+}
+#write table tr th {
+  font-weight: bold;
+  background-color: #f0f0f0;
+}
+
+/* 行内代码 */
+#write span code, #write li code {
+ color: rgb(239, 112, 96);
+}
+
+/* 脚注上标 */
+#write .md-footnote {
+ font-weight: bold;
+ color: rgb(239, 112, 96);
+}
+#write .md-footnote > .md-text:before {
+ content: '['
+}
+#write .md-footnote > .md-text:after {
+ content: ']'
+}
+
+/* 脚注 */
+#write .md-def-name {
+  padding-right: 1.8ch;
+}
+#write .md-def-name:before {
+  content: '[';
+  color: #000;
+}
+#write .md-def-name:after {
+  color: #000;
+}
+
+/* 代码块主题 */
+/* .md-fences:before {
+  content: ' ';
+  display: block;
+  width: 100%;
+  background-size: 40px;
+  background-repeat: no-repeat;
+  background-color: #282c34;
+  margin-bottom: -7px;
+  border-radius: 5px;
+  background-position: 10px 10px;
+} */
+.cm-s-inner.CodeMirror {
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+  background-color: #292d3e;
+  color: #a6accd;
+  font-family: Consolas;
+  border-radius: 4px;
+}
+.CodeMirror-lines {
+  padding-left: 4px;
+}
+.cm-s-inner .cm-keyword {
+  color: #c792ea;
+}
+.cm-s-inner .cm-operator {
+  color: #89ddff;
+}
+.cm-s-inner .cm-variable-2 {
+  color: #eeffff;
+}
+.cm-s-inner .cm-variable-3,
+.cm-s-inner .cm-type {
+  color: #f07178;
+}
+.cm-s-inner .cm-builtin {
+  color: #ffcb6b;
+}
+.cm-s-inner .cm-atom {
+  color: #f78c6c;
+}
+.cm-s-inner .cm-number {
+  color: #ff5370;
+}
+.cm-s-inner .cm-def {
+  color: #82aaff;
+}
+.cm-s-inner .cm-string {
+  color: #c3e88d;
+}
+.cm-s-inner .cm-string-2 {
+  color: #f07178;
+}
+.cm-s-inner .cm-comment {
+  color: #676e95;
+}
+.cm-s-inner .cm-variable {
+  color: #f07178;
+}
+.cm-s-inner .cm-tag {
+  color: #ff5370;
+}
+.cm-s-inner .cm-meta {
+  color: #ffcb6b;
+}
+.cm-s-inner .cm-attribute {
+  color: #c792ea;
+}
+.cm-s-inner .cm-property {
+  color: #c792ea;
+}
+.cm-s-inner .cm-qualifier {
+  color: #decb6b;
+}
+.cm-s-inner .cm-variable-3,
+.cm-s-inner .cm-type {
+  color: #decb6b;
+}
+.cm-s-inner .cm-error {
+  color: rgba(255, 255, 255, 1);
+  background-color: #ff5370;
+}
+.cm-s-inner .CodeMirror-matchingbracket {
+  text-decoration: underline;
+  color: white !important;
+}
+.CodeMirror div.CodeMirror-cursor {
+  border-left: 1px solid rgb(239, 112, 96);
+  z-index: 3;
+}
+
+
+
+</style><title>各类资料整理</title>
+</head>
+<body class='typora-export os-windows typora-export-show-outline typora-export-collapse-outline'><div class='typora-export-content'>
+<div class="typora-export-sidebar"><div class="outline-content"><li class="outline-item-wrapper outline-h2 outline-item-open"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#各类资料整理">各类资料整理</a></div><ul class="outline-children"><li class="outline-item-wrapper outline-h3 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#幼儿到大学全套教程">幼儿到大学全套教程</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#软件教程">软件教程</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#职场竞争力">职场竞争力</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#自我提升">自我提升</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#考证">考证</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#计算机编程">计算机编程</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#计算机编程-补充">计算机编程 补充</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#文艺">文艺</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#游戏">游戏</a></div><ul class="outline-children"></ul></li></ul></li></div></div><div id='write'  class=''><h2 id='各类资料整理'><span>各类资料整理</span></h2><h3 id='幼儿到大学全套教程'><span>幼儿到大学全套教程</span></h3><p><span>学而思全套教程：</span><a href='https://www.aliyundrive.com/s/dsW6E3NXLnp' target='_blank' class='url'>https://www.aliyundrive.com/s/dsW6E3NXLnp</a>
+<span>日语教程：</span><a href='https://alywp.net/3GlErM' target='_blank' class='url'>https://alywp.net/3GlErM</a>
+<span>英语教程：</span><a href='https://alywp.net/3GlErM' target='_blank' class='url'>https://alywp.net/3GlErM</a>
+<span>医学教程：</span><a href='https://www.aliyundrive.com/s/kCpFwvRz265' target='_blank' class='url'>https://www.aliyundrive.com/s/kCpFwvRz265</a>
+<span>幼儿到大学全套教程：</span><a href='https://www.aliyundrive.com/s/pYkq1VM2z1K' target='_blank' class='url'>https://www.aliyundrive.com/s/pYkq1VM2z1K</a>
+<span>各类考证：</span><a href='https://alywp.net/7ljWH9' target='_blank' class='url'>https://alywp.net/7ljWH9</a>
+<span>计算机编程：</span><a href='https://alywp.net/6jeOzxbz' target='_blank' class='url'>https://alywp.net/6jeOzxbz</a>
+<span>幼儿教育 </span><a href='https://www.aliyundrive.com/s/iEejdcsZBzJ' target='_blank' class='url'>https://www.aliyundrive.com/s/iEejdcsZBzJ</a>
+<span>中小学教育 </span><a href='https://www.aliyundrive.com/s/Q2QwjjXPkEc' target='_blank' class='url'>https://www.aliyundrive.com/s/Q2QwjjXPkEc</a>
+<span>高中教育 </span><a href='https://www.aliyundrive.com/s/1uMCV9bjuS5' target='_blank' class='url'>https://www.aliyundrive.com/s/1uMCV9bjuS5</a>
+<span>大学教育 </span><a href='https://www.aliyundrive.com/s/BRjxicoMBo1' target='_blank' class='url'>https://www.aliyundrive.com/s/BRjxicoMBo1</a>
+<span>教材资料 </span><a href='https://www.aliyundrive.com/s/PPDELQNBLEQ' target='_blank' class='url'>https://www.aliyundrive.com/s/PPDELQNBLEQ</a></p><h3 id='软件教程'><span>软件教程</span></h3><p><span>PPT教程 </span><a href='https://www.aliyundrive.com/s/T7EzQkiMvh4' target='_blank' class='url'>https://www.aliyundrive.com/s/T7EzQkiMvh4</a>
+<span>Excel教程 </span><a href='https://www.aliyundrive.com/s/Z2DF2Rg8vo6' target='_blank' class='url'>https://www.aliyundrive.com/s/Z2DF2Rg8vo6</a>
+<span>Word教程 </span><a href='https://www.aliyundrive.com/s/qDEFAVrtZP9' target='_blank' class='url'>https://www.aliyundrive.com/s/qDEFAVrtZP9</a>
+<span>C4D教程 </span><a href='https://www.aliyundrive.com/s/5SRZNmMJ1jF' target='_blank' class='url'>https://www.aliyundrive.com/s/5SRZNmMJ1jF</a>
+<span>PS教程 </span><a href='https://www.aliyundrive.com/s/UPu7CpSsT1b' target='_blank' class='url'>https://www.aliyundrive.com/s/UPu7CpSsT1b</a>
+<span>PR教程 </span><a href='https://www.aliyundrive.com/s/byRGaNDGUK5' target='_blank' class='url'>https://www.aliyundrive.com/s/byRGaNDGUK5</a>
+<span>AI教程 </span><a href='https://www.aliyundrive.com/s/kpoALfSLjUz' target='_blank' class='url'>https://www.aliyundrive.com/s/kpoALfSLjUz</a>
+<span>AE教程 </span><a href='https://www.aliyundrive.com/s/sXA3y2VybnX' target='_blank' class='url'>https://www.aliyundrive.com/s/sXA3y2VybnX</a>
+<span>LR教程 </span><a href='https://www.aliyundrive.com/s/UeAELhDxiks' target='_blank' class='url'>https://www.aliyundrive.com/s/UeAELhDxiks</a>
+<span>视频剪辑 </span><a href='https://www.aliyundrive.com/s/1GwUgnZK7AW' target='_blank' class='url'>https://www.aliyundrive.com/s/1GwUgnZK7AW</a>
+<span>摄影教程 </span><a href='https://www.aliyundrive.com/s/BRq96dKzSSz' target='_blank' class='url'>https://www.aliyundrive.com/s/BRq96dKzSSz</a>
+<span>Xmind8教程 </span><a href='https://www.aliyundrive.com/s/6LsLpWpBBQ4' target='_blank' class='url'>https://www.aliyundrive.com/s/6LsLpWpBBQ4</a>
+<span>Anki教程 </span><a href='https://www.aliyundrive.com/s/Si8FF9RexBx' target='_blank' class='url'>https://www.aliyundrive.com/s/Si8FF9RexBx</a></p><h3 id='职场竞争力'><span>职场竞争力</span></h3><p><span>职场竞争力 </span><a href='https://www.aliyundrive.com/s/gGWkrK5u3dW' target='_blank' class='url'>https://www.aliyundrive.com/s/gGWkrK5u3dW</a>
+<span>领导能力 </span><a href='https://www.aliyundrive.com/s/KiqTMDKeAw5' target='_blank' class='url'>https://www.aliyundrive.com/s/KiqTMDKeAw5</a>
+<span>项目管理 </span><a href='https://www.aliyundrive.com/s/vUVDwP7qzVx' target='_blank' class='url'>https://www.aliyundrive.com/s/vUVDwP7qzVx</a>
+<span>面试技巧 </span><a href='https://www.aliyundrive.com/s/e352McWK2Cn' target='_blank' class='url'>https://www.aliyundrive.com/s/e352McWK2Cn</a>
+<span>报告总结 </span><a href='https://www.aliyundrive.com/s/UAxFpJBfNyT' target='_blank' class='url'>https://www.aliyundrive.com/s/UAxFpJBfNyT</a>
+<span>营销销售 </span><a href='https://www.aliyundrive.com/s/Q2KLhRZNGej' target='_blank' class='url'>https://www.aliyundrive.com/s/Q2KLhRZNGej</a>
+<span>平面设计 </span><a href='https://www.aliyundrive.com/s/9JomKxm2aB7' target='_blank' class='url'>https://www.aliyundrive.com/s/9JomKxm2aB7</a>
+<span>财.务.会.计 </span><a href='https://www.aliyundrive.com/s/UtAcd8uVNj5' target='_blank' class='url'>https://www.aliyundrive.com/s/UtAcd8uVNj5</a>
+<span>人.力.资.源 </span><a href='https://www.aliyundrive.com/s/1WZJ7msFvmL' target='_blank' class='url'>https://www.aliyundrive.com/s/1WZJ7msFvmL</a>
+<span>工程施工 </span><a href='https://www.aliyundrive.com/s/hXSBBTJ43Co' target='_blank' class='url'>https://www.aliyundrive.com/s/hXSBBTJ43Co</a>
+<span>自媒体营销 </span><a href='https://www.aliyundrive.com/s/RHfcg46X1Sq' target='_blank' class='url'>https://www.aliyundrive.com/s/RHfcg46X1Sq</a>
+<span>文案写作 </span><a href='https://www.aliyundrive.com/s/bnmu3b6DKxP' target='_blank' class='url'>https://www.aliyundrive.com/s/bnmu3b6DKxP</a>
+<span>各种模板：</span><a href='https://www.aliyundrive.com/s/6T42PWb4WfL' target='_blank' class='url'>https://www.aliyundrive.com/s/6T42PWb4WfL</a></p><h3 id='自我提升'><span>自我提升</span></h3><p><span>曾仕强易经全套：</span><a href='https://www.aliyundrive.com/s/5W1deE9iUbP' target='_blank' class='url'>https://www.aliyundrive.com/s/5W1deE9iUbP</a>
+<span>文笔口才 </span><a href='https://alywp.net/3r8Rfx' target='_blank' class='url'>https://alywp.net/3r8Rfx</a>
+<span>思维认知 </span><a href='https://alywp.net/33f7Gv' target='_blank' class='url'>https://alywp.net/33f7Gv</a>
+<span>为人处世 </span><a href='https://alywp.net/1cmKM2' target='_blank' class='url'>https://alywp.net/1cmKM2</a>
+<span>学习效率 </span><a href='https://alywp.net/578a5r' target='_blank' class='url'>https://alywp.net/578a5r</a></p><h3 id='考证'><span>考证</span></h3><p><span>会.计/税.务 </span><a href='https://www.aliyundrive.com/s/3FbQdXPAVBq' target='_blank' class='url'>https://www.aliyundrive.com/s/3FbQdXPAVBq</a>
+<span>证.书 </span><a href='https://www.aliyundrive.com/s/jgKatDLjMSe' target='_blank' class='url'>https://www.aliyundrive.com/s/jgKatDLjMSe</a>
+<span>公.务.员考试 </span><a href='https://www.aliyundrive.com/s/hnEGHAjUNuU' target='_blank' class='url'>https://www.aliyundrive.com/s/hnEGHAjUNuU</a>
+<span>造.价/建.筑.师 </span><a href='https://www.aliyundrive.com/s/CCceEBzQweB' target='_blank' class='url'>https://www.aliyundrive.com/s/CCceEBzQweB</a>
+<span>驾.考.资料 </span><a href='https://www.aliyundrive.com/s/XW2jSytoYvC' target='_blank' class='url'>https://www.aliyundrive.com/s/XW2jSytoYvC</a>
+<span>计算机考试 </span><a href='https://www.aliyundrive.com/s/T7FcGoxDfxV' target='_blank' class='url'>https://www.aliyundrive.com/s/T7FcGoxDfxV</a>
+<span>英语考试 </span><a href='https://www.aliyundrive.com/s/vV3hX4Fty8t' target='_blank' class='url'>https://www.aliyundrive.com/s/vV3hX4Fty8t</a>
+<span>专.升.本 </span><a href='https://www.aliyundrive.com/s/4QpJMhh8Rgg' target='_blank' class='url'>https://www.aliyundrive.com/s/4QpJMhh8Rgg</a>
+<span>考研 </span><a href='https://www.aliyundrive.com/s/iqpvFsu7zTC' target='_blank' class='url'>https://www.aliyundrive.com/s/iqpvFsu7zTC</a>
+<span>教.招/教.资 </span><a href='https://www.aliyundrive.com/s/hRPLEvaWRRX' target='_blank' class='url'>https://www.aliyundrive.com/s/hRPLEvaWRRX</a></p><h3 id='计算机编程'><span>计算机编程</span></h3><p><span>计算机基础 </span><a href='https://www.aliyundrive.com/s/xXXzybLZW9B' target='_blank' class='url'>https://www.aliyundrive.com/s/xXXzybLZW9B</a>
+<span>C语言 </span><a href='https://www.aliyundrive.com/s/x6qsKNzhfyu' target='_blank' class='url'>https://www.aliyundrive.com/s/x6qsKNzhfyu</a>
+<span>Python </span><a href='https://www.aliyundrive.com/s/GYzLueyeWac' target='_blank' class='url'>https://www.aliyundrive.com/s/GYzLueyeWac</a>
+<span>web前端 </span><a href='https://www.aliyundrive.com/s/gQkXfQX3akP' target='_blank' class='url'>https://www.aliyundrive.com/s/gQkXfQX3akP</a>
+<span>Android </span><a href='https://www.aliyundrive.com/s/DGLd34ykq5X' target='_blank' class='url'>https://www.aliyundrive.com/s/DGLd34ykq5X</a>
+<span>go语言 </span><a href='https://www.aliyundrive.com/s/BvWdxzr3Utb' target='_blank' class='url'>https://www.aliyundrive.com/s/BvWdxzr3Utb</a>
+<span>Java </span><a href='https://www.aliyundrive.com/s/69kybUWzCHx' target='_blank' class='url'>https://www.aliyundrive.com/s/69kybUWzCHx</a>
+<span>脚本语言 </span><a href='https://www.aliyundrive.com/s/i2UXJwio8HV' target='_blank' class='url'>https://www.aliyundrive.com/s/i2UXJwio8HV</a>
+<span>大数据 </span><a href='https://www.aliyundrive.com/s/E7zXsAJLJMH' target='_blank' class='url'>https://www.aliyundrive.com/s/E7zXsAJLJMH</a></p><h3 id='计算机编程-补充'><span>计算机编程 补充</span></h3><p><a href='https://pan.baidu.com/s/1Ac1Ng7Y3h0DKQZJ-DF6-3w'><span>C++ Primer Plus配套教程 百度网盘下载链接（提取码：gpfn）</span></a></p><p><a href='https://url64.ctfile.com/f/3843664-517914988-cebf04'><span>Python程序员面试算法宝典.pdf（访问密码：338766）</span></a></p><p><a href='https://url64.ctfile.com/d/3843664-39387928-06663b'><span>更多PYTHON学习资料（访问密码：338766）</span></a></p><p><a href='https://url64.ctfile.com/f/3843664-517914952-92b2b5'><span>《算法 第4版》PDF下载（访问密码：338766）</span></a></p><p><a href='https://url64.ctfile.com/d/3843664-33674560-1d67a5'><span>更多算法相关资料（访问密码：338766）</span></a></p><p><span> </span><a href='https://url64.ctfile.com/f/3843664-517914910-7c1ca6'><span>《高性能MYSQL 第三版》PDF下载（访问密码：338766）</span></a></p><p><a href='https://url64.ctfile.com/d/3843664-41051292-899a4c'><span>更多电脑IT书籍（访问密码：338766）</span></a></p><p><a href='https://089u.com/d/3843664-44324790-73fb97'><span>电子书超级资源合集 （访问密码：338766）</span></a></p><p><a href='https://url64.ctfile.com/d/3843664-45353058-e67ce1'><span>破解精品高清视频教程-吾爱技术吧VIP全套课程（访问密码：338766）</span></a></p><h3 id='文艺'><span>文艺</span></h3><p><span>人生哲学 </span><a href='https://alywp.net/r9C9t' target='_blank' class='url'>https://alywp.net/r9C9t</a>
+<span>人物传记 </span><a href='https://alywp.net/5iivDa' target='_blank' class='url'>https://alywp.net/5iivDa</a>
+<span>文政史地 </span><a href='https://alywp.net/7KWLLO' target='_blank' class='url'>https://alywp.net/7KWLLO</a>
+<span>传统国学 </span><a href='https://alywp.net/1oWKR7' target='_blank' class='url'>https://alywp.net/1oWKR7</a>
+<span>演讲演说 </span><a href='https://www.aliyundrive.com/s/w7sWqigoMjQ' target='_blank' class='url'>https://www.aliyundrive.com/s/w7sWqigoMjQ</a>
+<span>前沿科技 </span><a href='https://alywp.net/3cwWEF' target='_blank' class='url'>https://alywp.net/3cwWEF</a></p><h3 id='游戏'><span>游戏</span></h3><p><span>召唤神龙</span><a href='http://www.wesane.com/game/910/' target='_blank' class='url'>http://www.wesane.com/game/910/</a>
+<span>投篮 </span><a href='http://t.cn/AisizCcW' target='_blank' class='url'>http://t.cn/AisizCcW</a><span> </span>
+<span>见缝插针 </span><a href='http://t.cn/E9tsC3p' target='_blank' class='url'>http://t.cn/E9tsC3p</a><span> </span>
+<span>锦上添花 </span><a href='http://t.cn/AiOrmbVh' target='_blank' class='url'>http://t.cn/AiOrmbVh</a><span> </span>
+<span>见缝插车 </span><a href='http://t.cn/A6PyPGrM' target='_blank' class='url'>http://t.cn/A6PyPGrM</a><span> </span>
+<span>堆木头 </span><a href='http://t.cn/E9tsC3N' target='_blank' class='url'>http://t.cn/E9tsC3N</a><span> </span>
+<span>OREOOO </span><a href='http://t.cn/EGdTQlC' target='_blank' class='url'>http://t.cn/EGdTQlC</a><span> </span>
+<span>刮腿毛 </span><a href='http://t.cn/A6PyP7Cd' target='_blank' class='url'>http://t.cn/A6PyP7Cd</a><span> </span>
+<span>能打多少次 </span><a href='http://t.cn/A6PLFX5u' target='_blank' class='url'>http://t.cn/A6PLFX5u</a><span> </span>
+<span>打掉砖块 </span><a href='http://t.cn/RcAimvm' target='_blank' class='url'>http://t.cn/RcAimvm</a><span> </span>
+<span>大宝剑 </span><a href='http://t.cn/A6PLFX5p' target='_blank' class='url'>http://t.cn/A6PLFX5p</a><span> </span>
+<span>十滴水 </span><a href='http://t.cn/A6PLFX5W' target='_blank' class='url'>http://t.cn/A6PLFX5W</a><span> </span>
+<span>友谊的小船说翻就翻 </span><a href='http://t.cn/RcAKw8F' target='_blank' class='url'>http://t.cn/RcAKw8F</a><span> </span>
+<span>无尽之湖 </span><a href='http://t.cn/A6PLFX50' target='_blank' class='url'>http://t.cn/A6PLFX50</a><span> </span>
+<span>蛇与方块 </span><a href='http://t.cn/Ev96Ras' target='_blank' class='url'>http://t.cn/Ev96Ras</a><span> </span>
+<span>有多远滚多远 </span><a href='http://t.cn/AisiB48U' target='_blank' class='url'>http://t.cn/AisiB48U</a><span> </span>
+<span>羽毛球 </span><a href='http://t.cn/A6Pyti4P' target='_blank' class='url'>http://t.cn/A6Pyti4P</a><span> </span>
+<span>彩虹屁 </span><a href='http://t.cn/A6Py5a3Q' target='_blank' class='url'>http://t.cn/A6Py5a3Q</a><span> </span>
+<span>乌鸦喝水 </span><a href='http://t.cn/RUMpO5R' target='_blank' class='url'>http://t.cn/RUMpO5R</a><span> </span>
+<span>擦一擦 </span><a href='http://t.cn/A6PyZq50' target='_blank' class='url'>http://t.cn/A6PyZq50</a><span> </span>
+<span>翻转水瓶 </span><a href='http://t.cn/A6PyZq5o' target='_blank' class='url'>http://t.cn/A6PyZq5o</a><span> </span>
+<span>磁铁粘粘 </span><a href='http://t.cn/A6PyqtYy' target='_blank' class='url'>http://t.cn/A6PyqtYy</a><span> </span>
+<span>旋转飞刀 </span><a href='http://t.cn/A6PyLrCb' target='_blank' class='url'>http://t.cn/A6PyLrCb</a><span> </span>
+<span>守护蛋蛋 </span><a href='http://t.cn/A6PyZq5a' target='_blank' class='url'>http://t.cn/A6PyZq5a</a><span> </span>
+<span>无敌破坏球 </span><a href='http://t.cn/A6PyZq5K' target='_blank' class='url'>http://t.cn/A6PyZq5K</a><span> </span>
+<span>打泡泡 </span><a href='http://t.cn/A6Pq1Hoj' target='_blank' class='url'>http://t.cn/A6Pq1Hoj</a><span> </span>
+<span>纸牌接龙 </span><a href='http://t.cn/AiuR04G8' target='_blank' class='url'>http://t.cn/AiuR04G8</a><span> </span>
+<span>六角拼拼 </span><a href='http://t.cn/Rtp4QDz' target='_blank' class='url'>http://t.cn/Rtp4QDz</a><span> </span>
+<span>俄罗斯方块 </span><a href='http://t.cn/RcciqaX' target='_blank' class='url'>http://t.cn/RcciqaX</a><span> </span>
+<span>捕鸟 </span><a href='http://t.cn/RagxdQ0' target='_blank' class='url'>http://t.cn/RagxdQ0</a><span> </span>
+<span>弹弹球 </span><a href='http://t.cn/RVbx3Dz' target='_blank' class='url'>http://t.cn/RVbx3Dz</a><span> </span>
+<span>切水果 </span><a href='http://t.cn/A6PGSCKb' target='_blank' class='url'>http://t.cn/A6PGSCKb</a><span> </span>
+<span>汽车华容道 </span><a href='http://t.cn/Ea80aIc' target='_blank' class='url'>http://t.cn/Ea80aIc</a><span> </span>
+<span>搭桥 </span><a href='http://t.cn/A6P5PvvX' target='_blank' class='url'>http://t.cn/A6P5PvvX</a>
+<span>小鱼找对象</span><a href='http://g.vsane.com/game/745/' target='_blank' class='url'>http://g.vsane.com/game/745/</a></p></div></div>
+
+<script>(function(){var e=document.body.parentElement,t=[],n=null,i=document.body.classList.contains("typora-export-collapse-outline"),r=function(e,t,n){document.addEventListener(e,function(e){if(!e.defaultPrevented)for(var i=e.target;i&&i!=this;i=i.parentNode)if(i.matches(t)){!1===n.call(i,e)&&(e.preventDefault(),e.stopPropagation());break}},!1)};function o(){return e.scrollTop}r("click",".outline-expander",function(e){var t=this.closest(".outline-item-wrapper").classList;return t.contains("outline-item-open")?t.remove("outline-item-open"):t.add("outline-item-open"),d(),!1}),r("click",".outline-item",function(e){var t=this.querySelector(".outline-label");if(location.hash="#"+t.getAttribute("href"),i){var n=this.closest(".outline-item-wrapper").classList;n.contains("outline-item-open")||n.add("outline-item-open"),c(),n.add("outline-item-active")}});var a,s,l=function(){var e=o();n=null;for(var i=0;i<t.length&&t[i][1]-e<60;i++)n=t[i]},c=function(){document.querySelectorAll(".outline-item-active").forEach(e=>e.classList.remove("outline-item-active")),document.querySelectorAll(".outline-item-single.outline-item-open").forEach(e=>e.classList.remove("outline-item-open"))},d=function(){if(n){c();var e=document.querySelector('.outline-label[href="#'+(CSS.escape?CSS.escape(n[0]):n[0])+'"]');if(e)if(i){var t=e.closest(".outline-item-open>ul>.outline-item-wrapper");if(t)t.classList.add("outline-item-active");else{for(var r=(e=e.closest(".outline-item-wrapper")).parentElement.closest(".outline-item-wrapper");r;)r=(e=r).parentElement.closest(".outline-item-wrapper");e.classList.add("outline-item-active")}}else e.closest(".outline-item-wrapper").classList.add("outline-item-active")}};window.addEventListener("scroll",function(e){a&&clearTimeout(a),a=setTimeout(function(){l(),d()},300)});var u=function(){s=setTimeout(function(){!function(){t=[];var e=o();document.querySelector("#write").querySelectorAll("h1, h2, h3, h4, h5, h6").forEach(n=>{var i=n.getAttribute("id");t.push([i,e+n.getBoundingClientRect().y])})}(),l(),d()},300)};window.addEventListener("resize",function(e){s&&clearTimeout(s),u()}),u()})();</script></body>
+</html>
