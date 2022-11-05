@@ -1,0 +1,41 @@
+Given two binary strings, return their sum (also a binary string).
+
+For example,
+a = "11"
+b = "1"
+Return "100".
+
+=============================================
+
+Complexity : O(n + m)
+
+Solution:
+
+
+public class Solution {
+    public String addBinary(String a, String b) {
+        // Start typing your Java solution below
+        // DO NOT write main() function
+        if(a.length() == 0 || b.length() == 0){
+            return (a.length() == 0)? b:a;
+        }
+        int add = 0;
+        StringBuffer res = new StringBuffer();
+        Stack<Integer> sts = new Stack<Integer>();
+        int ia = a.length() -1;
+        int ib = b.length() -1;
+        while(ia >= 0 || ib>= 0){
+            if(ia >= 0){
+                add += a.charAt(ia) - '0';ia--;
+            }
+            if(ib >= 0){add += b.charAt(ib) - '0'; ib--;}
+            sts.push(add % 2);
+            add = add / 2;
+        }
+        if(add == 1){sts.push(1);}
+        while(!sts.empty()){
+            res.append("" + sts.pop());
+        }
+        return res.toString();
+    }
+}

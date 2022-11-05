@@ -1,0 +1,59 @@
+Given a singly linked list where elements are sorted in ascending order, convert it to a height balanced BST.
+
+===============================================
+
+/**
+ * Definition for singly-linked list.
+ * public class ListNode {
+ *     int val;
+ *     ListNode next;
+ *     ListNode(int x) { val = x; next = null; }
+ * }
+ */
+/**
+ * Definition for binary tree
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode(int x) { val = x; }
+ * }
+ */
+public class Solution {
+    public TreeNode sortedListToBST(ListNode head) {
+        // Start typing your Java solution below
+        // DO NOT write main() function
+        if(head == null){
+            return null;
+        }
+        TreeNode root = null;
+        int len = 0;
+        ListNode k = head;
+        while(k!= null){
+            k = k.next;
+            len++;
+        }
+        return build(head,len);
+    }
+    
+    TreeNode build(ListNode head, int len){
+        if(len == 1){
+            TreeNode node = new TreeNode(head.val);
+            return node;
+        }
+        int start = len % 2 == 0?len/2:len/2+1;
+        ListNode mid = head;
+        while( start > 1){
+            mid = mid.next;
+            start--;
+        }
+        TreeNode mroot = new TreeNode(mid.val);
+        if(mid != head){
+            mroot.left = build(head,len % 2 == 0 ? len/2-1 : len/2);
+        }
+        if(mid.next != null){
+            mroot.right = build(mid.next,len/2);
+        }
+        return mroot;
+    }
+}

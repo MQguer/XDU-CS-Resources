@@ -1,0 +1,36 @@
+Given a string S and a string T, count the number of distinct subsequences of T in S.
+
+A subsequence of a string is a new string which is formed from the original string by deleting some (can be none) of the characters without disturbing the relative positions of the remaining characters. (ie, "ACE" is a subsequence of "ABCDE" while "AEC" is not).
+
+Here is an example:
+S = "rabbbit", T = "rabbit"
+
+Return 3.
+
+=====================================
+get results from right to left.
+
+
+because use one array to store the results.so have to iterate from right to left
+
+public class Solution {
+    public int numDistinct(String S, String T) {
+        // Start typing your Java solution below
+        // DO NOT write main() function
+        if(S.length() < T.length() ){
+            return 0;
+        }
+        int n = S.length();
+        int m = T.length();
+        int[] res = new int[m+1];
+        res[0] = 1;
+        for(int i = 1 ; i <= n; i++){
+            for(int j = m ; j >= 1; j--){
+                if(S.charAt(i-1) == T.charAt(j-1)){
+                    res[j] += res[j-1];
+                }
+            }
+        }
+        return res[m];
+    }
+}

@@ -1,0 +1,50 @@
+Given s1, s2, s3, find whether s3 is formed by the interleaving of s1 and s2.
+
+For example,
+Given
+s1 = aabcc,
+s2 = dbbca,
+
+When s3 = aadbbcbcac, return true.
+When s3 = aadbbbaccc, return false.
+
+=====================================
+
+be careful of the initialization status
+
+Solution:
+
+public class Solution {
+    public boolean isInterleave(String s1, String s2, String s3) {
+        // Start typing your Java solution below
+        // DO NOT write main() function
+        if(s1.length() + s2.length() != s3.length()){
+            return false;
+        }
+        int n = s1.length();
+        int m = s2.length();
+        boolean[][] res = new boolean[n+1][m+1];
+        res[0][0] = true;
+        for(int i = 1 ; i <= n ;i ++){
+            if(s1.charAt(i-1) == s3.charAt(i-1)){
+                res[i][0] = true;    
+            }else{
+                break;
+            }
+        }
+        for(int i = 1; i <= m; i++){
+            if(s2.charAt(i -1) == s3.charAt(i-1)){
+                res[0][i] = true;
+            } else{
+                break;
+            }
+        }
+        for(int i = 1 ; i <= n; i++){
+            for(int j = 1 ; j <= m; j++){
+                res[i][j] = (s1.charAt(i-1) == s3.charAt(i+j-1) && res[i-1][j]) || 
+                                (s2.charAt(j-1) == s3.charAt(i+j-1) && res[i][j-1]);
+            }
+        } 
+        return res[n][m];
+    }
+}

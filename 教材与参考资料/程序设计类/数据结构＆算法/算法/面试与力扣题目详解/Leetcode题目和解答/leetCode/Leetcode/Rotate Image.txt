@@ -1,0 +1,19 @@
+public class Solution {
+    public void rotate(int[][] matrix) {
+        // Start typing your Java solution below
+        // DO NOT write main() function
+        int n = matrix.length;
+        for(int level = 0; level < n / 2; level++){
+            int nn = n  -1;
+            for(int len = 0 ; len < n - level * 2 -1; len++){
+                int x = level + len;
+                int y = level;
+                int tmp = matrix[x][y];
+                matrix[x][y] = matrix[nn - y][x];
+                matrix[nn -y][x] = matrix[nn -x][nn - y];
+                matrix[nn - x][nn - y] = matrix[y][nn - x];
+                matrix[y][nn - x] = tmp;
+            }
+        }        
+    }
+}

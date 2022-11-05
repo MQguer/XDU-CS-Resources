@@ -1,0 +1,1 @@
+书籍编号:1|书籍名称:C Primer Plus|作者:Stephen Prata|剩余数量:27|价格:50|未归还数目:3 

@@ -1,0 +1,57 @@
+Given a digit string, return all possible letter combinations that the number could represent.
+
+A mapping of digit to letters (just like on the telephone buttons) is given below.
+Input:Digit string "23"
+Output: ["ad", "ae", "af", "bd", "be", "bf", "cd", "ce", "cf"].
+
+===========================
+
+when input is "" output should be "" too.
+
+Solutions:
+
+public class Solution {
+    public ArrayList<String> letterCombinations(String digits) {
+        // Start typing your Java solution below
+        // DO NOT write main() function
+        ArrayList<String> res = new ArrayList<String>();
+        if(digits.length() == 0){
+            res.add("");
+            return res;
+        }
+        String[] words = new String[]{"abc","def","ghi","jkl","mno","pqrs","tuv","wxyz"};
+        //dfs(digits,0,words,"",res);
+        res = iterative(digits,words);
+        return res;
+    }
+    
+    //a reccrurence solution
+    void dfs(String digits, int index,String[] words, String add, ArrayList<String> res){
+        if(index == digits.length()){
+            res.add(add);
+            return;
+        }
+        String word =  words[digits.charAt(index) - '2'];
+        for(int i = 0 ; i < word.length(); i++){
+            dfs(digits,index+1,words,add+word.charAt(i),res);
+        }
+    }
+    
+    // an iterative solution
+    ArrayList<String> iterative(String digits, String[] words){
+        ArrayList<String> res = new ArrayList<String>();
+        res.add("");
+        for(int i = 0; i < digits.length() ;i ++){
+            String word = words[digits.charAt(i) - '2'];
+            ArrayList<String> tmps = new ArrayList<String>();
+            for(int j = 0 ; j < word.length(); j ++){
+                for(String re : res){
+                    tmps.add(re + word.charAt(j));
+                }
+            }
+            res = tmps;
+        }
+        return res;
+    }
+    
+}

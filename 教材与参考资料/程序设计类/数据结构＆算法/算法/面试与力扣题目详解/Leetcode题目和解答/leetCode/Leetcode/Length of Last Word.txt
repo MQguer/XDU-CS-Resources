@@ -1,0 +1,19 @@
+public class Solution {
+    public int lengthOfLastWord(String s) {
+        // Start typing your Java solution below
+        // DO NOT write main() function
+        int last = 0;
+        int cur = 0;
+        for(int i = 0 ; i < s.length(); i++){
+            if(s.charAt(i) == ' '){
+                if(cur != 0){
+                    last = cur;
+                }
+                cur = 0;
+            }else{
+                cur++;
+            }
+        }
+        return cur == 0 ? last:cur;
+    }
+}

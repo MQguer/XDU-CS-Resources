@@ -1,0 +1,60 @@
+
+Follow up for "Search in Rotated Sorted Array":
+What if duplicates are allowed?
+
+Would this affect the run-time complexity? How and why?
+
+Write a function to determine if a given target is in the array.
+
+==========================================================================
+
+
+Solution:
+
+public class Solution {
+    public boolean search(int[] A, int target) {
+        // Start typing your Java solution below
+        // DO NOT write main() function
+        if(A == null || A.length == 0){
+            return false;
+        }
+        int low = 0;
+        int high = A.length -1;
+        while(low < high){
+            if(A[low] == target){return true;}
+            if(A[high] == target){return true;}
+            int mid = low + (high - low) / 2;
+            if(A[mid] == target){
+                return true;
+            }
+            if(A[high] == A[low]){
+                high--;
+            }else if(A[high] > A[low]){
+                if(A[mid] > target){
+                    high = mid -1;
+                }else{
+                    low = mid+1;
+                }
+            }else{
+                if(A[mid] > target){
+                    if(target < A[high] && A[mid] > A[high]){
+                        low = mid + 1;
+                    }else{
+                        high = mid -1;
+                    }
+                }else{
+                    if(target > A[high] && A[mid] < A[high]){
+                        high = mid -1;
+                    }else{
+                        low = mid + 1;
+                    }
+                }
+            }
+        }
+        if(A[low] == target){
+            return true;
+        }else{
+            return false;
+        }
+    }
+}

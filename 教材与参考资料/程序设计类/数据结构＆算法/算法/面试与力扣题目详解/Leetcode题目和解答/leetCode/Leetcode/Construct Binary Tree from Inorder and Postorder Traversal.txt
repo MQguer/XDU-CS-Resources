@@ -1,0 +1,48 @@
+Given inorder and postorder traversal of a tree, construct the binary tree.
+
+Note:
+You may assume that duplicates do not exist in the tree.
+
+========================
+
+Solution:
+
+/**
+ * Definition for binary tree
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode(int x) { val = x; }
+ * }
+ */
+public class Solution {
+    public TreeNode buildTree(int[] inorder, int[] postorder) {
+        // Start typing your Java solution below
+        // DO NOT write main() function
+        if(inorder.length != postorder.length){
+            return null;
+        }
+        return build(inorder,0,inorder.length -1,postorder,0,postorder.length -1);
+    }
+    
+    TreeNode build(int[] in, int sin, int ein, int[] post, int sp,int ep){
+        if(sin == ein){
+            TreeNode node = new TreeNode(in[sin]);
+            return node;
+        }
+        if(sin > ein){
+            return null;
+        }
+        int i = sin;
+        for(i = sin; i <= ein; i++){
+            if(in[i] == post[ep]){
+                break;
+            }
+        }
+        TreeNode node = new TreeNode(in[i]);
+        node.left = build(in,sin,i-1,post,sp,sp + (i-1 - sin));
+        node.right = build(in,i+1,ein,post,sp + i -sin,ep-1);
+        return node;
+    }
+}

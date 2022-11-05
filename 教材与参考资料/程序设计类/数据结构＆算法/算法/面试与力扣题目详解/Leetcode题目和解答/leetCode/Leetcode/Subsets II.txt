@@ -1,0 +1,53 @@
+Given a collection of integers that might contain duplicates, S, return all possible subsets.
+
+Note:
+
+Elements in a subset must be in non-descending order.
+The solution set must not contain duplicate subsets.
+For example,
+If S = [1,2,2], a solution is:
+
+[
+  [2],
+  [1],
+  [1,2,2],
+  [2,2],
+  [1,2],
+  []
+]
+
+=================================
+use a variable last to record the count added to results in last round
+
+Solution:
+
+public class Solution {
+    public ArrayList<ArrayList<Integer>> subsetsWithDup(int[] num) {
+        // Start typing your Java solution below
+        // DO NOT write main() function
+        ArrayList<ArrayList<Integer>> res = new ArrayList<ArrayList<Integer>>();
+        ArrayList<Integer> adds = new ArrayList<Integer>();
+        res.add(adds);
+        if(num.length == 0){
+            return res;
+        }
+        int last = 0;
+        Arrays.sort(num);
+        for(int i = 0 ; i < num.length; i++){
+            int next = 0;
+            ArrayList<ArrayList<Integer>> tmps = new ArrayList<ArrayList<Integer>>(res);
+            for(ArrayList<Integer> add : tmps){
+                if(i != 0 && num[i] == num[i -1] && last > 0){
+                    last--;
+                }else{
+                    ArrayList<Integer> tmp = new ArrayList<Integer>(add);
+                    tmp.add(num[i]);
+                    res.add(tmp);
+                    next++;
+                }
+            }
+            last = res.size() - next;
+        }
+        return res;
+    }
+}

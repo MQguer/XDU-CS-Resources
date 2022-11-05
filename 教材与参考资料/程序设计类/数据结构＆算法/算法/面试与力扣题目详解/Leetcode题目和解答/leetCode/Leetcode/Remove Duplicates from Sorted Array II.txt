@@ -1,0 +1,39 @@
+Follow up for "Remove Duplicates":
+What if duplicates are allowed at most twice?
+
+For example,
+Given sorted array A = [1,1,1,2,2,3],
+
+Your function should return length = 5, and A is now [1,1,2,2,3].
+
+====================================
+
+use a times variable to record how many times the same key appears
+
+
+Solution:
+
+public class Solution {
+    public int removeDuplicates(int[] A) {
+        // Start typing your Java solution below
+        // DO NOT write main() function
+        if(A.length <= 2){
+            return A.length;
+        }
+        int n = A.length;
+        int times = 1;
+        int cur = 0;
+        for(int i = 1; i < n;i++){
+            if(A[i] == A[cur]){
+                if(times < 2){
+                    A[++cur] = A[i]; 
+                    times++;
+                }
+            }else{
+                A[++cur] = A[i];
+                times = 1;
+            }
+        }
+        return cur + 1;
+    }
+}

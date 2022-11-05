@@ -1,0 +1,62 @@
+Given a binary tree and a sum, find all root-to-leaf paths where each path's sum equals the given sum.
+
+For example:
+Given the below binary tree and sum = 22,
+              5
+             / \
+            4   8
+           /   / \
+          11  13  4
+         /  \    / \
+        7    2  5   1
+return
+
+[
+   [5,4,11,2],
+   [5,8,4,5]
+]
+
+=============================================
+
+be careful of the backtraces
+
+Solution:
+
+/**
+ * Definition for binary tree
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode(int x) { val = x; }
+ * }
+ */
+public class Solution {
+    public ArrayList<ArrayList<Integer>> pathSum(TreeNode root, int sum) {
+        // Start typing your Java solution below
+        // DO NOT write main() function
+        ArrayList<ArrayList<Integer>> res = new ArrayList<ArrayList<Integer>>();
+        if(root == null){
+            return res;
+        }
+        ArrayList<Integer> adds = new ArrayList<Integer>();
+        dfs(root,sum,adds,res);
+        return res;
+    }
+    
+    void dfs(TreeNode node,int sum,ArrayList<Integer> adds,ArrayList<ArrayList<Integer>> res){
+        if(node == null){
+            return ;
+        }
+        if(node.left == null && node.right == null && node.val == sum){
+            adds.add(node.val);
+            res.add(new ArrayList<Integer>(adds));
+            adds.remove(adds.size() -1);
+            return;
+        }
+        adds.add(node.val);
+        dfs(node.left,sum - node.val,adds,res);
+        dfs(node.right,sum - node.val,adds,res);
+        adds.remove(adds.size() -1);
+    }
+}

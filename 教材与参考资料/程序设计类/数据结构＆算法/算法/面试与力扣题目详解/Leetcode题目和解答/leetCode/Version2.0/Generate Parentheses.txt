@@ -1,0 +1,65 @@
+Given n pairs of parentheses, write a function to generate all combinations of well-formed parentheses.
+
+For example, given n = 3, a solution set is:
+
+"((()))", "(()())", "(())()", "()(())", "()()()"
+
+=============================
+
+Complexity 
+
+DFS, but take care that repeated cases
+
+Solution:
+
+public class Solution {
+    public ArrayList<String> generateParenthesis(int n) {
+        // Start typing your Java solution below
+        // DO NOT write main() function
+        ArrayList<String> res = new ArrayList<String>();
+        if(n == 0 ){
+            return res;
+        }
+        char[] ins = new char[2 * n];
+        for(int i = 0 ; i < ins.length; i++){
+            ins[i++] = '(';
+            ins[i] = ')';
+        }
+        dfs(ins,0,"",res);
+        return res;
+    }
+    
+    void dfs(char[] ins,int start,String add,ArrayList<String> res){
+        if(start == ins.length){
+            if(valid(add)){res.add(add);}
+            return;
+        }
+        Set<Character> checks = new HashSet<Character>();
+        for(int i = start ; i < ins.length ; i++){
+            if(checks.contains(ins[i])){continue;}
+            checks.add(ins[i]);
+            swap(ins,start,i);
+            dfs(ins,start +1 , add+ins[start],res);
+            swap(ins,start,i);
+        }
+    }
+    
+    void swap(char[] ins,int ia,int ib){
+        char tmp = ins[ia];
+        ins[ia] = ins[ib];
+        ins[ib] = tmp;
+    }
+    
+    boolean valid(String input){
+        Stack<Character> sts = new Stack<Character>();
+        for(int i = 0 ; i < input.length(); i++){
+            if(input.charAt(i) == ')'){
+                if(sts.empty() || sts.pop() != '('){return false;}
+            }else{
+                sts.push('(');
+            }
+        }
+        if(sts.empty()){return true;}
+        return false;
+    }
+}

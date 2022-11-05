@@ -1,0 +1,62 @@
+Merge k sorted linked lists and return it as one sorted list. Analyze and describe its complexity.
+
+=====================
+
+Complexity O(mn)
+
+take care of the repeated iterms
+
+Solution:
+
+
+/**
+ * Definition for singly-linked list.
+ * public class ListNode {
+ *     int val;
+ *     ListNode next;
+ *     ListNode(int x) {
+ *         val = x;
+ *         next = null;
+ *     }
+ * }
+ */
+public class Solution {
+    public ListNode mergeKLists(ArrayList<ListNode> lists) {
+        // Start typing your Java solution below
+        // DO NOT write main() function
+        
+        ListNode head = null;
+        ListNode tail = null;
+        int finish = 0;
+        while(finish < lists.size()){
+            finish = 0;
+            ListNode min = null;
+            for(int i = 0 ; i < lists.size(); i++){
+                if(lists.get(i) == null){
+                    finish++;
+                }else{
+                    if(min == null)
+                    {
+                        min = lists.get(i);
+                    }else if(min.val > lists.get(i).val){
+                        min = lists.get(i);
+                    }
+                }                
+            }
+            if(finish == lists.size()){break;}
+            for(int i = 0 ; i < lists.size();i++){
+                if(lists.get(i) == null){continue;}
+                while(lists.get(i) != null && lists.get(i).val == min.val){
+                    if(head == null){
+                        head = lists.get(i);tail = lists.get(i);
+                    }else{
+                        tail.next = lists.get(i);
+                        tail = tail.next;
+                    }
+                    lists.set(i,lists.get(i).next);
+                }
+            }
+        }
+        return head;
+    }
+}

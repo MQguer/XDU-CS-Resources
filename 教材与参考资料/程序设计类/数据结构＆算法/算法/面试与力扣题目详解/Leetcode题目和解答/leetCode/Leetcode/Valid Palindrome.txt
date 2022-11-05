@@ -1,0 +1,56 @@
+Given a string, determine if it is a palindrome, considering only alphanumeric characters and ignoring cases.
+
+For example,
+"A man, a plan, a canal: Panama" is a palindrome.
+"race a car" is not a palindrome.
+
+Note:
+Have you consider that the string might be empty? This is a good question to ask during an interview.
+
+For the purpose of this problem, we define empty string as valid palindrome.
+
+============================
+
+Complexity : O(n)
+
+take care 
+1. "" -- true
+2. "." -- true
+3. "1a2" -- false
+4. ".1.1" -- true
+5. "aA" -- true
+
+
+Solution:
+
+public class Solution {
+    public boolean isPalindrome(String s) {
+        // Start typing your Java solution below
+        // DO NOT write main() function
+        if(s.length() <= 1){
+            return true;
+        }
+        int left = 0;
+        int right = s.length() -1;
+        while(left < right){
+            if(!valid(toLower(s.charAt(left)))){left++;continue;}
+            if(!valid(toLower(s.charAt(right)))){right--;continue;}
+            if(toLower(s.charAt(left)) == toLower(s.charAt(right))){
+                left++;right--;
+            }else{
+                return false;
+            }
+        }
+        return true;
+    }
+    
+    boolean valid(char ch){
+        if((ch > 'z' || ch < 'a') && (ch < '0' || ch > '9')){return false;}
+        return true;
+    }
+    char toLower(char ch){
+        if(ch >= 'A' && ch <= 'Z'){ch = (char)(ch + 32);}
+        return ch;
+    }
+}
+

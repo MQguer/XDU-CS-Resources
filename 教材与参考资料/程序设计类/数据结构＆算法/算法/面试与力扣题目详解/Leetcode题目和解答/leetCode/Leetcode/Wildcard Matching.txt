@@ -1,0 +1,35 @@
+
+public class Solution {
+    public boolean isMatch(String s, String p) {
+        // Start typing your Java solution below
+        // DO NOT write main() function
+        if(s == null){return p == null;}
+        return match(s,p);
+    }
+    boolean match(String s, String p){
+        
+        int is = 0 ; 
+        int ip = 0 ;
+        int markp = -1;
+        int marks = -1;
+        while(is < s.length()){
+            if(ip != p.length() && p.charAt(ip) == '*'){
+                markp = ip;
+                marks = is;
+                ip++;
+            }else{
+                if(ip != p.length() && (p.charAt(ip) == '?' || s.charAt(is) == p.charAt(ip)))
+                {
+                    ip++;is++;
+                }else if(markp >= 0){
+                    ip = markp + 1;  
+                    is = ++marks;
+                }else{
+                    return false;
+                }                
+            }
+        }
+        while(ip < p.length() && p.charAt(ip) == '*'){ip++;}
+        return is == s.length() && ip == p.length();
+    }
+}

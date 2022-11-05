@@ -1,0 +1,41 @@
+Implement strStr().
+
+Returns a pointer to the first occurrence of needle in haystack, or null if needle is not part of haystack.
+
+=========================================================
+
+Complexity : (O(mn))
+
+please take care of the "" string.
+
+1. "" , ""  -- ""
+2. "", "a"  -- null
+3. "a",""   -- "a"
+
+public class Solution {
+    public String strStr(String haystack, String needle) {
+        // Start typing your Java solution below
+        // DO NOT write main() function
+        if(needle.length() == 0){
+            return haystack;
+        }
+        if(haystack.length() < needle.length() || haystack.length() == 0){
+            return null;
+        }
+        for(int i = 0 ; i <= haystack.length() - needle.length(); i++){
+            int index = 0;
+            int tmp = i;
+            if(haystack.charAt(i) != needle.charAt(index)){
+                continue;
+            }
+            while(tmp < haystack.length() && index < needle.length() && haystack.charAt(tmp) == needle.charAt(index)){
+                tmp++;
+                index++;
+            }
+            if(index == needle.length()){
+                return haystack.substring(i);
+            }
+        }
+        return null;
+    }
+}

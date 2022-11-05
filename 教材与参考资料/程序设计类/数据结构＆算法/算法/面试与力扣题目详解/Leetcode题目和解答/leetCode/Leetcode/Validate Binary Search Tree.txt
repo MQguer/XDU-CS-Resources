@@ -1,0 +1,68 @@
+Given a binary tree, determine if it is a valid binary search tree (BST).
+
+Assume a BST is defined as follows:
+
+The left subtree of a node contains only nodes with keys less than the node's key.
+The right subtree of a node contains only nodes with keys greater than the node's key.
+Both the left and right subtrees must also be binary search trees.
+
+
+Complexity: O(n)
+
+1. use upper and lower to traverse the tree.
+2. get in-order traverse and check whether it is in asc order
+
+Solutions:
+
+/**
+ * Definition for binary tree
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode(int x) { val = x; }
+ * }
+ */
+public class Solution {
+    public boolean isValidBST(TreeNode root) {
+        // Start typing your Java solution below
+        // DO NOT write main() function
+        return solve(root,null,null);
+    }
+    
+    // only one traverse
+    boolean solve(TreeNode node, Integer lower, Integer uper){
+        if(node == null){
+            return true;
+        }
+        if(lower != null && node.val <= lower){
+            return false;
+        }
+        if(uper != null && node.val >= uper){
+            return false;
+        }
+        return solve(node.left,lower,node.val) && solve(node.right,node.val,uper);
+    }
+    
+    
+    // use inorder 
+    boolean solveWithInorder(TreeNode root){
+        ArrayList<Integer> res = new ArrayList<Integer>();
+        inorder(root,res);
+        for(int i = 0 ; i < res.size();i ++){
+            if(i != 0 && res.get(i ) <= res.get(i -1)){
+                return false;
+            }
+        }
+        return true;
+    }
+    
+    void inorder(TreeNode node,ArrayList<Integer> res){
+        if(node == null){
+            return;    
+        }
+        inorder(node.left,res);
+        res.add(node.val);
+        inorder(node.right,res);        
+    }
+}

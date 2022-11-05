@@ -1,0 +1,3 @@
+书籍编号:1|书籍名称:C Primer Plus|作者:Stephen Prata|剩余数量:27|价格:50|未归还数目:3 
+书籍编号:2|书籍名称:To kill a mocking bird|作者:Harper Lee|剩余数量:18|价格:25|未归还数目:2 
+书籍编号:3|书籍名称:ABC|作者:ABC|剩余数量:60|价格:10|未归还数目:0 

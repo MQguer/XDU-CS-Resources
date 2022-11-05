@@ -1,0 +1,20 @@
+架构设计常用到的10种设计模式
+
+https://zhuanlan.zhihu.com/p/248682485
+
+对于本门课只需要了解（标*为重点）：
+
+*分层模式（Layered pattern）
+
+*客户端-服务器模式（Client-server pattern）
+
+主从模式（Master-slave pattern）
+
+*管道-过滤器模式（Pipe-filter pattern）
+
+点对点模式（Peer-to-peer pattern）
+
+
+除了上面链接提到的，还需要了解：
+
+资源库模式（Repositories）

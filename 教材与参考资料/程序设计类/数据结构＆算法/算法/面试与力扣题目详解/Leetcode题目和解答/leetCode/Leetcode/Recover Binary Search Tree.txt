@@ -1,0 +1,63 @@
+Two elements of a binary search tree (BST) are swapped by mistake.
+
+Recover the tree without changing its structure.
+
+Note:
+A solution using O(n) space is pretty straight forward. Could you devise a constant space solution?
+
+==================================================
+
+solution 1: get it's inorder traversal and find the two faulty positions
+solution 2: use in order traversal and record two faulty positions, without o(n) space
+for solution 2. use pointer pre to record the pre node
+
+for case : 6 8 14 , one condition is 14 8 6 , another is 8 6 14, we don't know which two are the faulty positions
+so we record first to 14/8 next to 8/6 and go on, if there is no faulty positions, it is done, or we will update next pointer to 14
+the judgement is pre.val > now.val
+
+Solution:
+
+/**
+ * Definition for binary tree
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode(int x) { val = x; }
+ * }
+ */
+public class Solution {
+    class res {
+        TreeNode first = null;
+        TreeNode second = null;
+        TreeNode pre = null;
+    }
+    
+    public void recoverTree(TreeNode root) {
+        // Start typing your Java solution below
+        // DO NOT write main() function
+        res res = new res();
+        find(root,res);
+        if(res.first != null && res.second != null){
+            int tmp = res.first.val;
+            res.first.val = res.second.val;
+            res.second.val = tmp;
+        }
+        return;
+    }
+    
+    void find(TreeNode node, res res){
+        if(node == null){
+            return;
+        }
+        find(node.left,res);
+        if(res.pre != null && res.pre.val > node.val){
+            res.second = node;
+            if(res.first == null){
+                res.first = res.pre;
+            }
+        }
+        res.pre = node;
+        find(node.right,res);        
+    }
+}

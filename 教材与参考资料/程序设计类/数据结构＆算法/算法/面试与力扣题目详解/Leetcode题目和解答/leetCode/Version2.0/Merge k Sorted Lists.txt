@@ -1,0 +1,77 @@
+Merge k sorted linked lists and return it as one sorted list. Analyze and describe its complexity.
+
+=====================
+
+Complexity O(mn)
+
+take care of the repeated iterms
+
+Solution:
+
+/**
+ * Definition for singly-linked list.
+ * public class ListNode {
+ *     int val;
+ *     ListNode next;
+ *     ListNode(int x) {
+ *         val = x;
+ *         next = null;
+ *     }
+ * }
+ */
+public class Solution {
+    public ListNode mergeKLists(ArrayList<ListNode> lists) {
+        // Start typing your Java solution below
+        // DO NOT write main() function
+        if(lists.size() == 0){
+            return null;
+        }
+        int size = lists.size();
+        while(size > 1){
+            int low = 0;
+            int high = size -1;
+            while(low < high){
+                lists.set(low,mergeTwoList(lists.get(low),lists.get(high)));
+                lists.remove(high);
+                low ++;
+                high--;
+            }
+            size = lists.size();
+        }
+        return lists.get(0);
+    }
+    
+    ListNode mergeTwoList(ListNode l1, ListNode l2){
+        ListNode head = null;
+        ListNode tail = null;
+        while(l1 != null || l2 != null){
+            ListNode tmp = null;
+            if(l1 != null){
+                tmp = l1;
+            }
+            if(l2 != null){
+                if(tmp == null){
+                    tmp = l2;
+                    l2 = l2.next;
+                }else{
+                    if( tmp.val > l2.val){
+                        tmp = l2;
+                        l2 = l2.next;
+                    }else{
+                        l1 = l1.next;
+                    }
+                }
+            }else{
+                l1 = l1.next;
+            }
+            if(head == null){
+                head = tmp;
+                tail = tmp;
+            }else{
+                tail.next = tmp;
+                tail = tail.next;
+            }
+        }
+        return head;
+    }
+}

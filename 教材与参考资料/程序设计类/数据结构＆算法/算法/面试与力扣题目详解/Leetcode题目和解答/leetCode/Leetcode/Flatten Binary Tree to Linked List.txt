@@ -1,0 +1,72 @@
+Given a binary tree, flatten it to a linked list in-place.
+
+For example,
+Given
+
+         1
+        / \
+       2   5
+      / \   \
+     3   4   6
+The flattened tree should look like:
+   1
+    \
+     2
+      \
+       3
+        \
+         4
+          \
+           5
+            \
+             6
+Hints:
+If you notice carefully in the flattened tree, each node's right child points to the next node of a pre-order traversal.
+
+
+===============================================================
+
+
+Solution:
+/**
+ * Definition for binary tree
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode(int x) { val = x; }
+ * }
+ */
+public class Solution {
+    public void flatten(TreeNode root) {
+        // Start typing your Java solution below
+        // DO NOT write main() function
+        if(root == null){
+            return;
+        }
+        Stack<TreeNode> sts = new Stack<TreeNode>();
+        sts.push(root);
+        TreeNode head = null;
+        TreeNode tail = null;
+        while(!sts.empty()){
+            TreeNode node = sts.pop();
+            if(head == null){
+                head = node;
+                tail = node;
+            }else{
+                tail.right = node;
+                tail.left = null;
+                tail = tail.right;
+            }
+            if(node.right != null){
+                sts.push(node.right);
+            }
+            if(node.left != null){
+                sts.push(node.left);
+            }
+        }
+        root = head;
+    }
+    
+    
+}

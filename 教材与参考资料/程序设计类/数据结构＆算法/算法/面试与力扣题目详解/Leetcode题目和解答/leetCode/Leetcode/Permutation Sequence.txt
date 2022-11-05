@@ -1,0 +1,21 @@
+public class Solution {
+    public String getPermutation(int n, int k) {
+        // Start typing your Java solution below
+        // DO NOT write main() function
+        List<Integer> nums = new LinkedList<Integer>();
+        int fac = 1;
+        StringBuffer res = new StringBuffer();
+        for(int i = 0 ; i < n; i++){
+            nums.add(i + 1);
+            fac *= (i + 1);
+        }
+        for(int i = n; i > 0; i--){
+            fac /= i;
+            int cur = (k - 1) / fac;
+            k -= cur * fac;
+            res.append(nums.get(cur));
+            nums.remove(cur);
+        }
+        return res.toString();
+    }
+}

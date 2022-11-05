@@ -1,0 +1,56 @@
+Given a binary tree, find the maximum path sum.
+
+The path may start and end at any node in the tree.
+
+For example:
+Given the below binary tree,
+
+       1
+      / \
+     2   3
+Return 6.
+
+=============================================================
+
+be careful of the relationship between left, right and node
+for maxpath, the return value will be max(left,right) + node or node
+for result, the value will between left,right,left+node,right+node,left+right+node and original
+
+Solution:
+
+/**
+ * Definition for binary tree
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode(int x) { val = x; }
+ * }
+ */
+public class Solution {
+    class res {
+        int res = Integer.MIN_VALUE;
+    }
+    public int maxPathSum(TreeNode root) {
+        // Start typing your Java solution below
+        // DO NOT write main() function
+        res res = new res();
+        if(root == null){
+            return res.res;
+        }
+        maxPath(root,res);
+        return res.res;
+    }
+    
+    int maxPath(TreeNode node,res res){
+        if(node == null){
+            return 0;
+        }
+        int left = maxPath(node.left,res);
+        int right = maxPath(node.right,res);
+        int max =  Math.max(node.val,node.val + Math.max(left,right));
+        max = Math.max(max,right + node.val + left);
+        res.res = Math.max(res.res,max);
+        return Math.max(node.val,Math.max(left,right) + node.val);
+    }
+}

@@ -1,0 +1,16 @@
+public class Solution {
+    public boolean canJump(int[] A) {
+        // Start typing your Java solution below
+        // DO NOT write main() function
+        if(A.length <= 1){
+            return true;
+        }
+        int max = A[0];
+        for(int i = 0; i < A.length && i <= max; i++){
+            if(A[i] + i > max){
+                max = A[i] + i;
+            }
+        }
+        return max >= A.length -1?true:false;
+    }
+}

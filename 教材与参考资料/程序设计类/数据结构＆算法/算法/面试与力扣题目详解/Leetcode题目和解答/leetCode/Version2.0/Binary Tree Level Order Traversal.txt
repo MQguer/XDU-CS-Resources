@@ -1,0 +1,82 @@
+/**
+ * Definition for binary tree
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode(int x) { val = x; }
+ * }
+ */
+public class Solution {
+    public ArrayList<ArrayList<Integer>> levelOrder(TreeNode root) {
+        // Start typing your Java solution below
+        // DO NOT write main() function
+       return printLevel(root);
+    }
+    
+    //for iterative solution
+    ArrayList<ArrayList<Integer>> ite(TreeNode root){
+        ArrayList<ArrayList<Integer>> res = new ArrayList<ArrayList<Integer>>();
+        ArrayList<Integer> adds = new ArrayList<Integer>();
+        if(root == null){
+            return res;
+        }
+        Queue<TreeNode> ques = new LinkedList<TreeNode>();
+        int cur = 1;
+        int next = 0;
+        ques.add(root);
+        while(ques.size() > 0){
+            TreeNode curnode = ques.poll();
+            adds.add(curnode.val);
+            if(curnode.left != null){
+                ques.add(curnode.left);
+                next++;
+            }
+            if(curnode.right != null){
+                ques.add(curnode.right);
+                next++;
+            }
+            cur--;
+            if(cur == 0){
+                cur = next;
+                next = 0;
+                res.add(new ArrayList<Integer>(adds));
+                adds.clear();
+            }
+        }
+        return res;
+    }
+    
+    //for recursive solution
+    void rec(TreeNode node,int level,ArrayList<Integer> adds){
+        if(node == null){
+            return;
+        }
+        if(level== 1){
+            adds.add(node.val);
+        }else{
+            rec(node.left,level-1,adds);
+            rec(node.right,level-1,adds);
+        }
+    }
+    
+    int maxHeight(TreeNode node){
+        if(node == null){
+            return 0;
+        }
+        int left = maxHeight(node.left);
+        int right = maxHeight(node.right);
+        return Math.max(left,right) + 1;
+    }
+    
+    ArrayList<ArrayList<Integer>> printLevel(TreeNode node){
+        ArrayList<ArrayList<Integer>> res = new ArrayList<ArrayList<Integer>>();
+        int height = maxHeight(node);
+        for(int i = 1; i <= height; i++){
+            ArrayList<Integer> adds = new ArrayList<Integer>();
+            rec(node,i,adds);
+            res.add(adds);
+        }
+        return res;
+    }
+}

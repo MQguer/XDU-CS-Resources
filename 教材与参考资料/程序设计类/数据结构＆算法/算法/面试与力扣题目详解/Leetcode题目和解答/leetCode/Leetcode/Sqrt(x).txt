@@ -1,0 +1,53 @@
+Implement int sqrt(int x).
+
+Compute and return the square root of x.
+
+====================
+
+Complexity O(logn)
+
+take care
+
+1. +/-
+2. if x is Integer.MIN_VALUE, should use long to instead it, or will underflow
+
+Solution:
+
+ public class Solution {
+    public int sqrt(int x) {
+        // Start typing your Java solution below
+        // DO NOT write main() function
+        long xx = x;
+        boolean sign = false;
+        if(x <= 1 && x >= 0) {return x;};
+        if(x < 0){
+            xx = -1 * xx;
+            sign = true;
+        }
+        long left = 1;
+        long right = xx;
+        
+        while(left < right){
+            if(valid(xx,left)){return (int)left * (sign?-1:1);}
+            if(valid(xx,right)){return (int)right * (sign?-1:1);}
+            long mid = left + (right - left) / 2;
+            if(valid(xx,mid)){
+                return (int)mid * (sign?-1:1);
+            }else if(mid * mid < xx){
+                left = mid+1;
+            }else{
+                right = mid -1;
+            }
+        }
+        return (int)left * (sign?-1:1);
+    }
+    
+    boolean valid(long x, long num){
+        if(num * num == x){
+            return true;
+        }else if(num * num < x && (num+1) * (num+1) >x){
+            return true;
+        }
+        return false;
+    }
+}

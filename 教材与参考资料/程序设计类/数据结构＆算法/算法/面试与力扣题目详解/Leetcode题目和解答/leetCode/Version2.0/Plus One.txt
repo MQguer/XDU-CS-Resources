@@ -1,0 +1,30 @@
+Given a number represented as an array of digits, plus one to the number.
+
+=======================================
+
+Solution:
+
+public class Solution {
+    public int[] plusOne(int[] digits) {
+        // Start typing your Java solution below
+        // DO NOT write main() function
+        int add = 0;
+        int n = digits.length;
+        digits[n-1]++;
+        for(int i = n-1 ; i >= 0; i--){
+            int tmp = digits[i] + add;
+            add = tmp / 10;
+            digits[i] = tmp % 10;
+        }
+        if( add == 0){
+            return digits;
+        }else{
+            int[] res = new int[n+1];
+            res[0] = add;
+            for(int i = 1 ; i < n+1; i++){
+                res[i] = digits[i-1];
+            } 
+            return res;
+        }
+    }
+}

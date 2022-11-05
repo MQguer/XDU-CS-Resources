@@ -1,0 +1,50 @@
+Follow up for N-Queens problem.
+
+Now, instead outputting board configurations, return the total number of distinct solutions.
+
+
+===========================================
+
+Solution:
+
+
+public class Solution {
+    
+    class res {
+        int res = 0;
+    }
+     public int totalNQueens(int n) {
+        // Start typing your Java solution below
+        // DO NOT write main() function
+        res res = new res();
+        if(n <= 0){
+            return 0;
+        }
+        
+        int[] queens = new int[n];
+        dfs(queens,0,res);
+        return res.res;        
+    }
+    
+    void dfs(int[] queens,int index,res res){
+        if(index == queens.length){
+            res.res++;
+            return;
+        }
+        for(int i = 0; i < queens.length; i++){
+            queens[index] = i;
+            if(valid(queens,index)){
+                dfs(queens,index+1,res);
+            }
+        }
+        return;
+    }    
+    boolean valid(int[] queens,int index){
+       for(int i = 0 ; i < index; i++){
+          if(queens[i] == queens[index] || Math.abs(i - index) == Math.abs(queens[i] - queens[index])){
+              return false;
+          }
+       }
+       return true;
+    }
+}

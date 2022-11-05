@@ -1,0 +1,80 @@
+The n-queens puzzle is the problem of placing n queens on an n*n chessboard such that no two queens attack each other.
+
+Given an integer n, return all distinct solutions to the n-queens puzzle.
+
+Each solution contains a distinct board configuration of the n-queens' placement, where 'Q' and '.' both indicate a queen and an empty space respectively.
+
+For example,
+There exist two distinct solutions to the 4-queens puzzle:
+
+[
+ [".Q..",  // Solution 1
+  "...Q",
+  "Q...",
+  "..Q."],
+
+ ["..Q.",  // Solution 2
+  "Q...",
+  "...Q",
+  ".Q.."]
+]
+
+
+================================
+
+the point is how to check the valid status
+
+Solution:
+
+public class Solution {
+    public ArrayList<String[]> solveNQueens(int n) {
+        // Start typing your Java solution below
+        // DO NOT write main() function
+        ArrayList<String[]> res = new ArrayList<String[]>();
+        if(n <= 0){
+            return res;
+        }
+        int[] queens = new int[n];
+        dfs(queens,0,res);
+        return res;        
+    }
+    
+    void dfs(int[] queens,int index,ArrayList<String[]> res){
+        if(index == queens.length){
+            res.add(print(queens));
+            return;
+        }
+        for(int i = 0; i < queens.length; i++){
+            queens[index] = i;
+            if(valid(queens,index)){
+                dfs(queens,index+1,res);
+            }
+        }
+        return;
+    }
+    
+    String[] print(int[] num){
+        String[] res = new String[num.length];
+        for(int i = 0 ; i < num.length; i++){
+            StringBuffer row = new StringBuffer();
+            for(int j = 0 ; j < num.length;j++){
+                if(num[j] == i){
+                    row.append("Q");
+                }else{
+                    row.append(".");
+                }
+            }
+            res[i] = row.toString();
+        }
+        return res;
+    }
+    
+    boolean valid(int[] queens,int index){
+       for(int i = 0 ; i < index; i++){
+          if(queens[i] == queens[index] || Math.abs(i - index) == Math.abs(queens[i] - queens[index])){
+              return false;
+          }
+       }
+       return true;
+    }
+}
