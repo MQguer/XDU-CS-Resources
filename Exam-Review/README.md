@@ -27,3 +27,9 @@
 - 近代史纲要
 - 马原
 - 高等数学
+
+---
+
+其他西电复习资料：
+
+[西电18级智科期末考试整理](https://github.com/XDU-419Hub/ai-final-exam.git)
