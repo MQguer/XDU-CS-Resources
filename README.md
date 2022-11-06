@@ -1,6 +1,6 @@
 # [Anti-Legend Association](https://github.com/GageRain/Anti-Legend.git)
 
-![GitHub repo size](https://img.shields.io/github/repo-size/GageRain/Anti-Legend)        ![GitHub forks](https://img.shields.io/github/forks/GageRain/Anti-Legend?style=social)         ![GitHub Repo stars](https://img.shields.io/github/stars/GageRain/Anti-Legend?style=social)
+![GitHub repo size](https://img.shields.io/github/repo-size/GageRain/Anti-Legend)       	 ![GitHub forks](https://img.shields.io/github/forks/GageRain/Anti-Legend?style=social)        	 ![GitHub Repo stars](https://img.shields.io/github/stars/GageRain/Anti-Legend?style=social)
 
 ---
 
