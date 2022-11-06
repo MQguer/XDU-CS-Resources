@@ -1,4 +1,4 @@
-# [Anti-Legend Association](https://github.com/GageRain/Anti-Legend.git)
+# [Anti-Legend Association](https://github.com/GageRain/XDU-CS-Resources)
 
 ![GitHub repo size](https://img.shields.io/github/repo-size/GageRain/Anti-Legend)       	 ![GitHub forks](https://img.shields.io/github/forks/GageRain/Anti-Legend?style=social)        	 ![GitHub Repo stars](https://img.shields.io/github/stars/GageRain/Anti-Legend?style=social)
 
@@ -63,23 +63,23 @@ https://www.itsvse.com/downgit/#/home
 
 ### 1、专业参考资料
 
-主要包括各类学科的专业教材或参考书，内容有限，欢迎贡献补充：[点这里](https://github.com/GageRain/Anti-Legend/tree/main/%E6%95%99%E6%9D%90%E4%B8%8E%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99)
+主要包括各类学科的专业教材或参考书，内容有限，欢迎贡献补充：[点这里](https://github.com/GageRain/XDU-CS-Resources/tree/main/%E6%95%99%E6%9D%90%E4%B8%8E%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99)
 
 ### 2、考试复习资料
 
-主要包括各学科的期末复习资料，部分学科暂时缺少相应的资料，欢迎贡献：[点这里](https://github.com/GageRain/Anti-Legend/tree/main/%E6%95%99%E6%9D%90%E4%B8%8E%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99)
+主要包括各学科的期末复习资料，部分学科暂时缺少相应的资料，欢迎贡献：[点这里](https://github.com/GageRain/XDU-CS-Resources/tree/main/%E8%80%83%E8%AF%95%E5%A4%8D%E4%B9%A0%E8%B5%84%E6%96%99)
 
 ### 3、实验实习资料
 
-主要包括各类实验（包括上机）或实习的资料，如课件、代码等：[点这里](https://github.com/GageRain/Anti-Legend/tree/main/%E5%AE%9E%E9%AA%8C%E5%AE%9E%E4%B9%A0%E8%B5%84%E6%96%99)
+主要包括各类实验（包括上机）或实习的资料，如课件、代码等：[点这里](https://github.com/GageRain/XDU-CS-Resources/tree/main/%E5%AE%9E%E9%AA%8C%E5%AE%9E%E4%B9%A0%E8%B5%84%E6%96%99)
 
 ### 4、考研与保研资料
 
-主要包括考研和保研的相关资料，目前主要针对计算机专业，欢迎贡献：[点这里](https://github.com/GageRain/Anti-Legend/tree/main/%E8%80%83%E7%A0%94%E4%B8%8E%E4%BF%9D%E7%A0%94)
+主要包括考研和保研的相关资料，目前主要针对计算机专业，欢迎贡献：[点这里](https://github.com/GageRain/XDU-CS-Resources/tree/main/%E8%80%83%E7%A0%94%E4%B8%8E%E4%BF%9D%E7%A0%94)
 
 ### 5、其他文件
 
-主要包括一些电子书、论文文献、模板（如PPT、简历等）等文件，欢迎贡献：[点这里](https://github.com/GageRain/Anti-Legend/tree/main/%E5%85%B6%E4%BB%96%E6%96%87%E4%BB%B6)
+主要包括一些电子书、论文文献、模板（如PPT、简历等）等文件，欢迎贡献：[点这里](https://github.com/GageRain/XDU-CS-Resources/tree/main/%E5%85%B6%E4%BB%96%E6%96%87%E4%BB%B6)
 
 ## 原创文件
 
@@ -108,7 +108,7 @@ C语言-数据结构篇：敬请期待
 
 ## 附加模块
 
-这里是附加模块，这里主要整理一部分非原创的网络资源，大部分是Github的其他开源项目
+这里是附加模块，这里主要整理一部分非原创的网络资源，大部分是Github的其他开源项目0
 
 ### 1、谷歌大佬的励志自学笔记
 
