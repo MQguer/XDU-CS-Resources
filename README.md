@@ -1,6 +1,6 @@
 # [Anti-Legend Association](https://github.com/GageRain/XDU-CS-Resources)
 
-![GitHub repo size](https://img.shields.io/github/repo-size/GageRain/Anti-Legend)       	 ![GitHub forks](https://img.shields.io/github/forks/GageRain/Anti-Legend?style=social)        	 ![GitHub Repo stars](https://img.shields.io/github/stars/GageRain/Anti-Legend?style=social)
+ ![GitHub repo size](https://img.shields.io/github/repo-size/GageRain/XDU-CS-Resources)			![GitHub forks](https://img.shields.io/github/forks/GageRain/XDU-CS-Resources?style=social)			![GitHub Repo stars](https://img.shields.io/github/stars/GageRain/XDU-CS-Resources?style=social)
 
 ---
 
@@ -47,7 +47,7 @@ https://www.itsvse.com/downgit/#/home
 
 如果上面的网址失效，也不要慌，直接百度DownGit，有很多可用的网站
 
- <img src="https://my-typora-image-host.oss-cn-hangzhou.aliyuncs.com//img/image-20221105194832489.png" alt="image-20221105194832489" style="zoom: 50%;" />
+ <img src="https://my-typora-image-host.oss-cn-hangzhou.aliyuncs.com//img/image-20221105194832489.png" alt="image-20221105194832489" style="zoom: 50.1%;" />
 
 **2、Chrome插件 GitZip（推荐）** 
 
