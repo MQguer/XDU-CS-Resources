@@ -1,0 +1,54 @@
+<?xml version="1.0" ?>
+<swc xmlns="http://www.adobe.com/flash/swccatalog/9">
+    <versions>
+        <swc version="1.2"/>
+        <flex version="4.7.0" build="354188" minimumSupportedVersion="3.0.0"/>
+        <compiler name="ActionScript Compiler" version="2.0.0" build="354188"/>
+    </versions>
+    <features>
+        <feature-script-deps/>
+    </features>
+    <libraries>
+        <library path="library.swf">
+            <script name="com/wonderidea/clib/TAirPDFDaShiLibNAE" mod="1511510332586">
+                <def id="com.wonderidea.clib:TAirPDFDaShiLibNAE"/>
+                <dep id="Array" type="s"/>
+                <dep id="Boolean" type="s"/>
+                <dep id="Date" type="e"/>
+                <dep id="Function" type="s"/>
+                <dep id="Number" type="s"/>
+                <dep id="String" type="s"/>
+                <dep id="XML" type="e"/>
+                <dep id="flash.display:BitmapData" type="e"/>
+                <dep id="flash.events:EventDispatcher" type="i"/>
+                <dep id="flash.events:IEventDispatcher" type="s"/>
+                <dep id="flash.events:StatusEvent" type="e"/>
+                <dep id="flash.external:ExtensionContext" type="s"/>
+                <dep id="flash.geom:Rectangle" type="e"/>
+                <dep id="flash.utils:ByteArray" type="e"/>
+                <dep id="int" type="s"/>
+                <dep id="trace" type="e"/>
+                <dep id="uint" type="s"/>
+            </script>
+            <script name="com/wonderidea/clib/TAirSpeechSynthesis" mod="1511517572944">
+                <def id="com.wonderidea.clib:TAirSpeechSynthesis"/>
+                <dep id="Date" type="e"/>
+                <dep id="Function" type="s"/>
+                <dep id="JSON" type="e"/>
+                <dep id="Number" type="s"/>
+                <dep id="Object" type="s"/>
+                <dep id="String" type="s"/>
+                <dep id="com.wonderidea.clib:TAirPDFDaShiLibNAE" type="e"/>
+                <dep id="flash.events:Event" type="e"/>
+                <dep id="flash.events:EventDispatcher" type="i"/>
+                <dep id="flash.events:ProgressEvent" type="e"/>
+                <dep id="flash.events:StatusEvent" type="e"/>
+                <dep id="flash.external:ExtensionContext" type="s"/>
+                <dep id="trace" type="e"/>
+            </script>
+            <digests>
+                <digest type="SHA-256" signed="false" value="50b1da811097d63e6b8c6e649997613b9aa98996fd012ec1f86326b34d241cba"/>
+            </digests>
+        </library>
+    </libraries>
+</swc>

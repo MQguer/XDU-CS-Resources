@@ -1,0 +1,71 @@
+[2022-04-04 10:14:17.665] [I] ***************************************************************
+[2022-04-04 10:14:17.665] [I] Snipaste 2.7.3-Beta x86 (Desktop) (Qt 5.12.6)
+[2022-04-04 10:14:17.666] [I] OS: Windows 10 (10.0) [10.0.19042]
+[2022-04-04 10:14:17.666] [I] Cores: 12
+[2022-04-04 10:14:17.666] [I] Elevated: false
+[2022-04-04 10:14:17.666] [I] Log level: 2
+[2022-04-04 10:14:17.666] [I] Application dir: D:/360安全浏览器下载/Snipastelatestx86/Snipaste-2.7.3-Beta-x86
+[2022-04-04 10:14:17.666] [I] Working dir: D:/360安全浏览器下载/Snipastelatestx86/Snipaste-2.7.3-Beta-x86
+[2022-04-04 10:14:17.666] [I] Config: D:/360安全浏览器下载/Snipastelatestx86/Snipaste-2.7.3-Beta-x86/config.ini
+[2022-04-04 10:14:17.666] [I] Library paths: (D:/360安全浏览器下载/Snipastelatestx86/Snipaste-2.7.3-Beta-x86)
+[2022-04-04 10:14:17.666] [I] Screen scale: 1
+[2022-04-04 10:14:17.666] [I] Retina factor: 1
+[2022-04-04 10:14:17.666] [I] Screens: 1
+[2022-04-04 10:14:17.666] [I]     QRect(0, 0, 1920 x 1080), DPI = 96 , DPR = 1
+[2022-04-04 10:14:17.677] [I] Desktops: 1
+[2022-04-04 10:14:17.677] [I] OpenGL support: false
+[2022-04-04 10:14:17.688] [I] About to import settings from: D:/360安全浏览器下载/Snipastelatestx86/Snipaste-2.7.3-Beta-x86/config.ini
+[2022-04-04 10:14:17.690] [I] Settings imported
+[2022-04-04 10:14:17.692] [I] Breakpad initialized
+[2022-04-04 10:14:17.693] [I] Process priority: 1
+[2022-04-04 10:14:17.693] [I] Initializing Snipaste...
+[2022-04-04 10:14:18.015] [I] Prefetch...
+[2022-04-04 10:14:18.020] [I] Preloaded 20 files: 5 ms
+[2022-04-04 10:14:18.026] [I] About to apply settings...
+[2022-04-04 10:14:18.029] [I] Load default ssl configuration: 15 ms
+[2022-04-04 10:14:18.055] [I] Settings applied
+[2022-04-04 10:14:18.061] [I] Log level set to: 2
+[2022-04-04 10:14:18.079] [I] History dir: D:/360安全浏览器下载/Snipastelatestx86/Snipaste-2.7.3-Beta-x86/history
+[2022-04-04 10:14:18.080] [W] Failed to open history file "D:/360安全浏览器下载/Snipastelatestx86/Snipaste-2.7.3-Beta-x86/history/.sp0" for reading
+[2022-04-04 10:14:18.080] [I] Add group
+[2022-04-04 10:14:18.082] [I] Request to switch to group 0
+[2022-04-04 10:14:18.182] [I] About to restore pasters...
+[2022-04-04 10:14:18.182] [I] Group 0 [WQLJO6]: "默认"
+[2022-04-04 10:14:18.182] [I] Record version: 193
+[2022-04-04 10:14:18.182] [I] To restore: 0
+[2022-04-04 10:14:18.182] [I] Pasters touched
+[2022-04-04 10:14:18.182] [I] All pasters activated: true
+[2022-04-04 10:14:18.196] [I] Unref images: 0 (0 removed)
+[2022-04-04 10:14:18.197] [I] Unref dirs: 0 (0 removed)
+[2022-04-04 10:14:18.197] [I] Empty history info files: 0 (0 removed)
+[2022-04-04 10:14:18.197] [I] Pasters restored
+[2022-04-04 10:14:18.197] [I] Launch time: 533 ms
+[2022-04-04 10:14:31.728] [I] Parsing command arguments [0]: (sp, snip)
+[2022-04-04 10:14:31.728] [I] Snip request: 0 (dest: 0)
+[2022-04-04 10:14:31.728] [I] Snipper: preparing...
+[2022-04-04 10:14:31.728] [I] Desktop: QRect(0, 0, 1920 x 1080)
+[2022-04-04 10:14:31.764] [I] Background size: QSize(1920, 1080)
+[2022-04-04 10:14:31.764] [I] Screens: 1
+[2022-04-04 10:14:31.764] [I]     QRect(0, 0, 1920 x 1080), DPI = 96 , DPR = 1
+[2022-04-04 10:14:31.769] [I] Focus set
+[2022-04-04 10:14:31.770] [I] Snipper: preparation done (0)
+[2022-04-04 10:14:31.770] [I] Snipper: about to appear...
+[2022-04-04 10:14:31.770] [I] Snipper: prepare to show...
+[2022-04-04 10:14:31.772] [I] Snipper: shown
+[2022-04-04 10:14:31.783] [I] Snipper: focus in
+[2022-04-04 10:14:31.783] [I] Snipper: ready [0.056 s]
+[2022-04-04 10:14:39.607] [I] Screenshot (1221, 282, 197 x 187) destination: none
+[2022-04-04 10:14:39.607] [I] Snipper: about to quit...
+[2022-04-04 10:14:39.610] [I] Snipper: focus out [3] (Foreground window: Snipper - Snipaste)
+[2022-04-04 10:14:39.614] [I] Snipper: hidden
+[2022-04-04 10:14:39.615] [I] Snipper: quit
+[2022-04-04 10:14:42.831] [I] Parsing command arguments [0]: (sp, show-tray-menu)
+[2022-04-04 10:15:20.867] [I] Silent feed checking finished
+[2022-04-04 10:15:20.867] [I] No available update
+[2022-04-04 10:15:52.031] [I] Parsing command arguments [0]: (sp, show-tray-menu)
+[2022-04-04 10:15:53.164] [I] Quit from tray menu
+[2022-04-04 10:15:53.169] [I] Snipaste: normal exit
+[2022-04-04 10:15:53.170] [I] Snipper: destructed
+[2022-04-04 10:15:53.187] [I] Exit: 0
+
+

@@ -1,0 +1,324 @@
+<xml>
+
+	<Item>
+		<languageKey>xiaoqi</languageKey>
+		<language>普通话/青年女声</language>
+		<ent>InterPhonic</ent>
+		<vcn>xiaoqi</vcn>
+		<name>HuiHui</name>
+		<thumbnail>HuiHui.png</thumbnail>
+	</Item>
+<Item>
+	<languageKey>xiaoyu</languageKey>
+		<language>普通话/青年男声</language>
+		<ent>InterPhonic</ent>
+		<vcn>xiaoyu</vcn>
+		<name>AiHua</name>
+		<thumbnail>AiHua.png</thumbnail>
+	</Item>
+
+	
+	
+	<Item>
+		<languageKey>aisxyan</languageKey>
+		<language>普通话/青年女声</language>
+		<ent>ViviVoice</ent>
+		<vcn>vixy</vcn>
+		<name>XiaoLi</name>
+		<thumbnail>XiaoLi.png</thumbnail>
+	</Item>
+
+	<Item>
+	<languageKey>xiaoyan</languageKey>
+		<language>普通话/青年女声</language>
+		<ent>Aisound</ent>
+		<vcn>xiaoyan</vcn>
+		<name>XiaoQi</name>
+		<thumbnail>XiaoQi.png</thumbnail>
+	</Item>
+
+	<Item>
+	<languageKey>aisxiaoyu</languageKey>
+		<language>青年男声/普通话</language>
+		<ent>Aisound</ent>
+		<vcn>aisxiaoyu</vcn>
+		<name>宇峰</name>
+		<thumbnail>YuFeng.png</thumbnail>
+	</Item>
+
+	<Item>
+		<languageKey>xiaoqi2</languageKey>
+		<language>青年女声/普通话</language>
+		<ent>InterPhonic</ent>
+		<vcn>xiaoqi</vcn>
+		<name>小齐</name>
+		<thumbnail>QiQi.png</thumbnail>
+	</Item>
+
+
+
+
+
+	<Item>
+		<languageKey>aisxmeng</languageKey>
+		<language>青年女声/普通话</language>
+		<ent>Aisound</ent>
+		<vcn>aisxmeng</vcn>
+		<name>晓梦</name>
+		<thumbnail>XiaoMeng.png</thumbnail>
+	</Item>
+
+	<Item>
+	<languageKey>aisduoxu</languageKey>
+		<language>青年男声/普通话</language>
+		<ent>Aisound</ent>
+		<vcn>aisduoxu</vcn>
+		<name>许多</name>
+		<thumbnail>XuDuo.png</thumbnail>
+	</Item>
+
+	<Item>
+		<languageKey>aisjiuxu</languageKey>
+		<language>青年男声/普通话</language>
+		<ent>Aisound</ent>
+		<vcn>aisjiuxu</vcn>
+		<name>许久</name>
+		<thumbnail>XuJiu.png</thumbnail>
+	</Item>
+
+	<Item>
+		<languageKey>niyang</languageKey>
+		<language>青年男声/普通话</language>
+		<ent>Aisound</ent>
+		<vcn>niyang</vcn>
+		<name>小洋</name>
+		<thumbnail>XiaoYang.png</thumbnail>
+	</Item>
+
+	<Item>
+		<languageKey>aisxping</languageKey>
+		<language>青年女声/普通话</language>
+		<ent>Aisound</ent>
+		<vcn>aisxping</vcn>
+		<name>小萍</name>
+		<thumbnail>XiaoPing.png</thumbnail>
+	</Item>
+
+	<Item>
+		<languageKey>ziqi</languageKey>
+		<language>青年女声/普通话</language>
+		<ent>Aisound</ent>
+		<vcn>ziqi</vcn>
+		<name>子棋</name>
+		<thumbnail>ZiQi.png</thumbnail>
+	</Item>
+
+	
+
+	<Item>
+		<languageKey>yefang</languageKey>
+		<language>青年女声/普通话</language>
+		<ent>Aisound</ent>
+		<vcn>yefang</vcn>
+		<name>小芳</name>
+		<thumbnail>XiaoFang.png</thumbnail>
+	</Item>
+
+	<Item>
+	<languageKey>aismengchun</languageKey>
+		<language>青年女声/普通话</language>
+		<ent>Aisound</ent>
+		<vcn>aismengchun</vcn>
+		<name>小春</name>
+		<thumbnail>XiaoChun.png</thumbnail>
+	</Item>
+
+
+
+	<Item>
+		<languageKey>aisxmei</languageKey>
+		<language>粤语</language>
+		<ent>Aisound</ent>
+		<vcn>aisxmei</vcn>
+		<name>XiaoRong</name>
+		<thumbnail>XiaoRong.png</thumbnail>
+	</Item>
+
+
+	<Item>
+	<languageKey>aisdalong</languageKey>
+		<language>青年男声/粤语</language>
+		<ent>Aisound</ent>
+		<vcn>aisdalong</vcn>
+		<name>大龙</name>
+		<thumbnail>DaLong.png</thumbnail>
+	</Item>
+
+	<Item>
+	<languageKey>xiaomei</languageKey>
+		<language>青年女声/粤语</language>
+		<ent>InterPhonic</ent>
+		<vcn>xiaomei</vcn>
+		<name>晓美</name>
+		<thumbnail>XiaoMei.png</thumbnail>
+	</Item>
+
+
+	<Item>
+	<languageKey>aisnn</languageKey>
+		<language>童年女声</language>
+		<ent>Aisound</ent>
+		<vcn>aisnn</vcn>
+		<name>KeKe</name>
+		<thumbnail>KeKe.png</thumbnail>
+	</Item>
+
+	<Item>
+	<languageKey>aisBABYXu</languageKey>
+		<language>少男童声/普通话</language>
+		<ent>Aisound</ent>
+		<vcn>aisBABYXu</vcn>
+		<name>小宝</name>
+		<thumbnail>XiaoBao.png</thumbnail>
+	</Item>
+
+
+
+	<Item>
+	<languageKey>vils</languageKey>
+		<language>普通话/老年男声</language>
+		<ent>ViviVoice</ent>
+		<vcn>vils</vcn>
+		<name>LaoMa</name>
+		<thumbnail>LaoMa.png</thumbnail>
+	</Item>
+
+
+
+
+
+	<Item>
+		<languageKey>henry</languageKey>
+		<language>英文/青年男声</language>
+		<ent>InterPhonic</ent>
+		<vcn>henry</vcn>
+		<name>Tom</name>
+		<thumbnail>Henry.png</thumbnail>
+	</Item>
+	
+	<Item>
+	<languageKey>vimary</languageKey>
+		<language>英语/青年女声</language>
+		<ent>InterPhonic</ent>
+		<vcn>vimary</vcn>
+		<name>Catherine</name>
+		<thumbnail>Mary.png</thumbnail>
+	</Item>
+
+	<Item>
+		<languageKey>aisTom</languageKey>
+		<language>青年男声/英文</language>
+		<ent>Aisound</ent>
+		<vcn>aisTom</vcn>
+		<name>Tom</name>
+		<thumbnail>Tom.png</thumbnail>
+	</Item>
+
+	<Item>
+	<languageKey>aiscatherine</languageKey>
+		<language>青年女声/美式纯英文</language>
+		<ent>Aisound</ent>
+		<vcn>aiscatherine</vcn>
+		<name>Catherine</name>
+		<thumbnail>Catherine.png</thumbnail>
+	</Item>
+
+	<Item>
+	<languageKey>aisjohn</languageKey>
+		<language>青年男声/美式纯英文</language>
+		<ent>Aisound</ent>
+		<vcn>aisjohn</vcn>
+		<name>John</name>
+		<thumbnail>John.png</thumbnail>
+	</Item>
+
+
+
+<Item>
+	<languageKey>aisxxin</languageKey>
+		<language>卡通/普通话</language>
+		<ent>Aisound</ent>
+		<vcn>aisxxin</vcn>
+		<name>蜡笔小新</name>
+		<thumbnail>XiaoXin.png</thumbnail>
+	</Item>
+
+	<Item>
+		<languageKey>aisDuck</languageKey>
+		<language>卡通/普通话</language>
+		<ent>Aisound</ent>
+		<vcn>aisDuck</vcn>
+		<name>唐老鸭</name>
+		<thumbnail>LaoYa.png</thumbnail>
+	</Item>
+
+
+	<Item>
+		<languageKey>vixying</languageKey>
+		<language>陕西话/青年女声</language>
+		<ent>ViviVoice</ent>
+		<vcn>vixying</vcn>
+		<name>LiLi</name>
+		<thumbnail>LiLi.png</thumbnail>
+	</Item>
+
+
+
+	<Item>
+		<languageKey>aisxqiang</languageKey>
+		<language>湖南话/青年男声</language>
+		<ent>Aisound</ent>
+		<vcn>aisxqiang</vcn>
+		<name>XiaoRui</name>
+		<thumbnail>XiaoRui.png</thumbnail>
+	</Item>
+
+	<Item>
+		<languageKey>vixk</languageKey>
+		<language>河南话/青年男声</language>
+		<ent>Aisound</ent>
+		<vcn>vixk</vcn>
+		<name>aisxkun</name>
+		<thumbnail>XiaoHua.png</thumbnail>
+	</Item>
+
+
+	<Item>
+		<languageKey>aisxqian</languageKey>
+		<language>东北话/青年女声</language>
+		<ent>Aisound</ent>
+		<vcn>aisxqian</vcn>
+		<name>XiaoWen</name>
+		<thumbnail>XiaoWen.png</thumbnail>
+	</Item>
+
+	<Item>
+	<languageKey>aisxrong</languageKey>
+		<language>四川话/青年女声</language>
+		<ent>Aisound</ent>
+		<vcn>aisxrong</vcn>
+		<name>WeiZi</name>
+		<thumbnail>WeiZi.png</thumbnail>
+	</Item>
+
+
+	<Item>
+	<languageKey>aisxlin</languageKey>
+		<language>台普/青年女声</language>
+		<ent>Aisound</ent>
+		<vcn>aisxlin</vcn>
+		<name>RuiRui</name>
+		<thumbnail>RuiRui.png</thumbnail>
+	</Item>
+
+</xml>

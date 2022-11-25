@@ -1,0 +1,13 @@
+<extension xmlns="http://ns.adobe.com/air/extension/3.1">   
+    <id>com.wonderidea.clib.TAirPDFDaShiLibNAE</id>   
+    <versionNumber>1</versionNumber>   
+    <platforms>   
+        <platform name="Windows-x86">   
+            <applicationDeployment>   
+                <nativeLibrary>AirTTS.dll</nativeLibrary>  
+                <initializer>ExtInitializerVB</initializer>  
+                <finalizer>ExtFinalizerVB</finalizer>  
+            </applicationDeployment>  
+        </platform>   
+    </platforms>   
+</extension>  
