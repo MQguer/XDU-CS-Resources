@@ -82,7 +82,7 @@ https://www.itsvse.com/downgit/#/home
 
 ### 5、免费软件共享
 
-包括免费软件或破解软件资源的分享，部分较大的软件只能提供网盘链接：[点这里](https://github.com/GageRain/XDU-CS-Resources/tree/main/)
+包括免费软件或破解软件资源的分享，部分较大的软件只能提供网盘链接：[点这里](https://github.com/GageRain/XDU-CS-Resources/tree/main/%E5%85%8D%E8%B4%B9%E8%BD%AF%E4%BB%B6%E5%85%B1%E4%BA%AB)
 
 ### 6、其他文件
 
