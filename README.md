@@ -51,6 +51,7 @@ https://www.itsvse.com/downgit/#/home
 
  <img src="https://my-typora-image-host.oss-cn-hangzhou.aliyuncs.com//img/image-20221105194832489.png" alt="image-20221105194832489" style="zoom: 50.1%;" />
 
+
 **2、Chrome插件 GitZip（推荐）** 
 
 在谷歌浏览器中安装插件GitZip即可，在对应的界面右键即可下载：
@@ -69,23 +70,23 @@ https://www.itsvse.com/downgit/#/home
 
 ### 2、考试复习资料
 
-主要包括各学科的期末复习资料，部分学科暂时缺少相应的资料，欢迎贡献：[点这里](https://github.com/GageRain/XDU-CS-Resources/tree/main/%E8%80%83%E8%AF%95%E5%A4%8D%E4%B9%A0%E8%B5%84%E6%96%99)
+包括各学科的期末复习资料，部分学科暂时缺少相应的资料，欢迎贡献：[点这里](https://github.com/GageRain/XDU-CS-Resources/tree/main/%E8%80%83%E8%AF%95%E5%A4%8D%E4%B9%A0%E8%B5%84%E6%96%99)
 
 ### 3、实验实习资料
 
-主要包括各类实验（包括上机）或实习的资料，如课件、代码等：[点这里](https://github.com/GageRain/XDU-CS-Resources/tree/main/%E5%AE%9E%E9%AA%8C%E5%AE%9E%E4%B9%A0%E8%B5%84%E6%96%99)
+包括各类实验（包括上机）或实习的资料，如课件、代码等：[点这里](https://github.com/GageRain/XDU-CS-Resources/tree/main/%E5%AE%9E%E9%AA%8C%E5%AE%9E%E4%B9%A0%E8%B5%84%E6%96%99)
 
 ### 4、考研与保研资料
 
-主要包括考研和保研的相关资料，目前主要针对计算机专业，欢迎贡献：[点这里](https://github.com/GageRain/XDU-CS-Resources/tree/main/%E8%80%83%E7%A0%94%E4%B8%8E%E4%BF%9D%E7%A0%94)
+包括考研和保研的相关资料，目前主要针对计算机专业，欢迎贡献：[点这里](https://github.com/GageRain/XDU-CS-Resources/tree/main/%E8%80%83%E7%A0%94%E4%B8%8E%E4%BF%9D%E7%A0%94)
 
 ### 5、免费软件共享
 
-主要包括一些体量较小的免费软件分享，部分较大的软件只能提供网盘链接：[点这里](https://github.com/GageRain/XDU-CS-Resources/tree/main/)
+包括免费软件或破解软件资源的分享，部分较大的软件只能提供网盘链接：[点这里](https://github.com/GageRain/XDU-CS-Resources/tree/main/)
 
 ### 6、其他文件
 
-主要包括一些电子书、论文文献、模板（如PPT、简历等）等文件，欢迎贡献：[点这里](https://github.com/GageRain/XDU-CS-Resources/tree/main/%E5%85%B6%E4%BB%96%E6%96%87%E4%BB%B6)
+包括一些电子书、论文文献、模板（如PPT、简历等）等文件，欢迎贡献：[点这里](https://github.com/GageRain/XDU-CS-Resources/tree/main/%E5%85%B6%E4%BB%96%E6%96%87%E4%BB%B6)
 
 ## 原创文件
 
