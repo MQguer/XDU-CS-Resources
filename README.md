@@ -141,9 +141,11 @@ C语言-数据结构篇：敬请期待
 
 [浙江大学-各学科资料共享](https://github.com/QSCTech/zju-icicles)
 
-### 7、西电计算机专业经验分享项目
+### 7、西电计算机专业资源分享项目
 
 [西安电子科技大学计算机专业经验分享](https://github.com/baolintian/XDU_CS_Learning.git)
+
+[西安电子科技大学软院学习没烦恼项目](https://github.com/LevickCG/Happy-SE-in-XDU.git)
 
 ### 8、计算机考研信息及资料
 
