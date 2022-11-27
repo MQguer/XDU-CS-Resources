@@ -6,6 +6,8 @@
 
 ## **目录结构**
 
+[仓库简介](#仓库简介)
+
 [参与贡献](#参与贡献)
 
 [关于下载](#关于下载)
@@ -18,6 +20,20 @@
 
 ---
 
+## 仓库简介
+
+:smiley:本仓库主要面向西安电子科技大学计科院，整理了较多计算机专业的资料，内容分为三部分：
+
+**资料文件**——主要为本人、同学以及网络各方搜集的资料，由于本人是软工专业，可能软工资料偏多
+
+**原创文件**——主要为反传奇协会的成员整理或编写的文件及资料
+
+**附加模块**——主要为部分Github上其他的开源项目，都是很优质的学习资源
+
+PS：点击上面的标题**Anti-Legend Association**即可进入对应的Github库
+
+---
+
 ## 参与贡献
 
 :blush:本库欢迎各位同学参与贡献，只需按照以下流程：
@@ -26,8 +42,6 @@
 2. 在克隆的仓库中进行修改
 3. 对本库新建 Pull Request（PR），请求合并
 4. 本库管理员会根据需要选择接受PR，进行合并操作
-
-PS：点击上面的标题**Anti-Legend Association**即可进入对应的Github库
 
 ---
 
@@ -49,48 +63,51 @@ https://www.itsvse.com/downgit/#/home
 
 但是这种方法有时可能会下载空压缩包，并不稳定，本人更推荐第二种方法
 
- <img src="https://my-typora-image-host.oss-cn-hangzhou.aliyuncs.com//img/image-20221105194832489.png" alt="image-20221105194832489" style="zoom: 50.1%;" />
-
+<img src="https://my-typora-image-host.oss-cn-hangzhou.aliyuncs.com//img/image-20221105194832489.png" alt="image-20221105194832489" style="zoom: 44%;" /> 
 
 **2、Chrome插件 GitZip（推荐）** 
 
 在谷歌浏览器中安装插件GitZip即可，在对应的界面右键即可下载：
 
- <img src="https://my-typora-image-host.oss-cn-hangzhou.aliyuncs.com//img/image-20221105222724642.png" alt="image-20221105222724642" style="zoom: 76.5%;" />
+<img src="https://my-typora-image-host.oss-cn-hangzhou.aliyuncs.com//img/image-20221105222724642.png" alt="image-20221105222724642" style="zoom: 67%;" /> 
 
 ---
 
 ## 资料文件
 
-本部分为各方搜集的资料文件，欢迎各位同学贡献补充：
+:kissing:本部分为各方搜集的资料文件，部分过大的文件可以用网盘链接的形式分享，欢迎各位同学贡献补充：
 
 ### 1、专业参考资料
 
-主要包括各类学科的专业教材或参考书，内容有限，欢迎贡献补充：[点这里](https://github.com/GageRain/XDU-CS-Resources/tree/main/%E6%95%99%E6%9D%90%E4%B8%8E%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99)
+主要包括各类学科的专业教材或参考书，内容有限，欢迎贡献补充：[点这里查看资料](https://github.com/GageRain/XDU-CS-Resources/tree/main/%E6%95%99%E6%9D%90%E4%B8%8E%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99)
 
 ### 2、考试复习资料
 
-包括各学科的期末复习资料，部分学科暂时缺少相应的资料，欢迎贡献：[点这里](https://github.com/GageRain/XDU-CS-Resources/tree/main/%E8%80%83%E8%AF%95%E5%A4%8D%E4%B9%A0%E8%B5%84%E6%96%99)
+包括各学科的期末复习资料，部分学科暂时缺少相应的资料，欢迎贡献：[点这里查看资料](https://github.com/GageRain/XDU-CS-Resources/tree/main/%E8%80%83%E8%AF%95%E5%A4%8D%E4%B9%A0%E8%B5%84%E6%96%99)
 
 ### 3、实验实习资料
 
-包括各类实验（包括上机）或实习的资料，如课件、代码等：[点这里](https://github.com/GageRain/XDU-CS-Resources/tree/main/%E5%AE%9E%E9%AA%8C%E5%AE%9E%E4%B9%A0%E8%B5%84%E6%96%99)
+包括各类实验（包括上机）或实习的资料，如课件、代码等：[点这里查看资料](https://github.com/GageRain/XDU-CS-Resources/tree/main/%E5%AE%9E%E9%AA%8C%E5%AE%9E%E4%B9%A0%E8%B5%84%E6%96%99)
 
 ### 4、考研与保研资料
 
-包括考研和保研的相关资料，目前主要针对计算机专业，欢迎贡献：[点这里](https://github.com/GageRain/XDU-CS-Resources/tree/main/%E8%80%83%E7%A0%94%E4%B8%8E%E4%BF%9D%E7%A0%94)
+包括考研和保研的相关资料，目前主要针对计算机专业，欢迎贡献：[点这里查看资料](https://github.com/GageRain/XDU-CS-Resources/tree/main/%E8%80%83%E7%A0%94%E4%B8%8E%E4%BF%9D%E7%A0%94)
 
 ### 5、免费软件共享
 
-包括免费软件或破解软件资源的分享，部分较大的软件只能提供网盘链接：[点这里](https://github.com/GageRain/XDU-CS-Resources/tree/main/%E5%85%8D%E8%B4%B9%E8%BD%AF%E4%BB%B6%E5%85%B1%E4%BA%AB)
+包括免费软件或破解软件资源的分享，部分较大的软件只能提供网盘链接：[点这里查看资料](https://github.com/GageRain/XDU-CS-Resources/tree/main/%E5%85%8D%E8%B4%B9%E8%BD%AF%E4%BB%B6%E5%85%B1%E4%BA%AB)
 
-### 6、其他文件
+### 6、其他文件分享
 
-包括一些电子书、论文文献、模板（如PPT、简历等）等文件，欢迎贡献：[点这里](https://github.com/GageRain/XDU-CS-Resources/tree/main/%E5%85%B6%E4%BB%96%E6%96%87%E4%BB%B6)
+包括一些电子书、论文文献、模板（如PPT、简历等）等文件，欢迎贡献：[点这里查看资料](https://github.com/GageRain/XDU-CS-Resources/tree/main/%E5%85%B6%E4%BB%96%E6%96%87%E4%BB%B6)
+
+---
 
 ## 原创文件
 
-本部分均为**反传奇协会**上传的原创文件，用于学习交流。目前为止，我们已上传了以下文件：
+:smirk:本部分均为**反传奇协会**上传的文件，由内部成员整理或编写，仅供学习交流
+
+:expressionless:目前为止，我们已上传了以下文件：
 
 
 ### 1、反传奇手册
@@ -115,7 +132,7 @@ C语言-数据结构篇：敬请期待
 
 ## 附加模块
 
-这里是附加模块，这里主要整理一部分非原创的网络资源，大部分是Github的其他开源项目
+:heart_eyes:这里是附加模块，这里主要整理一部分非原创的网络资源，主要为Github上其他的计算机类开源项目
 
 ### 1、谷歌大佬的励志自学笔记
 
@@ -125,29 +142,17 @@ C语言-数据结构篇：敬请期待
 
 [众多免费编程类电子书资源，该开源项目还有众多其他如课程、博客类的学习资源，可自行查看](https://github.com/EbookFoundation/free-programming-books/blob/main/books/free-programming-books-zh.md)
 
-### 3、Java学习+Java面试指南
-
-[JavaGuide：涵盖大部分 Java 程序员所需要掌握的核心知识](https://javaguide.cn/)
-
-### 4、学习 IntelliJ IDEA
-
-[IntelliJ IDEA 全方面讲解教程，助你早日熟悉 IntelliJ IDEA](https://cdk8s.gitbook.io/github/)
-
-### 5、JavaScript 算法与数据结构
-
-[本仓库包含了多种基于 JavaScript 的算法与数据结构，大部分题目为英文](https://github.com/trekhleb/javascript-algorithms/blob/master/README.zh-CN.md)
-
-### 6、浙江大学课程攻略共享计划
+### 3、浙江大学课程攻略共享计划
 
 [浙江大学-各学科资料共享](https://github.com/QSCTech/zju-icicles)
 
-### 7、西电计算机专业资源分享项目
+### 4、西电计算机专业资源分享项目
 
 [西安电子科技大学计算机专业经验分享](https://github.com/baolintian/XDU_CS_Learning.git)
 
 [西安电子科技大学软院学习没烦恼项目](https://github.com/LevickCG/Happy-SE-in-XDU.git)
 
-### 8、计算机考研信息及资料
+### 5、计算机考研信息及资料
 
 - [2021-Postgraduate-408](https://github.com/hao14293/2021-Postgraduate-408) - 各高校近几年考研初试真题（含 408）
 - [aimto408](https://github.com/xiaolei565/aimto408) -  408 统考资料和信息汇总
@@ -190,6 +195,19 @@ C语言-数据结构篇：敬请期待
 - 数一、数二解析（1999-2019）
   - [China-NPEE-math](https://github.com/fjh1997/China-NPEE-math)
 
+### 6、Java学习+Java面试指南
+
+[JavaGuide：涵盖大部分 Java 程序员所需要掌握的核心知识](https://javaguide.cn/)
+
+### 7、学习 IntelliJ IDEA
+
+[IntelliJ IDEA 全方面讲解教程，助你早日熟悉 IntelliJ IDEA](https://cdk8s.gitbook.io/github/)
+
+### 8、JavaScript 算法与数据结构
+
+[本仓库包含了多种基于 JavaScript 的算法与数据结构，大部分题目为英文](https://github.com/trekhleb/javascript-algorithms/blob/master/README.zh-CN.md)
 
 
-[点击这里返回目录](#目录结构)
+
+:point_right:[点击这里返回目录](#目录结构):point_left:
+
