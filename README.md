@@ -14,15 +14,19 @@
 
 [资料文件](#资料文件)
 
+[原创文件](#原创文件)
+
 [附加模块](#附加模块)
 
 ---
 
 ## 仓库简介
 
-:smiley:本仓库主要面向西安电子科技大学计科院，整理了较多计算机专业的资料，内容分为：
+:smiley:本仓库主要面向西安电子科技大学计科院，整理了较多计算机专业的资料，内容分为三部分：
 
 **资料文件**——主要为本人、同学以及网络各方搜集的资料，由于本人是软工专业，可能软工资料偏多
+
+**原创文件**——主要为反传奇协会的成员整理或编写的文件及资料
 
 **附加模块**——主要为部分Github上其他的开源项目，都是很优质的学习资源
 
@@ -96,6 +100,33 @@ https://www.itsvse.com/downgit/#/home
 ### 6、其他文件分享
 
 包括一些电子书、论文文献、模板（如PPT、简历等）等文件，欢迎贡献：[点这里查看资料](https://github.com/GageRain/XDU-CS-Resources/tree/main/%E5%85%B6%E4%BB%96%E6%96%87%E4%BB%B6)
+
+---
+
+## 原创文件
+
+:smirk:本部分均为**反传奇协会**上传的文件，由内部成员整理或编写，仅供学习交流
+
+:expressionless:目前为止，我们已上传了以下文件：
+
+
+### 1、反传奇手册
+
+文件需要正确输入密码，由反传奇协会提供：[反传奇手册](https://gagerain.github.io/Anti-Legend/AntiLegend.html)
+
+### 2、网盘资料集合
+
+自己整理的一部分网盘资料，请勿随意外传：[网盘资料整理](https://gagerain.github.io/Anti-Legend/NetDisk.html)
+
+各类网络资料的集合，比较杂乱，应有尽有：[杂余资料集合](https://gagerain.github.io/Anti-Legend/ManyResources.html)
+
+### 3、C语言基础教程
+
+C语言-背景知识篇：[C语言基础之背景知识篇](https://gagerain.github.io/Anti-Legend/C-Tutor-One.html)
+
+C语言-编程基础篇：敬请期待
+
+C语言-数据结构篇：敬请期待
 
 ---
 
