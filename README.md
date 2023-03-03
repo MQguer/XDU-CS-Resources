@@ -1,4 +1,4 @@
-# [Anti-Legend Association](https://github.com/GageRain/XDU-CS-Resources)
+# [XDU-CS-Resources](https://github.com/GageRain/XDU-CS-Resources)
 
  ![GitHub repo size](https://img.shields.io/github/repo-size/GageRain/XDU-CS-Resources)			![GitHub forks](https://img.shields.io/github/forks/GageRain/XDU-CS-Resources?style=social)			![GitHub Repo stars](https://img.shields.io/github/stars/GageRain/XDU-CS-Resources?style=social)
 
@@ -30,7 +30,7 @@
 
 **附加模块**——主要为部分Github上其他的开源项目，都是很优质的学习资源
 
-PS：点击上面的标题**Anti-Legend Association**即可进入对应的Github库
+PS：点击上面的标题**XDU-CS-Resources**即可进入对应的Github库
 
 ---
 
