@@ -1,0 +1,31 @@
+{ "Info" "0" "" "Info: qsta_default_script.tcl version: #3" {  } {  } 0 0 "qsta_default_script.tcl version: #3" 0 0 "" 0 -1}
+{ "Info" "0" "" "Info: Migrating assignments from quartus_tan" {  } {  } 0 0 "Migrating assignments from quartus_tan" 0 0 "" 0 -1}
+{ "Info" "IQCU_PARALLEL_AUTODETECT_MULTIPLE_PROCESSORS" "4 12 " "Info: Parallel compilation is enabled and will use 4 of the 12 processors detected" {  } {  } 0 0 "Parallel compilation is enabled and will use %1!i! of the %2!i! processors detected" 0 0 "" 0 -1}
+{ "Info" "0" "" "Info: ----------------------------------------------------------" {  } {  } 0 0 "----------------------------------------------------------" 0 0 "" 0 -1}
+{ "Info" "0" "" "Info: ----------------------------------------------------------" {  } {  } 0 0 "----------------------------------------------------------" 0 0 "" 0 -1}
+{ "Info" "0" "" "Info: qtan_qsf2sdc_script.tcl version: #1" {  } {  } 0 0 "qtan_qsf2sdc_script.tcl version: #1" 0 0 "" 0 -1}
+{ "Info" "0" "" "Info: ----------------------------------------------------------" {  } {  } 0 0 "----------------------------------------------------------" 0 0 "" 0 -1}
+{ "Info" "0" "" "Info: ----------------------------------------------------------" {  } {  } 0 0 "----------------------------------------------------------" 0 0 "" 0 -1}
+{ "Info" "IMPP_MPP_AUTO_ASSIGNED_DEVICE" "CLOCK EP2C5T144C6 " "Info: Automatically selected device EP2C5T144C6 for design CLOCK" {  } {  } 0 0 "Automatically selected device %2!s! for design %1!s!" 0 0 "" 0 -1}
+{ "Warning" "0" "" "Warning: This translation should be used as a guide. Results should be checked carefully" {  } {  } 0 0 "This translation should be used as a guide. Results should be checked carefully" 0 0 "" 0 -1}
+{ "Info" "0" "" "Info: ** Translating Global Settings" {  } {  } 0 0 "** Translating Global Settings" 0 0 "" 0 -1}
+{ "Critical Warning" "0" "" "Critical Warning: QSF: Expected ENABLE_CLOCK_LATENCY to be set to 'ON', but it is set to 'OFF'" {  } {  } 1 0 "QSF: Expected ENABLE_CLOCK_LATENCY to be set to 'ON', but it is set to 'OFF'" 0 0 "" 0 -1}
+{ "Critical Warning" "0" "" "Critical Warning:      In SDC, create_generated_clock auto-generates clock latency" {  } {  } 1 0 "     In SDC, create_generated_clock auto-generates clock latency" 0 0 "" 0 -1}
+{ "Extra Info" "0" "" "Extra Info: derive_pll_clocks -use_tan_name" {  } {  } 1 0 "derive_pll_clocks -use_tan_name" 0 0 "" 0 -1}
+{ "Info" "0" "" "Info: ** Translating Clocks" {  } {  } 0 0 "** Translating Clocks" 0 0 "" 0 -1}
+{ "Info" "0" "" "Info: Found 1 clock(s) in Timing Netlist" {  } {  } 0 0 "Found 1 clock(s) in Timing Netlist" 0 0 "" 0 -1}
+{ "Info" "0" "" "Info: ** Translating Clock Latency assignments" {  } {  } 0 0 "** Translating Clock Latency assignments" 0 0 "" 0 -1}
+{ "Info" "0" "" "Info: ** Translating Clock Uncertainty assignments" {  } {  } 0 0 "** Translating Clock Uncertainty assignments" 0 0 "" 0 -1}
+{ "Info" "0" "" "Info: ** Translating MultiCycle assignments" {  } {  } 0 0 "** Translating MultiCycle assignments" 0 0 "" 0 -1}
+{ "Info" "0" "" "Info: ** Translating Cut assignments" {  } {  } 0 0 "** Translating Cut assignments" 0 0 "" 0 -1}
+{ "Info" "0" "" "Info: ** Translating Input/Output Delay assignments" {  } {  } 0 0 "** Translating Input/Output Delay assignments" 0 0 "" 0 -1}
+{ "Info" "0" "" "Info: ** Translating Tpd assignments" {  } {  } 0 0 "** Translating Tpd assignments" 0 0 "" 0 -1}
+{ "Info" "0" "" "Info: ** Translating Setup/Hold Relationship assignments" {  } {  } 0 0 "** Translating Setup/Hold Relationship assignments" 0 0 "" 0 -1}
+{ "Info" "0" "" "Info: ** Translating Tsu/Th/Tco/Min Tco assignments" {  } {  } 0 0 "** Translating Tsu/Th/Tco/Min Tco assignments" 0 0 "" 0 -1}
+{ "Info" "0" "" "Info: #** Translating HDL based assignments" {  } {  } 0 0 "#** Translating HDL based assignments" 0 0 "" 0 -1}
+{ "Info" "0" "" "Info: ** Generating set_clock_group to match TAN behavior" {  } {  } 0 0 "** Generating set_clock_group to match TAN behavior" 0 0 "" 0 -1}
+{ "Info" "0" "" "Info: Found 0 clock groups" {  } {  } 0 0 "Found 0 clock groups" 0 0 "" 0 -1}
+{ "Info" "0" "" "Info: #** Checking for unsupported assignments" {  } {  } 0 0 "#** Checking for unsupported assignments" 0 0 "" 0 -1}
+{ "Info" "0" "" "Info: --------------------------------------------------------" {  } {  } 0 0 "--------------------------------------------------------" 0 0 "" 0 -1}
+{ "Info" "0" "" "Info: Generated CLOCK.sdc" {  } {  } 0 0 "Generated CLOCK.sdc" 0 0 "" 0 -1}
+{ "Info" "0" "" "Info: --------------------------------------------------------" {  } {  } 0 0 "--------------------------------------------------------" 0 0 "" 0 -1}

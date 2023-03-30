@@ -1,0 +1,82 @@
+<kpt_db name="DECjishuqi.map_bb" kpt_version="1.1">
+  <key_points_set type="reference" hier_sep="/">
+    <key_point id="1" type="register">
+      <name>inst3</name>
+    </key_point>
+    <key_point id="2" type="register">
+      <name>inst1</name>
+    </key_point>
+    <key_point id="3" type="register">
+      <name>inst2</name>
+    </key_point>
+    <key_point id="4" type="register">
+      <name>inst23</name>
+    </key_point>
+  </key_points_set>
+  <key_points_set type="transition" hier_sep="|">
+  </key_points_set>
+  <key_points_set type="transformed" hier_sep="|">
+    <key_point id="5" type="register">
+      <name>inst3</name>
+    </key_point>
+    <key_point id="6" type="register">
+      <name>inst1</name>
+    </key_point>
+    <key_point id="7" type="register">
+      <name>inst2</name>
+    </key_point>
+    <key_point id="8" type="register">
+      <name>inst23</name>
+    </key_point>
+  </key_points_set>
+  <transformations_set hier_sep="|">
+    <transformation>
+      <kp_set type="reference">
+        <kp_state index="0">
+          <kp id="4" type="proxy"></kp>
+        </kp_state>
+      </kp_set>
+      <kp_set type="transformed">
+        <kp_state index="0">
+          <kp id="8" type="proxy"></kp>
+        </kp_state>
+      </kp_set>
+    </transformation>
+    <transformation>
+      <kp_set type="reference">
+        <kp_state index="0">
+          <kp id="1" type="proxy"></kp>
+        </kp_state>
+      </kp_set>
+      <kp_set type="transformed">
+        <kp_state index="0">
+          <kp id="5" type="proxy"></kp>
+        </kp_state>
+      </kp_set>
+    </transformation>
+    <transformation>
+      <kp_set type="reference">
+        <kp_state index="0">
+          <kp id="3" type="proxy"></kp>
+        </kp_state>
+      </kp_set>
+      <kp_set type="transformed">
+        <kp_state index="0">
+          <kp id="7" type="proxy"></kp>
+        </kp_state>
+      </kp_set>
+    </transformation>
+    <transformation>
+      <kp_set type="reference">
+        <kp_state index="0">
+          <kp id="2" type="proxy"></kp>
+        </kp_state>
+      </kp_set>
+      <kp_set type="transformed">
+        <kp_state index="0">
+          <kp id="6" type="proxy"></kp>
+        </kp_state>
+      </kp_set>
+    </transformation>
+  </transformations_set>
+</kpt_db>

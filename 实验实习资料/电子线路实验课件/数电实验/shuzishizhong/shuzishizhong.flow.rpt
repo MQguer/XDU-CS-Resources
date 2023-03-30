@@ -1,0 +1,123 @@
+Flow report for shuzishizhong
+Sat May 29 16:30:26 2021
+Quartus II Version 9.0 Build 132 02/25/2009 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Flow Summary
+  3. Flow Settings
+  4. Flow Non-Default Global Settings
+  5. Flow Elapsed Time
+  6. Flow OS Summary
+  7. Flow Log
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-------------------------------------------------------------------------------+
+; Flow Summary                                                                  ;
++------------------------------------+------------------------------------------+
+; Flow Status                        ; Successful - Sat May 29 16:30:26 2021    ;
+; Quartus II Version                 ; 9.0 Build 132 02/25/2009 SJ Full Version ;
+; Revision Name                      ; shuzishizhong                            ;
+; Top-level Entity Name              ; shuzishizhong                            ;
+; Family                             ; Cyclone II                               ;
+; Device                             ; EP2C5T144C8                              ;
+; Timing Models                      ; Final                                    ;
+; Met timing requirements            ; No                                       ;
+; Total logic elements               ; 82 / 4,608 ( 2 % )                       ;
+;     Total combinational functions  ; 82 / 4,608 ( 2 % )                       ;
+;     Dedicated logic registers      ; 33 / 4,608 ( < 1 % )                     ;
+; Total registers                    ; 33                                       ;
+; Total pins                         ; 18 / 89 ( 20 % )                         ;
+; Total virtual pins                 ; 0                                        ;
+; Total memory bits                  ; 0 / 119,808 ( 0 % )                      ;
+; Embedded Multiplier 9-bit elements ; 0 / 26 ( 0 % )                           ;
+; Total PLLs                         ; 0 / 2 ( 0 % )                            ;
++------------------------------------+------------------------------------------+
+
+
++-----------------------------------------+
+; Flow Settings                           ;
++-------------------+---------------------+
+; Option            ; Setting             ;
++-------------------+---------------------+
+; Start date & time ; 05/29/2021 16:30:13 ;
+; Main task         ; Compilation         ;
+; Revision Name     ; shuzishizhong       ;
++-------------------+---------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                ;
++------------------------------------+---------------------------------------------+---------------+-------------+----------------+
+; Assignment Name                    ; Value                                       ; Default Value ; Entity Name ; Section Id     ;
++------------------------------------+---------------------------------------------+---------------+-------------+----------------+
+; COMPILER_SIGNATURE_ID              ; 1097015350216.162227701205996               ; --            ; --          ; --             ;
+; MAX_CORE_JUNCTION_TEMP             ; 85                                          ; --            ; --          ; --             ;
+; MIN_CORE_JUNCTION_TEMP             ; 0                                           ; --            ; --          ; --             ;
+; MISC_FILE                          ; E:/lhr/shuzishizhong/shuzishizhong.dpf      ; --            ; --          ; --             ;
+; MISC_FILE                          ; D:/Desktop/shuzishizhong/shuzishizhong.dpf  ; --            ; --          ; --             ;
+; MISC_FILE                          ; F:/数电实验/shuzishizhong/shuzishizhong.dpf ; --            ; --          ; --             ;
+; PARTITION_COLOR                    ; 16764057                                    ; --            ; --          ; Top            ;
+; PARTITION_NETLIST_TYPE             ; SOURCE                                      ; --            ; --          ; Top            ;
+; USE_GENERATED_PHYSICAL_CONSTRAINTS ; Off                                         ; --            ; --          ; eda_blast_fpga ;
++------------------------------------+---------------------------------------------+---------------+-------------+----------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                           ;
++-------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name             ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++-------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Synthesis    ; 00:00:02     ; 1.0                     ; 238 MB              ; 00:00:01                           ;
+; Fitter                  ; 00:00:01     ; 1.0                     ; 286 MB              ; 00:00:01                           ;
+; Assembler               ; 00:00:01     ; 1.0                     ; 216 MB              ; 00:00:01                           ;
+; Classic Timing Analyzer ; 00:00:00     ; 1.0                     ; 181 MB              ; 00:00:00                           ;
+; Total                   ; 00:00:04     ; --                      ; --                  ; 00:00:03                           ;
++-------------------------+--------------+-------------------------+---------------------+------------------------------------+
+
+
++------------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                          ;
++-------------------------+------------------+---------------+------------+----------------+
+; Module Name             ; Machine Hostname ; OS Name       ; OS Version ; Processor type ;
++-------------------------+------------------+---------------+------------+----------------+
+; Analysis & Synthesis    ; DESKTOP-horiz0N  ; Windows Vista ; 6.2        ; x86_64         ;
+; Fitter                  ; DESKTOP-horiz0N  ; Windows Vista ; 6.2        ; x86_64         ;
+; Assembler               ; DESKTOP-horiz0N  ; Windows Vista ; 6.2        ; x86_64         ;
+; Classic Timing Analyzer ; DESKTOP-horiz0N  ; Windows Vista ; 6.2        ; x86_64         ;
++-------------------------+------------------+---------------+------------+----------------+
+
+
+------------
+; Flow Log ;
+------------
+quartus_map --read_settings_files=on --write_settings_files=off shuzishizhong -c shuzishizhong
+quartus_fit --read_settings_files=off --write_settings_files=off shuzishizhong -c shuzishizhong
+quartus_asm --read_settings_files=off --write_settings_files=off shuzishizhong -c shuzishizhong
+quartus_tan --read_settings_files=off --write_settings_files=off shuzishizhong -c shuzishizhong --timing_analysis_only
+
+
+

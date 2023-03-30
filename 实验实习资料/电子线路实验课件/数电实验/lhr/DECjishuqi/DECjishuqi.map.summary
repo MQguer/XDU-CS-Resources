@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Sun May 16 14:26:56 2021
+Quartus II Version : 9.0 Build 132 02/25/2009 SJ Full Version
+Revision Name : DECjishuqi
+Top-level Entity Name : DECjishuqi
+Family : Cyclone II
+Total logic elements : 13
+    Total combinational functions : 13
+    Dedicated logic registers : 4
+Total registers : 4
+Total pins : 9
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

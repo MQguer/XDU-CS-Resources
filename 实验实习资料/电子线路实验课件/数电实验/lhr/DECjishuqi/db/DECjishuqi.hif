@@ -1,0 +1,79 @@
+Version 9.0 Build 132 02/25/2009 SJ Full Version
+11
+910
+OFF
+OFF
+OFF
+ON
+ON
+ON
+FV_OFF
+Level2
+0
+0
+VRSM_ON
+VHSM_ON
+0
+-- Start Library Paths --
+-- End Library Paths --
+-- Start VHDL Libraries --
+-- End VHDL Libraries --
+# entity
+7447
+# storage
+db|DECjishuqi.(1).cnf
+db|DECjishuqi.(1).cnf
+# case_insensitive
+# source_file
+c:|altera|90|quartus|libraries|others|maxplus2|7447.bdf
+b866247e9e4e23608138281b57c7e83
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+7447:inst
+}
+# macro_sequence
+
+# end
+# entity
+74160
+# storage
+db|DECjishuqi.(2).cnf
+db|DECjishuqi.(2).cnf
+# case_insensitive
+# source_file
+c:|altera|90|quartus|libraries|others|maxplus2|74160.bdf
+1681ffda9592cd855e8df2e199631d
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# macro_sequence
+
+# end
+# entity
+DECjishuqi
+# storage
+db|DECjishuqi.(0).cnf
+db|DECjishuqi.(0).cnf
+# case_insensitive
+# source_file
+DECjishuqi.bdf
+49d137b31ab5afd4112304957f653f8
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+|
+}
+# macro_sequence
+
+# end
+# complete
+
