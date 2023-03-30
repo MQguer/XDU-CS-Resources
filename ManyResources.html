@@ -1,0 +1,1302 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+
+<style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; --title-bar-height:20px; }
+.mac-os-11 { --title-bar-height:28px; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body { margin: 0px; padding: 0px; height: auto; inset: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+  .CodeMirror-sizer { margin-left: 0px !important; }
+  .CodeMirror-gutters { display: none !important; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-fences-adv-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li blockquote { margin: 1rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  .typora-export #write { break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+  .typora-export-show-outline .typora-export-sidebar { display: none; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+.MathJax_ref { fill: currentcolor; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.6; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+.md-expand mark .md-meta { opacity: 0.3 !important; }
+mark .md-meta { color: rgb(0, 0, 0); }
+@media print {
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+}
+.md-diagram-panel .messageText { stroke: none !important; }
+.md-diagram-panel .start-state { fill: var(--node-fill); }
+.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
+.md-fences.md-fences-math { font-size: 1em; }
+.md-fences-advanced:not(.md-focus) { padding: 0px; white-space: nowrap; border: 0px; }
+.md-fences-advanced:not(.md-focus) { background: inherit; }
+.typora-export-show-outline .typora-export-content { max-width: 1440px; margin: auto; display: flex; flex-direction: row; }
+.typora-export-sidebar { width: 300px; font-size: 0.8rem; margin-top: 80px; margin-right: 18px; }
+.typora-export-show-outline #write { --webkit-flex:2; flex: 2 1 0%; }
+.typora-export-sidebar .outline-content { position: fixed; top: 0px; max-height: 100%; overflow: hidden auto; padding-bottom: 30px; padding-top: 60px; width: 300px; }
+@media screen and (max-width: 1024px) {
+  .typora-export-sidebar, .typora-export-sidebar .outline-content { width: 240px; }
+}
+@media screen and (max-width: 800px) {
+  .typora-export-sidebar { display: none; }
+}
+.outline-content li, .outline-content ul { margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px; list-style: none; }
+.outline-content ul { margin-top: 0px; margin-bottom: 0px; }
+.outline-content strong { font-weight: 400; }
+.outline-expander { width: 1rem; height: 1.42857rem; position: relative; display: table-cell; vertical-align: middle; cursor: pointer; padding-left: 4px; }
+.outline-expander::before { content: ""; position: relative; font-family: Ionicons; display: inline-block; font-size: 8px; vertical-align: middle; }
+.outline-item { padding-top: 3px; padding-bottom: 3px; cursor: pointer; }
+.outline-expander:hover::before { content: ""; }
+.outline-h1 > .outline-item { padding-left: 0px; }
+.outline-h2 > .outline-item { padding-left: 1em; }
+.outline-h3 > .outline-item { padding-left: 2em; }
+.outline-h4 > .outline-item { padding-left: 3em; }
+.outline-h5 > .outline-item { padding-left: 4em; }
+.outline-h6 > .outline-item { padding-left: 5em; }
+.outline-label { cursor: pointer; display: table-cell; vertical-align: middle; text-decoration: none; color: inherit; }
+.outline-label:hover { text-decoration: underline; }
+.outline-item:hover { border-color: rgb(245, 245, 245); background-color: var(--item-hover-bg-color); }
+.outline-item:hover { margin-left: -28px; margin-right: -28px; border-left: 28px solid transparent; border-right: 28px solid transparent; }
+.outline-item-single .outline-expander::before, .outline-item-single .outline-expander:hover::before { display: none; }
+.outline-item-open > .outline-item > .outline-expander::before { content: ""; }
+.outline-children { display: none; }
+.info-panel-tab-wrapper { display: none; }
+.outline-item-open > .outline-children { display: block; }
+.typora-export .outline-item { padding-top: 1px; padding-bottom: 1px; }
+.typora-export .outline-item:hover { margin-right: -8px; border-right: 8px solid transparent; }
+.typora-export .outline-expander::before { content: "+"; font-family: inherit; top: -1px; }
+.typora-export .outline-expander:hover::before, .typora-export .outline-item-open > .outline-item > .outline-expander::before { content: "−"; }
+.typora-export-collapse-outline .outline-children { display: none; }
+.typora-export-collapse-outline .outline-item-open > .outline-children, .typora-export-no-collapse-outline .outline-children { display: block; }
+.typora-export-no-collapse-outline .outline-expander::before { content: "" !important; }
+.typora-export-show-outline .outline-item-active > .outline-item .outline-label { font-weight: 700; }
+.md-inline-math-container mjx-container { zoom: 0.95; }
+
+
+:root {
+    --bg-color: #141d28;
+    --side-bar-bg-color: #090b10;
+    --control-text-color: #a9aaab;
+    --primary-color: #efb752;
+    --primary-btn-border-color: #f0b752;
+    --active-file-text-color: inherit;
+    --active-file-border-color: #f0b752;
+    --active-file-bg-color: #131c29;
+    --primary-btn-text-color: #f0b752;
+    --window-border: 1px solid #16161a;
+    --item-hover-bg-color: #1a283d;
+    --item-hover-text-color: #f0b752;
+    --meta-content-color: #f0b752;
+    --search-select-text-color: #f0b752;
+    /* --control-text-color: var(--text-color); */
+    --control-text-color: #6db7d1;
+    /* --control-text-hover-color: var(--text-color); */
+    --control-text-hover-color: #f0b752;
+    --heading-char-color: #f0b752;
+}
+
+.dropdown-menu {
+    background-color: #1a283d !important;
+    border-color: #313d50 !important;
+}
+
+html {
+    background: #141b28;
+    font-size: 0.925rem;
+}
+
+body {
+    background: #141b28;
+    color: #a9aaab;
+    font-family: "Nunito", "Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 1em;
+    height: 100%;
+    line-height: 1.6;
+}
+
+#write {
+    background: #131b29;
+    color: #a9aaab;
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 30px;
+    padding-bottom: 100px;
+    position: static;
+    width: 90%;
+}
+
+#write>ul:first-child,
+#write>ol:first-child {
+    margin-top: 30px;
+}
+
+a {
+    color: #71bfd9;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    cursor: text;
+    font-weight: bold;
+    line-height: 1.4;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    position: relative;
+}
+
+#write h1,
+#write h2,
+#write h3,
+#write h4,
+#write h5,
+#write h6,
+#write pre {
+    color: #efb752;
+    width: auto;
+}
+
+#write h1::before,
+#write h2::before,
+#write h3::before,
+#write h4::before,
+#write h5::before,
+#write h6::before {
+    border-radius: 0;
+    bottom: 0;
+    color: #517090;
+    float: none;
+    font-size: 1rem;
+    font-variant: 'small-caps';
+    font-weight: bold;
+    left: auto;
+    line-height: 20px;
+    padding: 0;
+    position: absolute;
+    right: calc(100% + 10px);
+    vertical-align: baseline;
+}
+
+#write h1 {
+    font-size: 3.2rem;
+    margin: 0.6rem 0;
+}
+
+#write h1::before {
+    bottom: 1.45rem;
+    content: 'H1';
+}
+
+#write h2 {
+    font-size: 1.8rem;
+    margin: 0.7rem 0;
+}
+
+#write h2::before {
+    bottom: 0.2rem;
+    content: 'H2';
+}
+
+#write h3 {
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+}
+
+#write h3::before {
+    bottom: 0.18rem;
+    content: 'H3';
+}
+
+#write h4 {
+    font-size: 1rem;
+    margin: 0.2rem 0;
+}
+
+#write h4::before {
+    content: 'H4';
+    bottom: 0.15rem;
+}
+
+#write h5,
+#write h6 {
+    font-size: 1rem;
+    margin: 0;
+}
+
+#write h5::before,
+#write h6::before {
+    bottom: 0.1rem;
+}
+
+#write h5::before {
+    content: 'H5';
+}
+
+#write h6::before {
+    content: 'H6';
+}
+
+h1:hover a.anchor,
+h2:hover a.anchor,
+h3:hover a.anchor,
+h4:hover a.anchor,
+h5:hover a.anchor,
+h6:hover a.anchor {
+    text-decoration: none;
+}
+
+h1 tt,
+h1 code {
+    font-size: inherit;
+}
+
+h2 tt,
+h2 code {
+    font-size: inherit;
+}
+
+h3 tt,
+h3 code {
+    font-size: inherit;
+}
+
+h4 tt,
+h4 code {
+    font-size: inherit;
+}
+
+h5 tt,
+h5 code {
+    font-size: inherit;
+}
+
+h6 tt,
+h6 code {
+    font-size: inherit;
+}
+
+h1 {
+    border-bottom: 1px solid #f79f2a;
+    font-size: 3.25em;
+    line-height: 1.2;
+    padding-bottom: 0.3em;
+}
+
+h2 {
+    border-bottom: 1px solid #f79f2a;
+    font-size: 2.75em;
+    line-height: 1.225;
+    padding-bottom: 0.3em;
+}
+
+h3 {
+    font-size: 1.8em;
+    line-height: 1.43;
+}
+
+h4 {
+    font-size: 1.45em;
+}
+
+h5 {
+    font-size: 1.2em;
+}
+
+h6 {
+    font-size: 1em;
+}
+
+p,
+blockquote,
+ul,
+ol,
+dl,
+table {
+    margin: 0.8em 0;
+}
+
+#write ol,
+#write ul {
+    padding-left: 2rem;
+    margin: .5rem 0;
+}
+
+#write ol>li,
+#write ul>li {
+    color: #f0b752;
+}
+
+#write ol>li>*,
+#write ul>li>* {
+    color: #b0b0b0;
+}
+
+#write ol>li>*:not(ol):not(ul),
+#write ul>li>*:not(ol):not(ul) {
+    padding-left: .25rem;
+}
+
+#write ul {
+    list-style-type: disc;
+}
+
+hr {
+    background-color: #f0b752;
+    border: 0 none;
+    box-sizing: content-box;
+    height: 2px;
+    margin: 16px 0;
+    overflow: hidden;
+    padding: 0;
+}
+
+li p.first {
+    display: inline-block;
+}
+
+ul,
+ol {
+    padding-left: 30px;
+}
+
+ul:first-child,
+ol:first-child {
+    margin-top: 0;
+}
+
+ul:last-child,
+ol:last-child {
+    margin-bottom: 0;
+}
+
+blockquote {
+    font-family: 'Nunito', 'Times New Roman', serif;
+    margin: 1rem 0 1rem 2rem;
+    position: relative;
+}
+
+blockquote::before {
+    background: #f0b752;
+    content: '';
+    height: 100%;
+    left: -2rem;
+    position: absolute;
+    width: 0.25rem;
+}
+
+table {
+    font-size: 0.875rem;
+    padding: 0;
+    word-break: initial;
+}
+
+table tr {
+    border-top: 1px solid #57708d;
+    margin: 0;
+    padding: 0;
+}
+
+thead {
+    background-color: #324963;
+    color: #9dbbdd;
+}
+
+table tr th {
+    border: 1px solid #57708d;
+    border-bottom: solid 2px #ccc;
+    border-bottom: 0;
+    font-weight: bold;
+    margin: 0;
+    padding: 10px 16px;
+}
+
+table tr td {
+    background: #192534;
+    border: 1px solid #57708d;
+    margin: 0;
+    padding: 10px 16px;
+}
+
+table tr th:first-child,
+table tr td:first-child {
+    margin-top: 0;
+}
+
+table tr th:last-child,
+table tr td:last-child {
+    margin-bottom: 0;
+}
+
+.CodeMirror-lines {
+    padding: 4px 0;
+}
+
+.code-tooltip {
+    background: #1a283d;
+    border-top: 1px solid #1a283d;
+    box-shadow: 0 1px 1px 0 rgba(0, 28, 36, 0.3);
+}
+
+.dropdown-menu {
+    color: #70c0d8;
+    margin-right: 5px;
+}
+
+.file-action-item.not-empty-menu-group.show {
+    background: #1a283d;
+    border-color: #1a283d;
+}
+
+.sidebar-footer-main-item #sidebar-files-menu {
+    background: #1a283d;
+    border-color: #303d50 !important;
+    color: #6db7d1;
+}
+
+.file-action-item.not-empty-menu-group.show a:hover,
+.dropdown-menu a:hover {
+    background-color: #1a283d !important;
+    color: #f4c25e !important;
+}
+
+.info-panel-tab.active,
+.info-panel-tab.active a {
+    background: #000 !important;
+}
+
+.info-panel-tab.active {
+    background: #000 !important;
+}
+
+.info-panel-tab-border {
+    background: #000 !important;
+    border-color: #000 !important;
+}
+
+.file-action-item a {
+    color: #70bed9 !important;
+}
+
+.md-fences,
+/* code, */
+
+tt {
+    border-radius: 3px;
+    color: #b9bcba;
+    font-size: 0.9em;
+    padding: 0;
+}
+
+code {
+    background-color: #6952b6;
+    border-radius: 4px;
+    color: #fff;
+    font-weight: bold;
+    line-height: 1;
+    padding: 5px 7px 2px 7px;
+}
+
+.md-fences {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding-bottom: 6px;
+    padding-top: 8px;
+}
+
+.md-task-list-item>input {
+    background: #1a283d;
+    margin-left: -1.3em;
+}
+
+@media print {
+    html {
+        font-size: 13px;
+    }
+
+    table,
+    pre {
+        page-break-inside: avoid;
+    }
+
+    pre {
+        word-wrap: break-word;
+    }
+}
+
+.md-fences {
+    /* background-color: #f8f8f8; */
+}
+
+#write pre.md-meta-block {
+    background-color: #1a283d;
+    border: 0;
+    border-radius: 3px;
+    color: #fff;
+    font-size: 85%;
+    line-height: 1.45;
+    margin-top: 0 !important;
+    padding: 1rem;
+}
+
+.mathjax-block>.code-tooltip {
+    bottom: 0.375rem;
+}
+
+.md-mathjax-midline {
+    background: #fafafa;
+}
+
+#write>h3.md-focus:before {
+    left: -1.5625rem;
+    top: 0.375rem;
+}
+
+#write>h4.md-focus:before {
+    left: -1.5625rem;
+    top: 0.285714286rem;
+}
+
+#write>h5.md-focus:before {
+    left: -1.5625rem;
+    top: 0.285714286rem;
+}
+
+#write>h6.md-focus:before {
+    left: -1.5625rem;
+    top: 0.285714286rem;
+}
+
+.md-image>.md-meta {
+    border-radius: 3px;
+    color: inherit;
+    font-size: 0.9em;
+    padding: 2px 0px 0px 4px;
+}
+
+.md-tag {
+    color: #70bfd9;
+    opacity: 1;
+}
+
+.md-toc {
+    margin-top: 20px;
+    padding-bottom: 20px;
+}
+
+.sidebar-tabs {
+    border-bottom: 1px solid #090b11;
+    font-weight: normal;
+}
+
+#typora-sidebar .sidebar-tabs {
+    border-bottom: 1px solid #090b11;
+    font-family: 'Nunito' !important;
+    font-weight: bold;
+}
+
+#typora-sidebar .file-list-item-file-name {
+    color: #71bfd9;
+    font-family: 'Nunito';
+    font-weight: bold;
+}
+
+#file-library-list-children {
+    background: #141d28;
+}
+
+#typora-sidebar .file-list-item-summary,
+#typora-sidebar .ty-search-item-line {
+    color: #c4d4ed;
+    font-family: 'Nunito';
+}
+
+.file-list-item-file-ext-part {
+    color: #57708d;
+    opacity: 1;
+}
+
+.active .file-list-item-file-ext-part {
+    color: #1b1531;
+    font-weight: bold;
+}
+
+.file-list-item.file-library-node.file-library-file-node {
+    background: #151b27;
+    border-color: #090c11;
+    opacity: 1;
+}
+
+.file-list-item.file-library-node.file-library-file-node:hover {
+    background: #090c11;
+    color: #fff;
+}
+
+#typora-sidebar #outline-content .outline-h1>.outline-item {
+    font-family: 'Nunito';
+}
+
+.info-panel-tab-wrapper {
+    background: #1a283d !important;
+    border-color: #1a283d !important;
+}
+
+#typora-sidebar .file-tree-node.file-library-file-node.active .file-node-background,
+#typora-sidebar .file-list-item.file-library-file-node.active {
+    background: #493a7e;
+    border-left: 4px solid #f0b752;
+    color: #fff;
+}
+
+.file-library-node:not(.file-node-root):focus>.file-node-content {
+    outline: none;
+    border-color: #151d2b;
+}
+
+#typora-sidebar .file-list-item.file-library-file-node:hover {
+    background: #18202d;
+}
+
+#typora-sidebar .file-list-item.file-library-file-node.active .file-list-item-file-name-part {
+    color: #f0b752;
+}
+
+#typora-sidebar .file-list-item.file-library-file-node.active:hover {
+    background: #403173;
+}
+
+#typora-sidebar {
+    color: #83bed6;
+}
+
+.file-node-title {
+    color: #83bed6;
+}
+
+
+/* menu button hover */
+
+.sidebar-footer-item:hover {
+    background: none !important;
+}
+
+#typora-sidebar .file-tree-node.file-library-file-node {
+    /* padding: 0; */
+}
+
+#typora-sidebar .file-tree-node.file-library-file-node.active .file-node-title {
+    color: #efb752;
+    color: #fff;
+}
+
+#typora-sidebar .file-tree-node.file-library-node.file-node-root .file-node-content:hover .file-node-title {
+    color: #efb752;
+}
+
+#typora-sidebar .file-tree-node.file-library-file-node.active:hover .file-node-title {
+    color: #fff;
+}
+
+/* this is the sidebar file tree padding */
+#typora-sidebar .file-tree-node {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    padding-left: 15px;
+}
+
+
+
+#typora-sidebar .file-library-node.file-node-root .file-tree-node.file-library-file-node .file-node-icon::before {
+    background-image: url("data:image/svg+xml,%3Csvg version='1.1' fill='#70bfd9' id='Capa_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 512 512' style='enable-background:new 0 0 512 512;' xml:space='preserve'%3E%3Cg%3E%3Cg%3E%3Cpath d='M438.944,352c11.046,0,20-8.954,20-20V80c0-44.112-35.888-80-80-80H133.056c-44.112,0-80,35.888-80,80v352 c0,44.112,35.888,80,80,80h245.888c44.113,0,80-35.888,80.001-80c0-11.046-8.954-20-20-20c-11.046,0-20,8.954-20,20 c0,22.056-17.944,40-40,40H133.056c-22.056,0-40-17.944-40-40V80c0-22.056,17.944-40,40-40h245.889c22.056,0,40,17.944,40,40v252 C418.944,343.046,427.899,352,438.944,352z'/%3E%3C/g%3E%3C/g%3E%3Cg%3E%3Cg%3E%3Cpath d='M358.944,120h-206c-11.046,0-20,8.954-20,20s8.954,20,20,20h206c11.046,0,20-8.954,20-20S369.989,120,358.944,120z'/%3E%3C/g%3E%3C/g%3E%3Cg%3E%3Cg%3E%3Cpath d='M358.944,200h-206c-11.046,0-20,8.954-20,20s8.954,20,20,20h206c11.046,0,20-8.954,20-20S369.989,200,358.944,200z'/%3E%3C/g%3E%3C/g%3E%3Cg%3E%3Cg%3E%3Cpath d='M278.054,280H152.944c-11.046,0-20,8.954-20,20c0,11.046,8.954,20,20,20h125.112c11.046,0,19.999-8.954,19.999-20 C298.054,288.954,289.1,280,278.054,280z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    content: '';
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+}
+
+#typora-sidebar .file-library-node.file-node-root .file-tree-node.file-library-file-node:hover .file-node-icon::before {
+    background-image: url("data:image/svg+xml,%3Csvg version='1.1' fill='#f4c25d' id='Capa_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 512 512' style='enable-background:new 0 0 512 512;' xml:space='preserve'%3E%3Cg%3E%3Cg%3E%3Cpath d='M438.944,352c11.046,0,20-8.954,20-20V80c0-44.112-35.888-80-80-80H133.056c-44.112,0-80,35.888-80,80v352 c0,44.112,35.888,80,80,80h245.888c44.113,0,80-35.888,80.001-80c0-11.046-8.954-20-20-20c-11.046,0-20,8.954-20,20 c0,22.056-17.944,40-40,40H133.056c-22.056,0-40-17.944-40-40V80c0-22.056,17.944-40,40-40h245.889c22.056,0,40,17.944,40,40v252 C418.944,343.046,427.899,352,438.944,352z'/%3E%3C/g%3E%3C/g%3E%3Cg%3E%3Cg%3E%3Cpath d='M358.944,120h-206c-11.046,0-20,8.954-20,20s8.954,20,20,20h206c11.046,0,20-8.954,20-20S369.989,120,358.944,120z'/%3E%3C/g%3E%3C/g%3E%3Cg%3E%3Cg%3E%3Cpath d='M358.944,200h-206c-11.046,0-20,8.954-20,20s8.954,20,20,20h206c11.046,0,20-8.954,20-20S369.989,200,358.944,200z'/%3E%3C/g%3E%3C/g%3E%3Cg%3E%3Cg%3E%3Cpath d='M278.054,280H152.944c-11.046,0-20,8.954-20,20c0,11.046,8.954,20,20,20h125.112c11.046,0,19.999-8.954,19.999-20 C298.054,288.954,289.1,280,278.054,280z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    content: '';
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+}
+
+.file-library-node.file-node-root .file-node-content {
+    color: #6db7d1 !important;
+}
+
+.file-library-node.file-node-root .file-node-content:hover {
+    color: #efb752 !important;
+}
+
+.file-library-node.file-node-root {
+    color: yellow !important;
+}
+
+.file-node-icon {
+    color: #70bfd9;
+    margin-right: 8px;
+}
+
+/* .file-node-icon::before { */
+.file-library-node.file-node-root .file-node-content .file-node-icon::before {
+    background-image: url("data:image/svg+xml,%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 512 512' fill='%236db7d1' style='enable-background:new 0 0 512 512;' xml:space='preserve'%3E%3Cpath d='M448,106.7H264.8l-58.5-57.8c-4-3.9-9.4-6.2-15-6.2H61.8C27.7,42.7,0,71,0,105.7v300.5c0,34.8,27.7,63.1,61.8,63.1h388.4 c34.1,0,61.8-28.3,61.8-63.1V172.5C512,137.4,482.1,106.7,448,106.7z'/%3E%3C/svg%3E%0A");
+    content: '';
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+}
+
+.file-library-node.file-node-root .file-node-content:hover .file-node-icon::before {
+    background-image: url("data:image/svg+xml,%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 512 512' fill='%23efb752' style='enable-background:new 0 0 512 512;' xml:space='preserve'%3E%3Cpath d='M448,106.7H264.8l-58.5-57.8c-4-3.9-9.4-6.2-15-6.2H61.8C27.7,42.7,0,71,0,105.7v300.5c0,34.8,27.7,63.1,61.8,63.1h388.4 c34.1,0,61.8-28.3,61.8-63.1V172.5C512,137.4,482.1,106.7,448,106.7z'/%3E%3C/svg%3E%0A");
+    content: '';
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+}
+
+#typora-sidebar .file-tree-node.file-library-file-node:hover .file-node-icon::before {
+    background-image: url("data:image/svg+xml,%3Csvg version='1.1' fill='#f4c25d' id='Capa_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 512 512' style='enable-background:new 0 0 512 512;' xml:space='preserve'%3E%3Cg%3E%3Cg%3E%3Cpath d='M438.944,352c11.046,0,20-8.954,20-20V80c0-44.112-35.888-80-80-80H133.056c-44.112,0-80,35.888-80,80v352 c0,44.112,35.888,80,80,80h245.888c44.113,0,80-35.888,80.001-80c0-11.046-8.954-20-20-20c-11.046,0-20,8.954-20,20 c0,22.056-17.944,40-40,40H133.056c-22.056,0-40-17.944-40-40V80c0-22.056,17.944-40,40-40h245.889c22.056,0,40,17.944,40,40v252 C418.944,343.046,427.899,352,438.944,352z'/%3E%3C/g%3E%3C/g%3E%3Cg%3E%3Cg%3E%3Cpath d='M358.944,120h-206c-11.046,0-20,8.954-20,20s8.954,20,20,20h206c11.046,0,20-8.954,20-20S369.989,120,358.944,120z'/%3E%3C/g%3E%3C/g%3E%3Cg%3E%3Cg%3E%3Cpath d='M358.944,200h-206c-11.046,0-20,8.954-20,20s8.954,20,20,20h206c11.046,0,20-8.954,20-20S369.989,200,358.944,200z'/%3E%3C/g%3E%3C/g%3E%3Cg%3E%3Cg%3E%3Cpath d='M278.054,280H152.944c-11.046,0-20,8.954-20,20c0,11.046,8.954,20,20,20h125.112c11.046,0,19.999-8.954,19.999-20 C298.054,288.954,289.1,280,278.054,280z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    content: '';
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+}
+
+#typora-sidebar .file-tree-node.file-library-file-node.active:hover .file-node-icon::before {
+    background-image: url("data:image/svg+xml,%3Csvg version='1.1' fill='#ffffff' id='Capa_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 512 512' style='enable-background:new 0 0 512 512;' xml:space='preserve'%3E%3Cg%3E%3Cg%3E%3Cg%3E%3Cpath d='M352.459,220c0-11.046-8.954-20-20-20h-206c-11.046,0-20,8.954-20,20s8.954,20,20,20h206 C343.505,240,352.459,231.046,352.459,220z'/%3E%3Cpath d='M126.459,280c-11.046,0-20,8.954-20,20c0,11.046,8.954,20,20,20H251.57c11.046,0,20-8.954,20-20c0-11.046-8.954-20-20-20 H126.459z'/%3E%3Cpath d='M173.459,472H106.57c-22.056,0-40-17.944-40-40V80c0-22.056,17.944-40,40-40h245.889c22.056,0,40,17.944,40,40v123 c0,11.046,8.954,20,20,20c11.046,0,20-8.954,20-20V80c0-44.112-35.888-80-80-80H106.57c-44.112,0-80,35.888-80,80v352 c0,44.112,35.888,80,80,80h66.889c11.046,0,20-8.954,20-20C193.459,480.954,184.505,472,173.459,472z'/%3E%3Cpath d='M467.884,289.572c-23.394-23.394-61.458-23.395-84.837-0.016l-109.803,109.56c-2.332,2.327-4.052,5.193-5.01,8.345 l-23.913,78.725c-2.12,6.98-0.273,14.559,4.821,19.78c3.816,3.911,9,6.034,14.317,6.034c1.779,0,3.575-0.238,5.338-0.727 l80.725-22.361c3.322-0.92,6.35-2.683,8.79-5.119l109.573-109.367C491.279,351.032,491.279,312.968,467.884,289.572z M333.776,451.768l-40.612,11.25l11.885-39.129l74.089-73.925l28.29,28.29L333.776,451.768z M439.615,346.13l-3.875,3.867 l-28.285-28.285l3.862-3.854c7.798-7.798,20.486-7.798,28.284,0C447.399,325.656,447.399,338.344,439.615,346.13z'/%3E%3Cpath d='M332.459,120h-206c-11.046,0-20,8.954-20,20s8.954,20,20,20h206c11.046,0,20-8.954,20-20S343.505,120,332.459,120z'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A");
+    content: '';
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+}
+
+#typora-sidebar .file-library-node.file-node-root .file-tree-node.file-library-file-node .active .file-node-icon::before,
+.active .file-node-icon::before {
+    background-image: url("data:image/svg+xml,%3Csvg version='1.1' fill='#ffffff' id='Capa_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 512 512' style='enable-background:new 0 0 512 512;' xml:space='preserve'%3E%3Cg%3E%3Cg%3E%3Cg%3E%3Cpath d='M352.459,220c0-11.046-8.954-20-20-20h-206c-11.046,0-20,8.954-20,20s8.954,20,20,20h206 C343.505,240,352.459,231.046,352.459,220z'/%3E%3Cpath d='M126.459,280c-11.046,0-20,8.954-20,20c0,11.046,8.954,20,20,20H251.57c11.046,0,20-8.954,20-20c0-11.046-8.954-20-20-20 H126.459z'/%3E%3Cpath d='M173.459,472H106.57c-22.056,0-40-17.944-40-40V80c0-22.056,17.944-40,40-40h245.889c22.056,0,40,17.944,40,40v123 c0,11.046,8.954,20,20,20c11.046,0,20-8.954,20-20V80c0-44.112-35.888-80-80-80H106.57c-44.112,0-80,35.888-80,80v352 c0,44.112,35.888,80,80,80h66.889c11.046,0,20-8.954,20-20C193.459,480.954,184.505,472,173.459,472z'/%3E%3Cpath d='M467.884,289.572c-23.394-23.394-61.458-23.395-84.837-0.016l-109.803,109.56c-2.332,2.327-4.052,5.193-5.01,8.345 l-23.913,78.725c-2.12,6.98-0.273,14.559,4.821,19.78c3.816,3.911,9,6.034,14.317,6.034c1.779,0,3.575-0.238,5.338-0.727 l80.725-22.361c3.322-0.92,6.35-2.683,8.79-5.119l109.573-109.367C491.279,351.032,491.279,312.968,467.884,289.572z M333.776,451.768l-40.612,11.25l11.885-39.129l74.089-73.925l28.29,28.29L333.776,451.768z M439.615,346.13l-3.875,3.867 l-28.285-28.285l3.862-3.854c7.798-7.798,20.486-7.798,28.284,0C447.399,325.656,447.399,338.344,439.615,346.13z'/%3E%3Cpath d='M332.459,120h-206c-11.046,0-20,8.954-20,20s8.954,20,20,20h206c11.046,0,20-8.954,20-20S343.505,120,332.459,120z'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A") !important;
+    content: '';
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+}
+
+
+
+.active .file-node-icon {
+    color: #fff;
+}
+
+.file-library-node.file-tree-node {
+    margin: 0;
+    padding: 0;
+}
+
+.file-library-node.file-tree-node.file-library-file-node .file-node-title {
+    color: #e7f3fd;
+}
+
+.file-library-node.file-tree-node.file-library-file-node:hover {
+    color: #fff;
+}
+
+.file-node-background {
+    padding: 18px 10px 18px 0;
+}
+
+.file-node-content {
+    padding: 8px 8px 8px 0;
+}
+
+.file-node-content:hover {
+    cursor: pointer;
+}
+
+.active .file-node-content {
+    font-weight: bold;
+}
+
+#typora-quick-open {
+    background-color: #141d28;
+    color: #fff !important;
+}
+
+#typora-quick-open-item {
+    background-color: #131c29;
+    border-color: #090c11;
+    border-color: #efb752 !important;
+    border-style: solid;
+    border-width: 1px;
+    color: #fff;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+/* focus mode */
+.on-focus-mode blockquote {
+    border-left-color: rgba(85, 85, 85, 0.12);
+}
+
+header,
+.context-menu,
+.megamenu-content,
+footer {
+    font-family: "Nunito", "Arial", sans-serif;
+}
+
+.megamenu-opened header {
+    background-image: none;
+}
+
+#typora-sidebar #ty-sidebar-footer {
+    background-color: #131b29 !important;
+    border-top: 1px solid #090b10;
+}
+
+.megamenu-menu-header {
+    border-bottom: 1px solid #090b10;
+}
+
+.megamenu-menu-list li:not(.saved) a:not(.active):hover,
+.megamenu-menu-list li a.active {
+    background: #101010 !important;
+}
+
+.file-node-content:hover .file-node-icon,
+.file-node-content:hover .file-node-open-state {
+    visibility: visible;
+}
+
+.mac-seamless-mode #typora-sidebar {
+    /* background-color: #f79f2a; */
+    background-color: #090c12;
+    border-right: 1px solid #090c12;
+    font-weight: 100;
+}
+
+.md-lang {
+    color: #b4654d;
+}
+
+.html-for-mac .context-menu {
+    --item-hover-bg-color: #090c12;
+}
+
+input {
+    color: #82bed6;
+}
+
+#searchpanel-word-option-btn,
+#find-and-replace-icon-word,
+#find-and-replace-icon-case,
+.searchpanel-search-option-btn,
+.icon,
+.glyphicon .popover,
+.popover-title {
+    color: #82bed6 !important;
+    fill: #82bed6 !important;
+}
+
+#md-notification .btn {
+    border: 0;
+}
+
+.long-btn:hover {
+    background-color: #82bed6;
+}
+
+.show-word-count #footer-word-count {
+    background: #000;
+}
+
+#recent-file-panel-action-btn {
+    background-color: #82bed6;
+}
+
+.dropdown-menu .divider {
+    border-color: #303d50;
+}
+
+.ty-preferences .window-content {
+    background-color: #fafafa;
+}
+
+.ty-preferences .nav-group-item.active {
+    background: #999;
+    color: white;
+}
+
+.cm-s-inner {
+    border: 1px solid #324560;
+    border-radius: 0.25rem;
+    padding: 0.5rem 0.2rem;
+}
+
+.cm-s-inner.CodeMirror,
+.cm-s-inner .CodeMirror-gutters {
+    background-color: #192133 !important;
+    border: 1px solid #324560;
+    /* padding: 10px 20px; */
+}
+
+.cm-s-inner .CodeMirror-gutters {
+    border: 0;
+    color: #6d8a88;
+    width: 5ch;
+}
+
+.cm-s-inner .CodeMirror-cursor {
+    border-left: solid thin #f8f8f2 !important;
+}
+
+.cm-s-inner .CodeMirror-linenumber {
+    color: #6D8A88;
+}
+
+.cm-s-inner .CodeMirror-line::selection,
+.cm-s-inner .CodeMirror-line::-moz-selection,
+.cm-s-inner .CodeMirror-line>span::selection,
+.cm-s-inner .CodeMirror-line>span::-moz-selection,
+.cm-s-inner .CodeMirror-line>span>span::selection,
+.cm-s-inner .CodeMirror-line>span>span::-moz-selection {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.cm-s-inner span.cm-comment {
+    color: #6272a4;
+}
+
+.cm-s-inner span.cm-string,
+.cm-s-inner span.cm-string-2 {
+    color: #f1fa8c;
+}
+
+.cm-s-inner span.cm-number {
+    color: #bd93f9;
+}
+
+.cm-s-inner span.cm-variable,
+.cm-s-inner span.cm-variable-2 {
+    color: #50fa7b;
+}
+
+.cm-s-inner span.cm-def {
+    color: white;
+}
+
+.cm-s-inner span.cm-operator {
+    color: #ff79c6;
+}
+
+.cm-s-inner span.cm-keyword {
+    color: #ff79c6;
+}
+
+.cm-s-inner span.cm-atom {
+    color: #bd93f9;
+}
+
+.cm-s-inner span.cm-meta {
+    color: #f8f8f2;
+}
+
+.cm-s-inner span.cm-tag {
+    color: #ff79c6;
+}
+
+.cm-s-inner span.cm-attribute {
+    color: #50fa7b;
+}
+
+.cm-s-inner span.cm-qualifier {
+    color: #50fa7b;
+}
+
+.cm-s-inner span.cm-property {
+    color: #66d9ef;
+}
+
+.cm-s-inner span.cm-builtin {
+    color: #50fa7b;
+}
+
+.cm-s-inner span.cm-variable-3,
+.cm-s-inner span.cm-type {
+    color: #ffb86c;
+}
+
+.md-fences.md-focus .cm-s-inner .CodeMirror-activeline-background {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.cm-s-inner .CodeMirror-matchingbracket {
+    color: white !important;
+    text-decoration: underline;
+}
+
+.cm-s-inner .CodeMirror-selected,
+.cm-s-inner .CodeMirror-selectedtext {
+    background: #3b4254 !important;
+    color: inherit;
+    text-shadow: none;
+}
+
+#write>p:first-child:empty {
+    position: static;
+}
+
+#write>p:first-child:not(:only-child)::before,
+#write>p:only-child::before {
+    background: url("file:///C://Users//HUAWEI//AppData//Roaming//Typora/themes/cobalt/splash.png") no-repeat 45% 90% transparent;
+    background-size: cover;
+    bottom: 0;
+    content: '';
+    display: block;
+    height: 100%;
+    left: 0;
+    max-width: 100%;
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+}
+
+#write>p:only-child:empty::before {
+    opacity: 1;
+}
+
+
+</style><title>各类资料整理</title>
+</head>
+<body class='typora-export os-windows typora-export-show-outline typora-export-collapse-outline'><div class='typora-export-content'>
+<div class="typora-export-sidebar"><div class="outline-content"><li class="outline-item-wrapper outline-h2 outline-item-open"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#各类资料整理">各类资料整理</a></div><ul class="outline-children"><li class="outline-item-wrapper outline-h3 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#幼儿到大学全套教程">幼儿到大学全套教程</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#软件教程">软件教程</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#职场竞争力">职场竞争力</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#自我提升">自我提升</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#考证">考证</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#计算机编程">计算机编程</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#计算机编程-补充">计算机编程 补充</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#文艺">文艺</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#游戏">游戏</a></div><ul class="outline-children"></ul></li></ul></li></div></div><div id='write'  class=''><h2 id='各类资料整理'><span>各类资料整理</span></h2><h3 id='幼儿到大学全套教程'><span>幼儿到大学全套教程</span></h3><p><span>学而思全套教程 </span><a href='https://www.aliyundrive.com/s/dsW6E3NXLnp' target='_blank' class='url'>https://www.aliyundrive.com/s/dsW6E3NXLnp</a>
+<span>日语教程 </span><a href='https://alywp.net/3GlErM' target='_blank' class='url'>https://alywp.net/3GlErM</a>
+<span>英语教程 </span><a href='https://alywp.net/3GlErM' target='_blank' class='url'>https://alywp.net/3GlErM</a>
+<span>医学教程 </span><a href='https://www.aliyundrive.com/s/kCpFwvRz265' target='_blank' class='url'>https://www.aliyundrive.com/s/kCpFwvRz265</a>
+<span>幼儿到大学全套教程 </span><a href='https://www.aliyundrive.com/s/pYkq1VM2z1K' target='_blank' class='url'>https://www.aliyundrive.com/s/pYkq1VM2z1K</a>
+<span>各类考证 </span><a href='https://alywp.net/7ljWH9' target='_blank' class='url'>https://alywp.net/7ljWH9</a>
+<span>计算机编程 </span><a href='https://alywp.net/6jeOzxbz' target='_blank' class='url'>https://alywp.net/6jeOzxbz</a>
+<span>幼儿教育 </span><a href='https://www.aliyundrive.com/s/iEejdcsZBzJ' target='_blank' class='url'>https://www.aliyundrive.com/s/iEejdcsZBzJ</a>
+<span>中小学教育 </span><a href='https://www.aliyundrive.com/s/Q2QwjjXPkEc' target='_blank' class='url'>https://www.aliyundrive.com/s/Q2QwjjXPkEc</a>
+<span>高中教育 </span><a href='https://www.aliyundrive.com/s/1uMCV9bjuS5' target='_blank' class='url'>https://www.aliyundrive.com/s/1uMCV9bjuS5</a>
+<span>大学教育 </span><a href='https://www.aliyundrive.com/s/BRjxicoMBo1' target='_blank' class='url'>https://www.aliyundrive.com/s/BRjxicoMBo1</a>
+<span>教材资料 </span><a href='https://www.aliyundrive.com/s/PPDELQNBLEQ' target='_blank' class='url'>https://www.aliyundrive.com/s/PPDELQNBLEQ</a></p><h3 id='软件教程'><span>软件教程</span></h3><p><span>PPT教程 </span><a href='https://www.aliyundrive.com/s/T7EzQkiMvh4' target='_blank' class='url'>https://www.aliyundrive.com/s/T7EzQkiMvh4</a>
+<span>Excel教程 </span><a href='https://www.aliyundrive.com/s/Z2DF2Rg8vo6' target='_blank' class='url'>https://www.aliyundrive.com/s/Z2DF2Rg8vo6</a>
+<span>Word教程 </span><a href='https://www.aliyundrive.com/s/qDEFAVrtZP9' target='_blank' class='url'>https://www.aliyundrive.com/s/qDEFAVrtZP9</a>
+<span>C4D教程 </span><a href='https://www.aliyundrive.com/s/5SRZNmMJ1jF' target='_blank' class='url'>https://www.aliyundrive.com/s/5SRZNmMJ1jF</a>
+<span>PS教程 </span><a href='https://www.aliyundrive.com/s/UPu7CpSsT1b' target='_blank' class='url'>https://www.aliyundrive.com/s/UPu7CpSsT1b</a>
+<span>PR教程 </span><a href='https://www.aliyundrive.com/s/byRGaNDGUK5' target='_blank' class='url'>https://www.aliyundrive.com/s/byRGaNDGUK5</a>
+<span>AI教程 </span><a href='https://www.aliyundrive.com/s/kpoALfSLjUz' target='_blank' class='url'>https://www.aliyundrive.com/s/kpoALfSLjUz</a>
+<span>AE教程 </span><a href='https://www.aliyundrive.com/s/sXA3y2VybnX' target='_blank' class='url'>https://www.aliyundrive.com/s/sXA3y2VybnX</a>
+<span>LR教程 </span><a href='https://www.aliyundrive.com/s/UeAELhDxiks' target='_blank' class='url'>https://www.aliyundrive.com/s/UeAELhDxiks</a>
+<span>视频剪辑 </span><a href='https://www.aliyundrive.com/s/1GwUgnZK7AW' target='_blank' class='url'>https://www.aliyundrive.com/s/1GwUgnZK7AW</a>
+<span>摄影教程 </span><a href='https://www.aliyundrive.com/s/BRq96dKzSSz' target='_blank' class='url'>https://www.aliyundrive.com/s/BRq96dKzSSz</a>
+<span>Xmind8教程 </span><a href='https://www.aliyundrive.com/s/6LsLpWpBBQ4' target='_blank' class='url'>https://www.aliyundrive.com/s/6LsLpWpBBQ4</a>
+<span>Anki教程 </span><a href='https://www.aliyundrive.com/s/Si8FF9RexBx' target='_blank' class='url'>https://www.aliyundrive.com/s/Si8FF9RexBx</a></p><h3 id='职场竞争力'><span>职场竞争力</span></h3><p><span>职场竞争力 </span><a href='https://www.aliyundrive.com/s/gGWkrK5u3dW' target='_blank' class='url'>https://www.aliyundrive.com/s/gGWkrK5u3dW</a>
+<span>领导能力 </span><a href='https://www.aliyundrive.com/s/KiqTMDKeAw5' target='_blank' class='url'>https://www.aliyundrive.com/s/KiqTMDKeAw5</a>
+<span>项目管理 </span><a href='https://www.aliyundrive.com/s/vUVDwP7qzVx' target='_blank' class='url'>https://www.aliyundrive.com/s/vUVDwP7qzVx</a>
+<span>面试技巧 </span><a href='https://www.aliyundrive.com/s/e352McWK2Cn' target='_blank' class='url'>https://www.aliyundrive.com/s/e352McWK2Cn</a>
+<span>报告总结 </span><a href='https://www.aliyundrive.com/s/UAxFpJBfNyT' target='_blank' class='url'>https://www.aliyundrive.com/s/UAxFpJBfNyT</a>
+<span>营销销售 </span><a href='https://www.aliyundrive.com/s/Q2KLhRZNGej' target='_blank' class='url'>https://www.aliyundrive.com/s/Q2KLhRZNGej</a>
+<span>平面设计 </span><a href='https://www.aliyundrive.com/s/9JomKxm2aB7' target='_blank' class='url'>https://www.aliyundrive.com/s/9JomKxm2aB7</a>
+<span>财.务.会.计 </span><a href='https://www.aliyundrive.com/s/UtAcd8uVNj5' target='_blank' class='url'>https://www.aliyundrive.com/s/UtAcd8uVNj5</a>
+<span>人.力.资.源 </span><a href='https://www.aliyundrive.com/s/1WZJ7msFvmL' target='_blank' class='url'>https://www.aliyundrive.com/s/1WZJ7msFvmL</a>
+<span>工程施工 </span><a href='https://www.aliyundrive.com/s/hXSBBTJ43Co' target='_blank' class='url'>https://www.aliyundrive.com/s/hXSBBTJ43Co</a>
+<span>自媒体营销 </span><a href='https://www.aliyundrive.com/s/RHfcg46X1Sq' target='_blank' class='url'>https://www.aliyundrive.com/s/RHfcg46X1Sq</a>
+<span>文案写作 </span><a href='https://www.aliyundrive.com/s/bnmu3b6DKxP' target='_blank' class='url'>https://www.aliyundrive.com/s/bnmu3b6DKxP</a>
+<span>各种模板：</span><a href='https://www.aliyundrive.com/s/6T42PWb4WfL' target='_blank' class='url'>https://www.aliyundrive.com/s/6T42PWb4WfL</a></p><h3 id='自我提升'><span>自我提升</span></h3><p><span>曾仕强易经全套：</span><a href='https://www.aliyundrive.com/s/5W1deE9iUbP' target='_blank' class='url'>https://www.aliyundrive.com/s/5W1deE9iUbP</a>
+<span>文笔口才 </span><a href='https://alywp.net/3r8Rfx' target='_blank' class='url'>https://alywp.net/3r8Rfx</a>
+<span>思维认知 </span><a href='https://alywp.net/33f7Gv' target='_blank' class='url'>https://alywp.net/33f7Gv</a>
+<span>为人处世 </span><a href='https://alywp.net/1cmKM2' target='_blank' class='url'>https://alywp.net/1cmKM2</a>
+<span>学习效率 </span><a href='https://alywp.net/578a5r' target='_blank' class='url'>https://alywp.net/578a5r</a></p><h3 id='考证'><span>考证</span></h3><p><span>会.计/税.务 </span><a href='https://www.aliyundrive.com/s/3FbQdXPAVBq' target='_blank' class='url'>https://www.aliyundrive.com/s/3FbQdXPAVBq</a>
+<span>证.书 </span><a href='https://www.aliyundrive.com/s/jgKatDLjMSe' target='_blank' class='url'>https://www.aliyundrive.com/s/jgKatDLjMSe</a>
+<span>公.务.员考试 </span><a href='https://www.aliyundrive.com/s/hnEGHAjUNuU' target='_blank' class='url'>https://www.aliyundrive.com/s/hnEGHAjUNuU</a>
+<span>造.价/建.筑.师 </span><a href='https://www.aliyundrive.com/s/CCceEBzQweB' target='_blank' class='url'>https://www.aliyundrive.com/s/CCceEBzQweB</a>
+<span>驾.考.资料 </span><a href='https://www.aliyundrive.com/s/XW2jSytoYvC' target='_blank' class='url'>https://www.aliyundrive.com/s/XW2jSytoYvC</a>
+<span>计算机考试 </span><a href='https://www.aliyundrive.com/s/T7FcGoxDfxV' target='_blank' class='url'>https://www.aliyundrive.com/s/T7FcGoxDfxV</a>
+<span>英语考试 </span><a href='https://www.aliyundrive.com/s/vV3hX4Fty8t' target='_blank' class='url'>https://www.aliyundrive.com/s/vV3hX4Fty8t</a>
+<span>专.升.本 </span><a href='https://www.aliyundrive.com/s/4QpJMhh8Rgg' target='_blank' class='url'>https://www.aliyundrive.com/s/4QpJMhh8Rgg</a>
+<span>考研 </span><a href='https://www.aliyundrive.com/s/iqpvFsu7zTC' target='_blank' class='url'>https://www.aliyundrive.com/s/iqpvFsu7zTC</a>
+<span>教.招/教.资 </span><a href='https://www.aliyundrive.com/s/hRPLEvaWRRX' target='_blank' class='url'>https://www.aliyundrive.com/s/hRPLEvaWRRX</a></p><h3 id='计算机编程'><span>计算机编程</span></h3><p><span>计算机基础 </span><a href='https://www.aliyundrive.com/s/xXXzybLZW9B' target='_blank' class='url'>https://www.aliyundrive.com/s/xXXzybLZW9B</a>
+<span>C语言 </span><a href='https://www.aliyundrive.com/s/x6qsKNzhfyu' target='_blank' class='url'>https://www.aliyundrive.com/s/x6qsKNzhfyu</a>
+<span>Python </span><a href='https://www.aliyundrive.com/s/GYzLueyeWac' target='_blank' class='url'>https://www.aliyundrive.com/s/GYzLueyeWac</a>
+<span>web前端 </span><a href='https://www.aliyundrive.com/s/gQkXfQX3akP' target='_blank' class='url'>https://www.aliyundrive.com/s/gQkXfQX3akP</a>
+<span>Android </span><a href='https://www.aliyundrive.com/s/DGLd34ykq5X' target='_blank' class='url'>https://www.aliyundrive.com/s/DGLd34ykq5X</a>
+<span>go语言 </span><a href='https://www.aliyundrive.com/s/BvWdxzr3Utb' target='_blank' class='url'>https://www.aliyundrive.com/s/BvWdxzr3Utb</a>
+<span>Java </span><a href='https://www.aliyundrive.com/s/69kybUWzCHx' target='_blank' class='url'>https://www.aliyundrive.com/s/69kybUWzCHx</a>
+<span>脚本语言 </span><a href='https://www.aliyundrive.com/s/i2UXJwio8HV' target='_blank' class='url'>https://www.aliyundrive.com/s/i2UXJwio8HV</a>
+<span>大数据 </span><a href='https://www.aliyundrive.com/s/E7zXsAJLJMH' target='_blank' class='url'>https://www.aliyundrive.com/s/E7zXsAJLJMH</a></p><h3 id='计算机编程-补充'><span>计算机编程 补充</span></h3><p><a href='https://pan.baidu.com/s/1Ac1Ng7Y3h0DKQZJ-DF6-3w'><span>C++ Primer Plus配套教程 百度网盘下载链接（提取码：gpfn）</span></a></p><p><a href='https://url64.ctfile.com/f/3843664-517914988-cebf04'><span>Python程序员面试算法宝典.pdf（访问密码：338766）</span></a></p><p><a href='https://url64.ctfile.com/d/3843664-39387928-06663b'><span>更多PYTHON学习资料（访问密码：338766）</span></a></p><p><a href='https://url64.ctfile.com/f/3843664-517914952-92b2b5'><span>《算法 第4版》PDF下载（访问密码：338766）</span></a></p><p><a href='https://url64.ctfile.com/d/3843664-33674560-1d67a5'><span>更多算法相关资料（访问密码：338766）</span></a></p><p><span> </span><a href='https://url64.ctfile.com/f/3843664-517914910-7c1ca6'><span>《高性能MYSQL 第三版》PDF下载（访问密码：338766）</span></a></p><p><a href='https://url64.ctfile.com/d/3843664-41051292-899a4c'><span>更多电脑IT书籍（访问密码：338766）</span></a></p><p><a href='https://089u.com/d/3843664-44324790-73fb97'><span>电子书超级资源合集 （访问密码：338766）</span></a></p><p><a href='https://url64.ctfile.com/d/3843664-45353058-e67ce1'><span>破解精品高清视频教程-吾爱技术吧VIP全套课程（访问密码：338766）</span></a></p><h3 id='文艺'><span>文艺</span></h3><p><span>人生哲学 </span><a href='https://alywp.net/r9C9t' target='_blank' class='url'>https://alywp.net/r9C9t</a>
+<span>人物传记 </span><a href='https://alywp.net/5iivDa' target='_blank' class='url'>https://alywp.net/5iivDa</a>
+<span>文政史地 </span><a href='https://alywp.net/7KWLLO' target='_blank' class='url'>https://alywp.net/7KWLLO</a>
+<span>传统国学 </span><a href='https://alywp.net/1oWKR7' target='_blank' class='url'>https://alywp.net/1oWKR7</a>
+<span>演讲演说 </span><a href='https://www.aliyundrive.com/s/w7sWqigoMjQ' target='_blank' class='url'>https://www.aliyundrive.com/s/w7sWqigoMjQ</a>
+<span>前沿科技 </span><a href='https://alywp.net/3cwWEF' target='_blank' class='url'>https://alywp.net/3cwWEF</a></p><h3 id='游戏'><span>游戏</span></h3><p><span>召唤神龙</span><a href='http://www.wesane.com/game/910/' target='_blank' class='url'>http://www.wesane.com/game/910/</a>
+<span>投篮 </span><a href='http://t.cn/AisizCcW' target='_blank' class='url'>http://t.cn/AisizCcW</a><span> </span>
+<span>见缝插针 </span><a href='http://t.cn/E9tsC3p' target='_blank' class='url'>http://t.cn/E9tsC3p</a><span> </span>
+<span>锦上添花 </span><a href='http://t.cn/AiOrmbVh' target='_blank' class='url'>http://t.cn/AiOrmbVh</a><span> </span>
+<span>见缝插车 </span><a href='http://t.cn/A6PyPGrM' target='_blank' class='url'>http://t.cn/A6PyPGrM</a><span> </span>
+<span>堆木头 </span><a href='http://t.cn/E9tsC3N' target='_blank' class='url'>http://t.cn/E9tsC3N</a><span> </span>
+<span>OREOOO </span><a href='http://t.cn/EGdTQlC' target='_blank' class='url'>http://t.cn/EGdTQlC</a><span> </span>
+<span>刮腿毛 </span><a href='http://t.cn/A6PyP7Cd' target='_blank' class='url'>http://t.cn/A6PyP7Cd</a><span> </span>
+<span>能打多少次 </span><a href='http://t.cn/A6PLFX5u' target='_blank' class='url'>http://t.cn/A6PLFX5u</a><span> </span>
+<span>打掉砖块 </span><a href='http://t.cn/RcAimvm' target='_blank' class='url'>http://t.cn/RcAimvm</a><span> </span>
+<span>大宝剑 </span><a href='http://t.cn/A6PLFX5p' target='_blank' class='url'>http://t.cn/A6PLFX5p</a><span> </span>
+<span>十滴水 </span><a href='http://t.cn/A6PLFX5W' target='_blank' class='url'>http://t.cn/A6PLFX5W</a><span> </span>
+<span>友谊的小船说翻就翻 </span><a href='http://t.cn/RcAKw8F' target='_blank' class='url'>http://t.cn/RcAKw8F</a><span> </span>
+<span>无尽之湖 </span><a href='http://t.cn/A6PLFX50' target='_blank' class='url'>http://t.cn/A6PLFX50</a><span> </span>
+<span>蛇与方块 </span><a href='http://t.cn/Ev96Ras' target='_blank' class='url'>http://t.cn/Ev96Ras</a><span> </span>
+<span>有多远滚多远 </span><a href='http://t.cn/AisiB48U' target='_blank' class='url'>http://t.cn/AisiB48U</a><span> </span>
+<span>羽毛球 </span><a href='http://t.cn/A6Pyti4P' target='_blank' class='url'>http://t.cn/A6Pyti4P</a><span> </span>
+<span>彩虹屁 </span><a href='http://t.cn/A6Py5a3Q' target='_blank' class='url'>http://t.cn/A6Py5a3Q</a><span> </span>
+<span>乌鸦喝水 </span><a href='http://t.cn/RUMpO5R' target='_blank' class='url'>http://t.cn/RUMpO5R</a><span> </span>
+<span>擦一擦 </span><a href='http://t.cn/A6PyZq50' target='_blank' class='url'>http://t.cn/A6PyZq50</a><span> </span>
+<span>翻转水瓶 </span><a href='http://t.cn/A6PyZq5o' target='_blank' class='url'>http://t.cn/A6PyZq5o</a><span> </span>
+<span>磁铁粘粘 </span><a href='http://t.cn/A6PyqtYy' target='_blank' class='url'>http://t.cn/A6PyqtYy</a><span> </span>
+<span>旋转飞刀 </span><a href='http://t.cn/A6PyLrCb' target='_blank' class='url'>http://t.cn/A6PyLrCb</a><span> </span>
+<span>守护蛋蛋 </span><a href='http://t.cn/A6PyZq5a' target='_blank' class='url'>http://t.cn/A6PyZq5a</a><span> </span>
+<span>无敌破坏球 </span><a href='http://t.cn/A6PyZq5K' target='_blank' class='url'>http://t.cn/A6PyZq5K</a><span> </span>
+<span>打泡泡 </span><a href='http://t.cn/A6Pq1Hoj' target='_blank' class='url'>http://t.cn/A6Pq1Hoj</a><span> </span>
+<span>纸牌接龙 </span><a href='http://t.cn/AiuR04G8' target='_blank' class='url'>http://t.cn/AiuR04G8</a><span> </span>
+<span>六角拼拼 </span><a href='http://t.cn/Rtp4QDz' target='_blank' class='url'>http://t.cn/Rtp4QDz</a><span> </span>
+<span>俄罗斯方块 </span><a href='http://t.cn/RcciqaX' target='_blank' class='url'>http://t.cn/RcciqaX</a><span> </span>
+<span>捕鸟 </span><a href='http://t.cn/RagxdQ0' target='_blank' class='url'>http://t.cn/RagxdQ0</a><span> </span>
+<span>弹弹球 </span><a href='http://t.cn/RVbx3Dz' target='_blank' class='url'>http://t.cn/RVbx3Dz</a><span> </span>
+<span>切水果 </span><a href='http://t.cn/A6PGSCKb' target='_blank' class='url'>http://t.cn/A6PGSCKb</a><span> </span>
+<span>汽车华容道 </span><a href='http://t.cn/Ea80aIc' target='_blank' class='url'>http://t.cn/Ea80aIc</a><span> </span>
+<span>搭桥 </span><a href='http://t.cn/A6P5PvvX' target='_blank' class='url'>http://t.cn/A6P5PvvX</a>
+<span>小鱼找对象</span><a href='http://g.vsane.com/game/745/' target='_blank' class='url'>http://g.vsane.com/game/745/</a></p></div></div>
+
+<script>(function(){var e=document.body.parentElement,t=[],n=null,i=document.body.classList.contains("typora-export-collapse-outline"),r=function(e,t,n){document.addEventListener(e,function(e){if(!e.defaultPrevented)for(var i=e.target;i&&i!=this;i=i.parentNode)if(i.matches(t)){!1===n.call(i,e)&&(e.preventDefault(),e.stopPropagation());break}},!1)};function o(){return e.scrollTop}r("click",".outline-expander",function(e){var t=this.closest(".outline-item-wrapper").classList;return t.contains("outline-item-open")?t.remove("outline-item-open"):t.add("outline-item-open"),d(),!1}),r("click",".outline-item",function(e){var t=this.querySelector(".outline-label");if(location.hash="#"+t.getAttribute("href"),i){var n=this.closest(".outline-item-wrapper").classList;n.contains("outline-item-open")||n.add("outline-item-open"),c(),n.add("outline-item-active")}});var a,s,l=function(){var e=o();n=null;for(var i=0;i<t.length&&t[i][1]-e<60;i++)n=t[i]},c=function(){document.querySelectorAll(".outline-item-active").forEach(e=>e.classList.remove("outline-item-active")),document.querySelectorAll(".outline-item-single.outline-item-open").forEach(e=>e.classList.remove("outline-item-open"))},d=function(){if(n){c();var e=document.querySelector('.outline-label[href="#'+(CSS.escape?CSS.escape(n[0]):n[0])+'"]');if(e)if(i){var t=e.closest(".outline-item-open>ul>.outline-item-wrapper");if(t)t.classList.add("outline-item-active");else{for(var r=(e=e.closest(".outline-item-wrapper")).parentElement.closest(".outline-item-wrapper");r;)r=(e=r).parentElement.closest(".outline-item-wrapper");e.classList.add("outline-item-active")}}else e.closest(".outline-item-wrapper").classList.add("outline-item-active")}};window.addEventListener("scroll",function(e){a&&clearTimeout(a),a=setTimeout(function(){l(),d()},300)});var u=function(){s=setTimeout(function(){!function(){t=[];var e=o();document.querySelector("#write").querySelectorAll("h1, h2, h3, h4, h5, h6").forEach(n=>{var i=n.getAttribute("id");t.push([i,e+n.getBoundingClientRect().y])})}(),l(),d()},300)};window.addEventListener("resize",function(e){s&&clearTimeout(s),u()}),u()})();</script></body>
+</html>
