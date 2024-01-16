@@ -1,5 +1,17 @@
 # 线性代数
 
+---
+
+个人强烈推荐西电杨威老师的网课，尤其是其中的满分线性代数系列的习题讲解，备考期末绰绰有余：
+
+[线帒杨的个人空间-线帒杨个人主页-哔哩哔哩视频 (bilibili.com)](https://space.bilibili.com/504497972?spm_id_from=333.337.0.0)
+
+---
+
+以下内容来自 https://github.com/SincereXIA/XidianCS.git
+
+
+
 重要性：★★★★✰
 
 难度：★★★✰✰
@@ -56,8 +68,3 @@
 
   https://www.bilibili.com/video/BV1ys411472E
 
----
-
-
-
-以上内容来自https://github.com/SincereXIA/XidianCS.git
