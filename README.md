@@ -129,6 +129,8 @@ https://www.itsvse.com/downgit/#/home
 
 ### 4、西电计算机专业资源分享项目
 
+[西电计科本科学习的一些经验分享与资料汇总](https://github.com/zimuzi2019/xducs-learning-tips?tab=readme-ov-file) 
+
 [西安电子科技大学计算机专业经验分享](https://github.com/baolintian/XDU_CS_Learning.git)
 
 [西安电子科技大学软院学习没烦恼项目](https://github.com/LevickCG/Happy-SE-in-XDU.git)
