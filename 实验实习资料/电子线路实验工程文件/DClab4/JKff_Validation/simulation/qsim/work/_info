@@ -1,0 +1,85 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\JKff_Validation\simulation\qsim
+vJKffValidation
+Z1 !s100 >^:fL;jG7TVJ@CBXR4^=A0
+Z2 I1ZNzaWPXHabRa;5`lR9743
+Z3 VV^17<Caabh>H]BSNiPD4Y0
+Z4 dD:\JKff_Validation\simulation\qsim
+Z5 w1390047079
+Z6 8JKffValidation.vo
+Z7 FJKffValidation.vo
+L0 31
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s90 -work|work|JKffValidation.vo|
+Z10 o-work work -O0
+Z11 n@j@kff@validation
+!i10b 1
+!s85 0
+Z12 !s108 1390047081.371000
+Z13 !s107 JKffValidation.vo|
+!s101 -O0
+vJKffValidation_vlg_check_tst
+!i10b 1
+Z14 !s100 AJ1`hQ36SaL@l`F1G[6^I2
+Z15 IeLbhoL_=THm2PooQJTfaP2
+Z16 VOT6h1mGfcPf6jFMEm@k1J1
+R4
+Z17 w1390047076
+Z18 8Waveform.vwf.vt
+Z19 FWaveform.vwf.vt
+L0 65
+R8
+r1
+!s85 0
+31
+Z20 !s108 1390047081.469000
+Z21 !s107 Waveform.vwf.vt|
+Z22 !s90 -work|work|Waveform.vwf.vt|
+!s101 -O0
+R10
+Z23 n@j@kff@validation_vlg_check_tst
+vJKffValidation_vlg_sample_tst
+!i10b 1
+Z24 !s100 @QT2NPn]TZ@>Y^AIQaCIH2
+Z25 IWfnAo@:_7:]YooHmRmf=d0
+Z26 V9FBFPAGmdUEW>l27kf=EH2
+R4
+R17
+R18
+R19
+L0 29
+R8
+r1
+!s85 0
+31
+R20
+R21
+R22
+!s101 -O0
+R10
+Z27 n@j@kff@validation_vlg_sample_tst
+vJKffValidation_vlg_vec_tst
+!i10b 1
+Z28 !s100 0]DH@Fo:Q[lFWVP62diB83
+Z29 Ig`FSO`:ENKk>FLk6I]9:P0
+Z30 Vo0ndjdVX@>lU^>mKn0ODK3
+R4
+R17
+R18
+R19
+Z31 L0 160
+R8
+r1
+!s85 0
+31
+R20
+R21
+R22
+!s101 -O0
+R10
+Z32 n@j@kff@validation_vlg_vec_tst

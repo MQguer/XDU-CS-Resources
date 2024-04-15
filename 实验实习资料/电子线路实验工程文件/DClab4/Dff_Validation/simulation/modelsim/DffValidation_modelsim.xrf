@@ -1,0 +1,9 @@
+vendor_name = ModelSim
+source_file = 1, D:/Dff_Validation/DffValidation.bdf
+source_file = 1, D:/Dff_Validation/db/DffValidation.cbx.xml
+source_file = 1, c:/altera/13.1/quartus/libraries/others/maxplus2/7474.bdf
+source_file = 1, c:/altera/13.1/quartus/libraries/others/maxplus2/7473.bdf
+design_name = DffValidation
+instance = comp, \pin_name2~output\, pin_name2~output, DffValidation, 1
+instance = comp, \clk~input\, clk~input, DffValidation, 1
+instance = comp, \pin_name1~input\, pin_name1~input, DffValidation, 1

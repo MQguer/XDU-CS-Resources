@@ -1,0 +1,16 @@
+Info: Start Nativelink Simulation process
+Error: Run Analysis and Elaboration successfully before starting RTL NativeLink Simulation
+Analysis and Synthesis should be completed successfully before starting RTL NativeLink Simulation
+Error: NativeLink simulation flow was NOT successful
+
+
+
+================The following additional information is provided to help identify the cause of error while running nativelink scripts=================
+Nativelink TCL script failed with errorCode:  1
+Nativelink TCL script failed with errorInfo:  1
+    invoked from within
+"if ![qmap_successfully_completed] {
+	    nl_postmsg error "Error: Run Analysis and Elaboration successfully before starting RTL NativeLink Simulation"..."
+    (procedure "run_eda_simulation_tool" line 231)
+    invoked from within
+"run_eda_simulation_tool eda_opts_hash"

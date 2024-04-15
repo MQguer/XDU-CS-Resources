@@ -1,0 +1,12 @@
+vendor_name = ModelSim
+source_file = 1, D:/distributor/distributor.bdf
+source_file = 1, D:/distributor/db/distributor.cbx.xml
+design_name = distributor
+instance = comp, \Y0~output\, Y0~output, distributor, 1
+instance = comp, \Y1~output\, Y1~output, distributor, 1
+instance = comp, \Y2~output\, Y2~output, distributor, 1
+instance = comp, \Y3~output\, Y3~output, distributor, 1
+instance = comp, \A1~input\, A1~input, distributor, 1
+instance = comp, \Din~input\, Din~input, distributor, 1
+instance = comp, \A0~input\, A0~input, distributor, 1
+instance = comp, \Enable~input\, Enable~input, distributor, 1

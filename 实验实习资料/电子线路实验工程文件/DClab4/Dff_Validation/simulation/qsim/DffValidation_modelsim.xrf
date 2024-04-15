@@ -1,0 +1,17 @@
+vendor_name = ModelSim
+source_file = 1, D:/Dff_Validation/DffValidation.bdf
+source_file = 1, D:/Dff_Validation/simulation/modelsim/Waveform.vwf
+source_file = 1, D:/Dff_Validation/db/DffValidation.cbx.xml
+source_file = 1, c:/altera/13.1/quartus/libraries/others/maxplus2/7474.bdf
+source_file = 1, c:/altera/13.1/quartus/libraries/others/maxplus2/7473.bdf
+design_name = DffValidation
+instance = comp, \Q~output , Q~output, DffValidation, 1
+instance = comp, \SET~input , SET~input, DffValidation, 1
+instance = comp, \clear~input , clear~input, DffValidation, 1
+instance = comp, \inst~1 , inst~1, DffValidation, 1
+instance = comp, \clock~input , clock~input, DffValidation, 1
+instance = comp, \in~input , in~input, DffValidation, 1
+instance = comp, \inst~3 , inst~3, DffValidation, 1
+instance = comp, \inst~0 , inst~0, DffValidation, 1
+instance = comp, \inst~_emulated , inst~_emulated, DffValidation, 1
+instance = comp, \inst~2 , inst~2, DffValidation, 1

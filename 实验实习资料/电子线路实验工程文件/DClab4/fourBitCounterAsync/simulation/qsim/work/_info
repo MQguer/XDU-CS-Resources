@@ -1,0 +1,85 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\fourBitCounterAsync\simulation\qsim
+vfourBitCounterAsync
+Z1 IU9T0RZ;figh@TRAYSha5X1
+Z2 V8]mab;?DjCNW1B=YE0YNY3
+Z3 dD:\fourBitCounterAsync\simulation\qsim
+Z4 w1390051190
+Z5 8fourBitCounterAsync.vo
+Z6 FfourBitCounterAsync.vo
+L0 31
+Z7 OV;L;10.1d;51
+r1
+31
+Z8 !s90 -work|work|fourBitCounterAsync.vo|
+Z9 o-work work -O0
+Z10 nfour@bit@counter@async
+!i10b 1
+Z11 !s100 <OcYnzbBBdDW5_zGdM?zO0
+!s85 0
+Z12 !s108 1390051192.082000
+Z13 !s107 fourBitCounterAsync.vo|
+!s101 -O0
+vfourBitCounterAsync_vlg_check_tst
+!i10b 1
+!s100 TZ7?C[cVdnXOo??YU9V891
+IkA@3cPYC]ef1m7BgXeIiU3
+Z14 V26cnizf7N2R?8RbjH]VJW3
+R3
+Z15 w1390051187
+Z16 8Waveform.vwf.vt
+Z17 FWaveform.vwf.vt
+L0 57
+R7
+r1
+!s85 0
+31
+Z18 !s108 1390051192.283000
+Z19 !s107 Waveform.vwf.vt|
+Z20 !s90 -work|work|Waveform.vwf.vt|
+!s101 -O0
+R9
+Z21 nfour@bit@counter@async_vlg_check_tst
+vfourBitCounterAsync_vlg_sample_tst
+!i10b 1
+Z22 !s100 HUhSA?Hg>F3mI]WnHP;DG2
+Z23 I0@aP;>5?j[FeQ7iK_IiJf2
+Z24 V5iW77898fCeLol;_4l4Ke3
+R3
+R15
+R16
+R17
+L0 29
+R7
+r1
+!s85 0
+31
+R18
+R19
+R20
+!s101 -O0
+R9
+Z25 nfour@bit@counter@async_vlg_sample_tst
+vfourBitCounterAsync_vlg_vec_tst
+!i10b 1
+Z26 !s100 ohlkV6lA5[?1MG;UzjD@;0
+Z27 IfQS5M^>QJhn8UQM0<`7ck1
+Z28 Ve`Q;kDQBj01GaX@l[TBfB3
+R3
+R15
+R16
+R17
+Z29 L0 233
+R7
+r1
+!s85 0
+31
+R18
+R19
+R20
+!s101 -O0
+R9
+Z30 nfour@bit@counter@async_vlg_vec_tst

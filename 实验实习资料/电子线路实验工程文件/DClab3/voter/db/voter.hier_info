@@ -1,0 +1,10 @@
+|voter
+Result <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+A => inst1.IN0
+A => inst.IN0
+C => inst1.IN1
+C => inst2.IN1
+B => inst2.IN0
+B => inst.IN1
+
+

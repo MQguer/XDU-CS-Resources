@@ -1,0 +1,20 @@
+|One
+S <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+A => inst6.IN0
+A => inst11.IN0
+A => inst12.IN0
+A => inst14.IN0
+A => inst13.IN0
+B => inst7.IN0
+B => inst11.IN1
+B => inst1.IN1
+B => inst15.IN0
+B => inst13.IN1
+C_i => inst.IN2
+C_i => inst11.IN2
+C_i => inst8.IN0
+C_i => inst14.IN1
+C_i => inst15.IN1
+Ci1 <= inst16.DB_MAX_OUTPUT_PORT_TYPE
+
+

@@ -1,0 +1,135 @@
+Flow report for voter
+Sat Jan 11 20:38:06 2014
+Quartus II 32-bit Version 13.1.0 Build 162 10/23/2013 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Flow Summary
+  3. Flow Settings
+  4. Flow Non-Default Global Settings
+  5. Flow Elapsed Time
+  6. Flow OS Summary
+  7. Flow Log
+  8. Flow Messages
+  9. Flow Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------+
+; Flow Summary                                                                     ;
++------------------------------------+---------------------------------------------+
+; Flow Status                        ; Successful - Sat Jan 11 20:38:06 2014       ;
+; Quartus II 32-bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Full Version ;
+; Revision Name                      ; voter                                       ;
+; Top-level Entity Name              ; voter                                       ;
+; Family                             ; Cyclone IV GX                               ;
+; Total logic elements               ; 1 / 14,400 ( < 1 % )                        ;
+;     Total combinational functions  ; 1 / 14,400 ( < 1 % )                        ;
+;     Dedicated logic registers      ; 0 / 14,400 ( 0 % )                          ;
+; Total registers                    ; 0                                           ;
+; Total pins                         ; 4 / 81 ( 5 % )                              ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0 / 552,960 ( 0 % )                         ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total GXB Receiver Channel PCS     ; 0 / 2 ( 0 % )                               ;
+; Total GXB Receiver Channel PMA     ; 0 / 2 ( 0 % )                               ;
+; Total GXB Transmitter Channel PCS  ; 0 / 2 ( 0 % )                               ;
+; Total GXB Transmitter Channel PMA  ; 0 / 2 ( 0 % )                               ;
+; Total PLLs                         ; 0 / 3 ( 0 % )                               ;
+; Device                             ; EP4CGX15BF14C6                              ;
+; Timing Models                      ; Final                                       ;
++------------------------------------+---------------------------------------------+
+
+
++-----------------------------------------+
+; Flow Settings                           ;
++-------------------+---------------------+
+; Option            ; Setting             ;
++-------------------+---------------------+
+; Start date & time ; 01/11/2014 20:37:11 ;
+; Main task         ; Compilation         ;
+; Revision Name     ; voter               ;
++-------------------+---------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                     ;
++-------------------------------------+---------------------------------+---------------+-------------+----------------+
+; Assignment Name                     ; Value                           ; Default Value ; Entity Name ; Section Id     ;
++-------------------------------------+---------------------------------+---------------+-------------+----------------+
+; COMPILER_SIGNATURE_ID               ; 119004502419825.138944383105640 ; --            ; --          ; --             ;
+; EDA_OUTPUT_DATA_FORMAT              ; Vhdl                            ; --            ; --          ; eda_simulation ;
+; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (VHDL)          ; <None>        ; --          ; --             ;
+; PARTITION_COLOR                     ; 16764057                        ; --            ; --          ; Top            ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING           ; --            ; --          ; Top            ;
+; PARTITION_NETLIST_TYPE              ; SOURCE                          ; --            ; --          ; Top            ;
+; PROJECT_OUTPUT_DIRECTORY            ; output_files                    ; --            ; --          ; --             ;
++-------------------------------------+---------------------------------+---------------+-------------+----------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                             ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Synthesis      ; 00:00:03     ; 1.0                     ; 391 MB              ; 00:00:03                           ;
+; Fitter                    ; 00:00:08     ; 1.2                     ; 660 MB              ; 00:00:08                           ;
+; Assembler                 ; 00:00:03     ; 1.0                     ; 394 MB              ; 00:00:03                           ;
+; TimeQuest Timing Analyzer ; 00:00:04     ; 1.0                     ; 388 MB              ; 00:00:04                           ;
+; EDA Netlist Writer        ; 00:00:02     ; 1.0                     ; 350 MB              ; 00:00:02                           ;
+; EDA Netlist Writer        ; 00:00:02     ; 1.0                     ; 359 MB              ; 00:00:02                           ;
+; EDA Netlist Writer        ; 00:00:02     ; 1.0                     ; 362 MB              ; 00:00:02                           ;
+; Total                     ; 00:00:24     ; --                      ; --                  ; 00:00:24                           ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+
+
++----------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                        ;
++---------------------------+------------------+-----------+------------+----------------+
+; Module Name               ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
++---------------------------+------------------+-----------+------------+----------------+
+; Analysis & Synthesis      ; 308-68           ; Windows 7 ; 6.1        ; i686           ;
+; Fitter                    ; 308-68           ; Windows 7 ; 6.1        ; i686           ;
+; Assembler                 ; 308-68           ; Windows 7 ; 6.1        ; i686           ;
+; TimeQuest Timing Analyzer ; 308-68           ; Windows 7 ; 6.1        ; i686           ;
+; EDA Netlist Writer        ; 308-68           ; Windows 7 ; 6.1        ; i686           ;
+; EDA Netlist Writer        ; 308-68           ; Windows 7 ; 6.1        ; i686           ;
+; EDA Netlist Writer        ; 308-68           ; Windows 7 ; 6.1        ; i686           ;
++---------------------------+------------------+-----------+------------+----------------+
+
+
+------------
+; Flow Log ;
+------------
+quartus_map --read_settings_files=on --write_settings_files=off voter -c voter
+quartus_fit --read_settings_files=off --write_settings_files=off voter -c voter
+quartus_asm --read_settings_files=off --write_settings_files=off voter -c voter
+quartus_sta voter -c voter
+quartus_eda --read_settings_files=off --write_settings_files=off voter -c voter
+quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog voter -c voter --vector_source=D:/voter/simulation/modelsim/Waveform.vwf --testbench_file=D:/voter/simulation/qsim/Waveform.vwf.vt
+quartus_eda --functional=on --flatten_buses=off --simulation=on --tool=modelsim_oem --format=verilog --output_directory=D:/voter/simulation/qsim/ voter -c voter
+
+
+

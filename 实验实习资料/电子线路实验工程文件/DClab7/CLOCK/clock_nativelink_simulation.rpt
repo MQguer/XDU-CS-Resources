@@ -1,0 +1,12 @@
+Info: Start Nativelink Simulation process
+Error: NativeLink did not detect any HDL files in the project
+Error: NativeLink simulation flow was NOT successful
+
+
+
+================The following additional information is provided to help identify the cause of error while running nativelink scripts=================
+Nativelink TCL script failed with errorCode:  NONE
+Nativelink TCL script failed with errorInfo:  NativeLink did not detect any HDL files in the project
+    (procedure "run_eda_simulation_tool" line 1)
+    invoked from within
+"run_eda_simulation_tool eda_opts_hash"

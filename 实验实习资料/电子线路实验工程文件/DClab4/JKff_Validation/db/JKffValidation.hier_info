@@ -1,0 +1,9 @@
+|JKffValidation
+Q <= inst.DB_MAX_OUTPUT_PORT_TYPE
+SET => inst.PRESET
+Clear => inst.ACLR
+K => inst.IN0
+J => inst.IN1
+Clock => inst.CLK
+
+

@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Sat Jan 25 21:37:56 2014
+Quartus II 32-bit Version : 13.1.0 Build 162 10/23/2013 SJ Full Version
+Revision Name : moc
+Top-level Entity Name : moc
+Family : Cyclone IV E
+Total logic elements : 12
+    Total combinational functions : 2
+    Dedicated logic registers : 12
+Total registers : 12
+Total pins : 14
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

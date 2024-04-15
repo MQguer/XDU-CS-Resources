@@ -1,0 +1,20 @@
+Fitter Status : Successful - Sat Jan 18 21:19:07 2014
+Quartus II 32-bit Version : 13.1.0 Build 162 10/23/2013 SJ Full Version
+Revision Name : fourBitCounterAsync
+Top-level Entity Name : fourBitCounterAsync
+Family : Cyclone IV GX
+Device : EP4CGX15BF14C6
+Timing Models : Final
+Total logic elements : 4 / 14,400 ( < 1 % )
+    Total combinational functions : 4 / 14,400 ( < 1 % )
+    Dedicated logic registers : 4 / 14,400 ( < 1 % )
+Total registers : 4
+Total pins : 5 / 81 ( 6 % )
+Total virtual pins : 0
+Total memory bits : 0 / 552,960 ( 0 % )
+Embedded Multiplier 9-bit elements : 0
+Total GXB Receiver Channel PCS : 0 / 2 ( 0 % )
+Total GXB Receiver Channel PMA : 0 / 2 ( 0 % )
+Total GXB Transmitter Channel PCS : 0 / 2 ( 0 % )
+Total GXB Transmitter Channel PMA : 0 / 2 ( 0 % )
+Total PLLs : 0 / 3 ( 0 % )

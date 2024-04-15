@@ -1,0 +1,28 @@
+|moc
+Q0 <= inst.DB_MAX_OUTPUT_PORT_TYPE
+cp => inst.CLK
+cp => inst14.CLK
+cp => inst13.CLK
+cp => inst9.CLK
+cp => inst8.CLK
+cp => inst6.CLK
+cp => inst7.CLK
+cp => inst5.CLK
+cp => inst12.CLK
+cp => inst3.CLK
+cp => inst2.CLK
+cp => inst1.CLK
+DRN0 => inst.PRESET
+Q1 <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+Q2 <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+Q3 <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+Q4 <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+Q5 <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+Q6 <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+Q7 <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+Q8 <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+Q9 <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+Q10 <= inst13.DB_MAX_OUTPUT_PORT_TYPE
+Q11 <= inst14.DB_MAX_OUTPUT_PORT_TYPE
+
+

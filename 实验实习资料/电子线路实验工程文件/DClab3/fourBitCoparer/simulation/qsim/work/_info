@@ -1,0 +1,85 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\fourBitCoparer\simulation\qsim
+vfourBitCoparer
+Z1 !s100 oD8o43AzGNS1dkz`jI9zM0
+Z2 IaGMg@C7hEE>1j8Th@@2c:0
+Z3 VF^h8iSbPJ4;WFN5?a2X=61
+Z4 dD:\fourBitCoparer\simulation\qsim
+Z5 w1389444860
+Z6 8fourBitCoparer.vo
+Z7 FfourBitCoparer.vo
+L0 31
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s90 -work|work|fourBitCoparer.vo|
+Z10 o-work work -O0
+Z11 nfour@bit@coparer
+!i10b 1
+!s85 0
+Z12 !s108 1389444862.398000
+Z13 !s107 fourBitCoparer.vo|
+!s101 -O0
+vfourBitCoparer_vlg_check_tst
+!i10b 1
+Z14 !s100 zQND4XNSSo0^^MC7F@TRL1
+Z15 IkE2AeK_ifg3hdVnE@V0E=2
+Z16 V88BD?;?LLgLjz2oX^beh12
+R4
+Z17 w1389444857
+Z18 8Waveform2.vwf.vt
+Z19 FWaveform2.vwf.vt
+L0 71
+R8
+r1
+!s85 0
+31
+Z20 !s108 1389444862.549000
+Z21 !s107 Waveform2.vwf.vt|
+Z22 !s90 -work|work|Waveform2.vwf.vt|
+!s101 -O0
+R10
+Z23 nfour@bit@coparer_vlg_check_tst
+vfourBitCoparer_vlg_sample_tst
+!i10b 1
+Z24 !s100 _9ZJzkMTz<dK?127;_lXJ1
+Z25 IBl`Z^^[igb6[@TX;FO0BH0
+Z26 VTWQd94:EB<6WFOY2Y?WYP2
+R4
+R17
+R18
+R19
+L0 29
+R8
+r1
+!s85 0
+31
+R20
+R21
+R22
+!s101 -O0
+R10
+Z27 nfour@bit@coparer_vlg_sample_tst
+vfourBitCoparer_vlg_vec_tst
+!i10b 1
+Z28 !s100 0V_6_N?9H33`[GkdNNCO<2
+Z29 Ib_ojhfVfMYX3AA]iedC2g1
+Z30 Vhb;_oP?HXPM@9Ge6z_12^1
+R4
+R17
+R18
+R19
+Z31 L0 280
+R8
+r1
+!s85 0
+31
+R20
+R21
+R22
+!s101 -O0
+R10
+Z32 nfour@bit@coparer_vlg_vec_tst
