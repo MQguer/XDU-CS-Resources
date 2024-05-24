@@ -1,0 +1,290 @@
+$comment
+	File created using the following command:
+		vcd file JKffValidation.msim.vcd -direction
+$end
+$date
+	Sat Jan 18 20:11:22 2014
+$end
+$version
+	ModelSim Version 10.1d
+$end
+$timescale
+	1ps
+$end
+$scope module JKffValidation_vlg_vec_tst $end
+$var reg 1 ! Clear $end
+$var reg 1 " Clock $end
+$var reg 1 # J $end
+$var reg 1 $ K $end
+$var reg 1 % SET $end
+$var wire 1 & Q $end
+$var wire 1 ' sampler $end
+$scope module i1 $end
+$var wire 1 ( gnd $end
+$var wire 1 ) vcc $end
+$var wire 1 * unknown $end
+$var tri1 1 + devclrn $end
+$var tri1 1 , devpor $end
+$var tri1 1 - devoe $end
+$var wire 1 . Q~output_o $end
+$var wire 1 / SET~input_o $end
+$var wire 1 0 Clear~input_o $end
+$var wire 1 1 inst~1_combout $end
+$var wire 1 2 Clock~input_o $end
+$var wire 1 3 K~input_o $end
+$var wire 1 4 J~input_o $end
+$var wire 1 5 inst~3_combout $end
+$var wire 1 6 inst~0_combout $end
+$var wire 1 7 inst~_emulated_q $end
+$var wire 1 8 inst~2_combout $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0!
+0"
+0#
+0$
+0%
+0&
+x'
+0(
+1)
+x*
+1+
+1,
+1-
+0.
+0/
+00
+01
+02
+03
+04
+05
+16
+07
+08
+$end
+#70000
+1$
+13
+0'
+#90000
+1"
+12
+1'
+#110000
+1!
+10
+0'
+11
+18
+15
+1.
+1&
+#130000
+1#
+14
+1'
+#140000
+0$
+03
+0'
+05
+#170000
+1%
+1/
+1'
+06
+#180000
+0"
+02
+0'
+#210000
+1$
+13
+1'
+15
+#220000
+0!
+00
+0'
+16
+01
+08
+0.
+0&
+#260000
+0#
+04
+1'
+05
+#270000
+1"
+12
+0'
+#280000
+0$
+03
+1'
+#330000
+1!
+10
+0'
+06
+#340000
+0%
+0/
+1'
+16
+11
+18
+1.
+1&
+#350000
+1$
+13
+0'
+15
+#360000
+0"
+02
+1'
+#390000
+1#
+14
+0'
+#420000
+0$
+03
+1'
+05
+#440000
+0!
+00
+0'
+01
+08
+15
+0.
+0&
+#450000
+1"
+12
+1'
+#490000
+1$
+13
+0'
+#510000
+1%
+1/
+1'
+#520000
+0#
+04
+0'
+05
+#540000
+0"
+02
+1'
+#550000
+1!
+10
+0'
+06
+#560000
+0$
+03
+1'
+#630000
+1"
+1$
+12
+13
+0'
+#650000
+1#
+14
+1'
+15
+#660000
+0!
+00
+0'
+16
+#680000
+0%
+0/
+1'
+#700000
+0$
+03
+0'
+#720000
+0"
+02
+1'
+#770000
+1!
+1$
+10
+13
+0'
+11
+18
+1.
+1&
+#780000
+0#
+04
+1'
+#810000
+1"
+12
+0'
+#840000
+0$
+03
+1'
+05
+#850000
+1%
+1/
+0'
+06
+#880000
+0!
+00
+1'
+16
+01
+08
+0.
+0&
+#900000
+0"
+02
+0'
+#910000
+1#
+1$
+14
+13
+1'
+15
+#980000
+0$
+03
+0'
+#990000
+1!
+1"
+10
+12
+1'
+06
+#1000000

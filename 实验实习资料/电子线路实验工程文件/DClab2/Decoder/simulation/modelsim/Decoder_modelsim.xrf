@@ -1,0 +1,11 @@
+vendor_name = ModelSim
+source_file = 1, D:/here/Decoder/Decoder.bdf
+source_file = 1, D:/here/Decoder/db/Decoder.cbx.xml
+design_name = Decoder
+instance = comp, \Y0~output\, Y0~output, Decoder, 1
+instance = comp, \Y1~output\, Y1~output, Decoder, 1
+instance = comp, \Y2~output\, Y2~output, Decoder, 1
+instance = comp, \Y3~output\, Y3~output, Decoder, 1
+instance = comp, \E~input\, E~input, Decoder, 1
+instance = comp, \A1~input\, A1~input, Decoder, 1
+instance = comp, \A0~input\, A0~input, Decoder, 1

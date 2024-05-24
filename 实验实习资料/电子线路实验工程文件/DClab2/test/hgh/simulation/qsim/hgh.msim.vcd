@@ -1,0 +1,256 @@
+$comment
+	File created using the following command:
+		vcd file hgh.msim.vcd -direction
+$end
+$date
+	Sat Jan 04 20:04:29 2014
+$end
+$version
+	ModelSim Version 10.1d
+$end
+$timescale
+	1ps
+$end
+$scope module hgh_vlg_vec_tst $end
+$var reg 1 ! in1 $end
+$var reg 1 " in2 $end
+$var reg 1 # in3 $end
+$var reg 1 $ in5 $end
+$var reg 1 % in6 $end
+$var reg 1 & pin_name4 $end
+$var wire 1 ' o1 $end
+$var wire 1 ( o2 $end
+$var wire 1 ) o3 $end
+$var wire 1 * o4 $end
+$var wire 1 + o5 $end
+$var wire 1 , o6 $end
+$var wire 1 - o7 $end
+$var wire 1 . o8 $end
+$var wire 1 / sampler $end
+$scope module i1 $end
+$var wire 1 0 gnd $end
+$var wire 1 1 vcc $end
+$var wire 1 2 unknown $end
+$var tri1 1 3 devclrn $end
+$var tri1 1 4 devpor $end
+$var tri1 1 5 devoe $end
+$var wire 1 6 o1~output_o $end
+$var wire 1 7 o2~output_o $end
+$var wire 1 8 o3~output_o $end
+$var wire 1 9 o4~output_o $end
+$var wire 1 : o5~output_o $end
+$var wire 1 ; o6~output_o $end
+$var wire 1 < o7~output_o $end
+$var wire 1 = o8~output_o $end
+$var wire 1 > in3~input_o $end
+$var wire 1 ? in2~input_o $end
+$var wire 1 @ in5~input_o $end
+$var wire 1 A pin_name4~input_o $end
+$var wire 1 B in6~input_o $end
+$var wire 1 C in1~input_o $end
+$var wire 1 D inst|21~0_combout $end
+$var wire 1 E inst|15~combout $end
+$var wire 1 F inst|22~0_combout $end
+$var wire 1 G inst|16~combout $end
+$var wire 1 H inst|17~combout $end
+$var wire 1 I inst|18~combout $end
+$var wire 1 J inst|19~combout $end
+$var wire 1 K inst|20~combout $end
+$var wire 1 L inst|21~combout $end
+$var wire 1 M inst|22~combout $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0!
+0"
+0#
+0$
+0%
+1&
+0'
+1(
+1)
+1*
+1+
+1,
+1-
+1.
+x/
+00
+11
+x2
+13
+14
+15
+06
+17
+18
+19
+1:
+1;
+1<
+1=
+0>
+0?
+0@
+1A
+0B
+0C
+1D
+1E
+0F
+0G
+0H
+0I
+0J
+0K
+0L
+0M
+$end
+#100000
+1!
+1C
+0/
+1F
+0D
+1G
+0E
+07
+16
+0(
+1'
+#200000
+1"
+0!
+1?
+0C
+1/
+1I
+0G
+0F
+1D
+0I
+1H
+09
+17
+0*
+1(
+19
+08
+1*
+0)
+#300000
+1!
+1C
+0/
+1F
+0D
+1I
+0H
+09
+18
+0*
+1)
+#400000
+1#
+0"
+0!
+1>
+0?
+0C
+1/
+1K
+0I
+0F
+1D
+0K
+1J
+0;
+19
+0,
+1*
+1;
+0:
+1,
+0+
+#500000
+1!
+1C
+0/
+1F
+0D
+1K
+0J
+0;
+1:
+0,
+1+
+#600000
+1"
+0!
+1?
+0C
+1/
+1M
+0K
+0F
+1D
+0M
+1L
+0=
+1;
+0.
+1,
+1=
+0<
+1.
+0-
+#700000
+1!
+1C
+0/
+1F
+0D
+1M
+0L
+0=
+1<
+0.
+1-
+#800000
+0#
+0"
+0!
+0>
+0?
+0C
+1/
+0M
+1G
+0F
+1D
+0G
+1E
+1=
+07
+1.
+0(
+17
+06
+1(
+0'
+#900000
+1!
+1C
+0/
+1F
+0D
+1G
+0E
+07
+16
+0(
+1'
+#1000000

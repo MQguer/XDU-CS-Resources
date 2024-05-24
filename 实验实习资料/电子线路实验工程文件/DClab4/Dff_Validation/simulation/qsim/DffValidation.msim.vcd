@@ -1,0 +1,191 @@
+$comment
+	File created using the following command:
+		vcd file DffValidation.msim.vcd -direction
+$end
+$date
+	Sat Jan 18 19:27:40 2014
+$end
+$version
+	ModelSim Version 10.1d
+$end
+$timescale
+	1ps
+$end
+$scope module DffValidation_vlg_vec_tst $end
+$var reg 1 ! clock $end
+$var reg 1 " in $end
+$var wire 1 # out $end
+$var wire 1 $ sampler $end
+$scope module i1 $end
+$var wire 1 % gnd $end
+$var wire 1 & vcc $end
+$var wire 1 ' unknown $end
+$var tri1 1 ( devclrn $end
+$var tri1 1 ) devpor $end
+$var tri1 1 * devoe $end
+$var wire 1 + out~output_o $end
+$var wire 1 , clock~input_o $end
+$var wire 1 - in~input_o $end
+$var wire 1 . inst~feeder_combout $end
+$var wire 1 / inst~q $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0!
+0"
+0#
+x$
+0%
+1&
+x'
+1(
+1)
+1*
+0+
+0,
+0-
+0.
+0/
+$end
+#60000
+1"
+1-
+0$
+1.
+#85000
+1!
+1,
+1$
+1/
+1+
+1#
+#120000
+0"
+0-
+0$
+0.
+#170000
+0!
+0,
+1$
+#180000
+1"
+1-
+0$
+1.
+#240000
+0"
+0-
+1$
+0.
+#255000
+1!
+1,
+0$
+0/
+0+
+0#
+#300000
+1"
+1-
+1$
+1.
+#340000
+0!
+0,
+0$
+#360000
+0"
+0-
+1$
+0.
+#420000
+1"
+1-
+0$
+1.
+#425000
+1!
+1,
+1$
+1/
+1+
+1#
+#480000
+0"
+0-
+0$
+0.
+#510000
+0!
+0,
+1$
+#540000
+1"
+1-
+0$
+1.
+#595000
+1!
+1,
+1$
+#600000
+0"
+0-
+0$
+0.
+#660000
+1"
+1-
+1$
+1.
+#680000
+0!
+0,
+0$
+#720000
+0"
+0-
+1$
+0.
+#765000
+1!
+1,
+0$
+0/
+0+
+0#
+#780000
+1"
+1-
+1$
+1.
+#840000
+0"
+0-
+0$
+0.
+#850000
+0!
+0,
+1$
+#900000
+1"
+1-
+0$
+1.
+#935000
+1!
+1,
+1$
+1/
+1+
+1#
+#960000
+0"
+0-
+0$
+0.
+#1000000

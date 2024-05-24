@@ -1,0 +1,15 @@
+vendor_name = ModelSim
+source_file = 1, D:/multiplexer/multiplexer.bdf
+source_file = 1, D:/multiplexer/db/multiplexer.cbx.xml
+design_name = multiplexer
+instance = comp, \F~output\, F~output, multiplexer, 1
+instance = comp, \Enable~input\, Enable~input, multiplexer, 1
+instance = comp, \D3~input\, D3~input, multiplexer, 1
+instance = comp, \A1~input\, A1~input, multiplexer, 1
+instance = comp, \D2~input\, D2~input, multiplexer, 1
+instance = comp, \D0~input\, D0~input, multiplexer, 1
+instance = comp, \D1~input\, D1~input, multiplexer, 1
+instance = comp, \A0~input\, A0~input, multiplexer, 1
+instance = comp, \inst11~0\, inst11~0, multiplexer, 1
+instance = comp, \inst11~1\, inst11~1, multiplexer, 1
+instance = comp, \inst11~2\, inst11~2, multiplexer, 1

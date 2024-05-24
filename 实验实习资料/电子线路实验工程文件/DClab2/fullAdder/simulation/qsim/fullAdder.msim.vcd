@@ -1,0 +1,388 @@
+$comment
+	File created using the following command:
+		vcd file fullAdder.msim.vcd -direction
+$end
+$date
+	Thu Mar 14 21:42:17 2024
+$end
+$version
+	ModelSim Version 10.1d
+$end
+$timescale
+	1ps
+$end
+$scope module fullAdder_vlg_vec_tst $end
+$var reg 1 ! A1 $end
+$var reg 1 " A2 $end
+$var reg 1 # A3 $end
+$var reg 1 $ A4 $end
+$var reg 1 % B1 $end
+$var reg 1 & B2 $end
+$var reg 1 ' B3 $end
+$var reg 1 ( B4 $end
+$var wire 1 ) C1 $end
+$var wire 1 * C2 $end
+$var wire 1 + C3 $end
+$var wire 1 , C4 $end
+$var wire 1 - Ci1 $end
+$var wire 1 . sampler $end
+$scope module i1 $end
+$var wire 1 / gnd $end
+$var wire 1 0 vcc $end
+$var wire 1 1 unknown $end
+$var tri1 1 2 devclrn $end
+$var tri1 1 3 devpor $end
+$var tri1 1 4 devoe $end
+$var wire 1 5 C1~output_o $end
+$var wire 1 6 C2~output_o $end
+$var wire 1 7 C3~output_o $end
+$var wire 1 8 C4~output_o $end
+$var wire 1 9 Ci1~output_o $end
+$var wire 1 : A1~input_o $end
+$var wire 1 ; B1~input_o $end
+$var wire 1 < inst49~combout $end
+$var wire 1 = inst51~combout $end
+$var wire 1 > A2~input_o $end
+$var wire 1 ? B2~input_o $end
+$var wire 1 @ inst9~1_cout $end
+$var wire 1 A inst9~2_combout $end
+$var wire 1 B B3~input_o $end
+$var wire 1 C A3~input_o $end
+$var wire 1 D inst9~3 $end
+$var wire 1 E inst9~4_combout $end
+$var wire 1 F A4~input_o $end
+$var wire 1 G B4~input_o $end
+$var wire 1 H inst9~5 $end
+$var wire 1 I inst9~6_combout $end
+$var wire 1 J inst9~7 $end
+$var wire 1 K inst9~8_combout $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0!
+0"
+0#
+0$
+0%
+0&
+0'
+0(
+0)
+0*
+0+
+0,
+0-
+x.
+0/
+10
+x1
+12
+13
+14
+05
+06
+07
+08
+09
+0:
+0;
+0<
+0=
+0>
+0?
+0@
+0A
+0B
+0C
+1D
+0E
+0F
+0G
+0H
+0I
+1J
+0K
+$end
+#60000
+1!
+1%
+1:
+1;
+0.
+1=
+1A
+16
+1*
+#120000
+1"
+1&
+0!
+0%
+1>
+1?
+0:
+0;
+1.
+0D
+1@
+0=
+0A
+06
+0*
+1E
+17
+1+
+#180000
+1!
+1%
+1:
+1;
+0.
+1=
+1A
+16
+1*
+#240000
+1#
+1'
+0"
+0&
+0!
+0%
+1C
+1B
+0>
+0?
+0:
+0;
+1.
+1H
+0@
+0=
+0A
+1D
+06
+0*
+1I
+18
+1,
+0E
+07
+0+
+#300000
+1!
+1%
+1:
+1;
+0.
+1=
+1A
+16
+1*
+#360000
+1"
+1&
+0!
+0%
+1>
+1?
+0:
+0;
+1.
+0D
+1@
+0=
+0A
+06
+0*
+1E
+17
+1+
+#420000
+1!
+1%
+1:
+1;
+0.
+1=
+1A
+16
+1*
+#480000
+1$
+1(
+0#
+0'
+0"
+0&
+0!
+0%
+1F
+1G
+0C
+0B
+0>
+0?
+0:
+0;
+1.
+0J
+0H
+0@
+0=
+0A
+1D
+06
+0*
+1K
+0I
+19
+08
+1-
+0,
+0E
+07
+0+
+#540000
+1!
+1%
+1:
+1;
+0.
+1=
+1A
+16
+1*
+#600000
+1"
+1&
+0!
+0%
+1>
+1?
+0:
+0;
+1.
+0D
+1@
+0=
+0A
+06
+0*
+1E
+17
+1+
+#660000
+1!
+1%
+1:
+1;
+0.
+1=
+1A
+16
+1*
+#720000
+1#
+1'
+0"
+0&
+0!
+0%
+1C
+1B
+0>
+0?
+0:
+0;
+1.
+1H
+0@
+0=
+0A
+1D
+06
+0*
+1I
+18
+1,
+0E
+07
+0+
+#780000
+1!
+1%
+1:
+1;
+0.
+1=
+1A
+16
+1*
+#840000
+1"
+1&
+0!
+0%
+1>
+1?
+0:
+0;
+1.
+0D
+1@
+0=
+0A
+06
+0*
+1E
+17
+1+
+#900000
+1!
+1%
+1:
+1;
+0.
+1=
+1A
+16
+1*
+#960000
+0$
+0(
+0#
+0'
+0"
+0&
+0!
+0%
+0F
+0G
+0C
+0B
+0>
+0?
+0:
+0;
+1.
+1J
+0H
+0@
+0=
+0A
+1D
+06
+0*
+0K
+0I
+09
+08
+0-
+0,
+0E
+07
+0+
+#1000000

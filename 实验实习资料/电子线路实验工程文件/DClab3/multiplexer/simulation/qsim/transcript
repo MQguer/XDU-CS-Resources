@@ -1,0 +1,26 @@
+# do multiplexer.do 
+# ** Warning: (vlib-34) Library already exists at "work".
+# 
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module multiplexer
+# 
+# Top level modules:
+# 	multiplexer
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module multiplexer_vlg_sample_tst
+# -- Compiling module multiplexer_vlg_check_tst
+# -- Compiling module multiplexer_vlg_vec_tst
+# 
+# Top level modules:
+# 	multiplexer_vlg_vec_tst
+# vsim -L cycloneiv_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate -c -voptargs=\"+acc\" -t 1ps -novopt work.multiplexer_vlg_vec_tst 
+# Loading work.multiplexer_vlg_vec_tst
+# Loading work.multiplexer
+# Loading cycloneiv_ver.cycloneiv_io_obuf
+# Loading cycloneiv_ver.cycloneiv_io_ibuf
+# Loading cycloneiv_ver.cycloneiv_lcell_comb
+# Loading work.multiplexer_vlg_sample_tst
+# Loading work.multiplexer_vlg_check_tst
+# Simulation passed !
+# ** Note: $finish    : Waveform1.vwf.vt(160)
+#    Time: 1 us  Iteration: 0  Instance: /multiplexer_vlg_vec_tst/tb_out

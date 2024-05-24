@@ -1,0 +1,21 @@
+|distributor
+Y0 <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+A1 => inst.IN0
+A1 => inst5.IN0
+A1 => inst6.IN0
+A0 => inst1.IN0
+A0 => inst4.IN1
+A0 => inst6.IN1
+Din => inst23123123.IN2
+Din => inst4.IN2
+Din => inst5.IN2
+Din => inst6.IN2
+Enable => inst7.IN1
+Enable => inst8.IN1
+Enable => inst9.IN1
+Enable => inst10.IN1
+Y1 <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+Y2 <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+Y3 <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+
+

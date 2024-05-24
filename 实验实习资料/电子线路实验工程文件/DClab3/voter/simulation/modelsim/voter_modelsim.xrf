@@ -1,0 +1,9 @@
+vendor_name = ModelSim
+source_file = 1, D:/voter/voter.bdf
+source_file = 1, D:/voter/db/voter.cbx.xml
+design_name = voter
+instance = comp, \Result~output\, Result~output, voter, 1
+instance = comp, \C~input\, C~input, voter, 1
+instance = comp, \A~input\, A~input, voter, 1
+instance = comp, \B~input\, B~input, voter, 1
+instance = comp, \inst3~0\, inst3~0, voter, 1

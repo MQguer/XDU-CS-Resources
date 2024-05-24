@@ -1,0 +1,16 @@
+vendor_name = ModelSim
+source_file = 1, D:/JKff_Validation/JKffValidation.bdf
+source_file = 1, D:/JKff_Validation/Waveform.vwf
+source_file = 1, D:/JKff_Validation/db/JKffValidation.cbx.xml
+design_name = JKffValidation
+instance = comp, \Q~output\, Q~output, JKffValidation, 1
+instance = comp, \SET~input\, SET~input, JKffValidation, 1
+instance = comp, \Clear~input\, Clear~input, JKffValidation, 1
+instance = comp, \inst~1\, inst~1, JKffValidation, 1
+instance = comp, \Clock~input\, Clock~input, JKffValidation, 1
+instance = comp, \K~input\, K~input, JKffValidation, 1
+instance = comp, \J~input\, J~input, JKffValidation, 1
+instance = comp, \inst~3\, inst~3, JKffValidation, 1
+instance = comp, \inst~0\, inst~0, JKffValidation, 1
+instance = comp, \inst~_emulated\, inst~_emulated, JKffValidation, 1
+instance = comp, \inst~2\, inst~2, JKffValidation, 1

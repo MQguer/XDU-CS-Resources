@@ -1,0 +1,15 @@
+|multiplexer
+F <= inst11.DB_MAX_OUTPUT_PORT_TYPE
+Enable => inst10.IN0
+A1 => inst6.IN0
+A1 => inst2.IN0
+A1 => inst3.IN0
+A0 => inst7.IN0
+A0 => inst3.IN1
+A0 => inst1.IN1
+D0 => inst.IN2
+D2 => inst2.IN2
+D3 => inst3.IN2
+D1 => inst1.IN2
+
+

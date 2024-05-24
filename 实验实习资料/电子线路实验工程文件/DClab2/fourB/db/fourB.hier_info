@@ -1,0 +1,42 @@
+|fourB
+s1 <= 7483:inst.S1
+b4 => 7483:inst.B4
+c0 => 7483:inst.C0
+a1 => 7483:inst.A1
+a2 => 7483:inst.A2
+b1 => 7483:inst.B1
+b2 => 7483:inst.B2
+a3 => 7483:inst.A3
+b3 => 7483:inst.B3
+a4 => 7483:inst.A4
+s2 <= 7483:inst.S2
+s3 <= 7483:inst.S3
+s4 <= 7483:inst.S4
+c4 <= 7483:inst.C4
+
+
+|fourB|7483:inst
+C4 <= 83.DB_MAX_OUTPUT_PORT_TYPE
+B4 => 22.IN0
+B4 => 26.IN0
+A4 => 22.IN1
+A4 => 26.IN1
+B3 => 21.IN0
+B3 => 25.IN0
+A3 => 21.IN1
+A3 => 25.IN1
+B2 => 20.IN0
+B2 => 24.IN0
+A2 => 20.IN1
+A2 => 24.IN1
+B1 => 19.IN0
+B1 => 23.IN0
+A1 => 19.IN1
+A1 => 23.IN1
+C0 => 17.IN0
+S4 <= 45.DB_MAX_OUTPUT_PORT_TYPE
+S3 <= 44.DB_MAX_OUTPUT_PORT_TYPE
+S2 <= 43.DB_MAX_OUTPUT_PORT_TYPE
+S1 <= 42.DB_MAX_OUTPUT_PORT_TYPE
+
+

@@ -1,0 +1,9 @@
+vendor_name = ModelSim
+source_file = 1, D:/fourBitCoparer/fourBitCoparer.bdf
+source_file = 1, D:/fourBitCoparer/db/fourBitCoparer.cbx.xml
+design_name = fourBitCoparer
+instance = comp, \L0~output\, L0~output, fourBitCoparer, 1
+instance = comp, \S0~output\, S0~output, fourBitCoparer, 1
+instance = comp, \E0~output\, E0~output, fourBitCoparer, 1
+instance = comp, \A0~input\, A0~input, fourBitCoparer, 1
+instance = comp, \B0~input\, B0~input, fourBitCoparer, 1

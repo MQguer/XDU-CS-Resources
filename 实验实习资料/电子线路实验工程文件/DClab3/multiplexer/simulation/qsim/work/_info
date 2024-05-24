@@ -1,0 +1,81 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\multiplexer\simulation\qsim
+vmultiplexer
+Z1 !s100 MR59heQ8c0VlIb2^iMEiT2
+Z2 Id22k3lNWBRllL?T0hC=K61
+Z3 VkG8bF=@eCPiX2cNDOh^L]3
+Z4 dD:\multiplexer\simulation\qsim
+Z5 w1389444104
+Z6 8multiplexer.vo
+Z7 Fmultiplexer.vo
+L0 31
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s90 -work|work|multiplexer.vo|
+Z10 o-work work -O0
+!i10b 1
+!s85 0
+Z11 !s108 1389444106.101000
+Z12 !s107 multiplexer.vo|
+!s101 -O0
+vmultiplexer_vlg_check_tst
+!i10b 1
+Z13 !s100 SQKN;`Ag[1GD=0hTTi?V<3
+Z14 IDdf37deX8NNecG32Z^Jk]1
+Z15 Vf?8c2J?H@FFJV^[naAccE1
+R4
+Z16 w1389444101
+Z17 8Waveform1.vwf.vt
+Z18 FWaveform1.vwf.vt
+L0 69
+R8
+r1
+!s85 0
+31
+Z19 !s108 1389444106.254000
+Z20 !s107 Waveform1.vwf.vt|
+Z21 !s90 -work|work|Waveform1.vwf.vt|
+!s101 -O0
+R10
+vmultiplexer_vlg_sample_tst
+!i10b 1
+Z22 !s100 bLVTT0<WSDB7c@zTNSnQU3
+Z23 IjbMWEA>28cCTFinLSK[;N0
+Z24 VfCe];?jA^9mGA3Z6oFPie1
+R4
+R16
+R17
+R18
+L0 29
+R8
+r1
+!s85 0
+31
+R19
+R20
+R21
+!s101 -O0
+R10
+vmultiplexer_vlg_vec_tst
+!i10b 1
+!s100 ^Z4;>kIHzNh73G`lBWGl@0
+I7UizEe=JjRl6`eYj:Q^EK0
+Z25 Vo:9j5>Td>^XP]R;fm:S323
+R4
+R16
+R17
+R18
+Z26 L0 164
+R8
+r1
+!s85 0
+31
+R19
+R20
+R21
+!s101 -O0
+R10

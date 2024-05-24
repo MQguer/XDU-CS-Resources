@@ -1,0 +1,443 @@
+$comment
+	File created using the following command:
+		vcd file moc.msim.vcd -direction
+$end
+$date
+	Sat Jan 25 21:23:53 2014
+$end
+$version
+	ModelSim Version 10.1d
+$end
+$timescale
+	1ps
+$end
+$scope module moc_vlg_vec_tst $end
+$var reg 1 ! cp $end
+$var reg 1 " DRN0 $end
+$var wire 1 # Q0 $end
+$var wire 1 $ Q1 $end
+$var wire 1 % Q2 $end
+$var wire 1 & Q3 $end
+$var wire 1 ' Q4 $end
+$var wire 1 ( Q5 $end
+$var wire 1 ) Q6 $end
+$var wire 1 * Q7 $end
+$var wire 1 + Q8 $end
+$var wire 1 , Q9 $end
+$var wire 1 - Q10 $end
+$var wire 1 . Q11 $end
+$var wire 1 / sampler $end
+$scope module i1 $end
+$var wire 1 0 gnd $end
+$var wire 1 1 vcc $end
+$var wire 1 2 unknown $end
+$var tri1 1 3 devclrn $end
+$var tri1 1 4 devpor $end
+$var tri1 1 5 devoe $end
+$var wire 1 6 Q0~output_o $end
+$var wire 1 7 Q1~output_o $end
+$var wire 1 8 Q2~output_o $end
+$var wire 1 9 Q3~output_o $end
+$var wire 1 : Q4~output_o $end
+$var wire 1 ; Q5~output_o $end
+$var wire 1 < Q6~output_o $end
+$var wire 1 = Q7~output_o $end
+$var wire 1 > Q8~output_o $end
+$var wire 1 ? Q9~output_o $end
+$var wire 1 @ Q10~output_o $end
+$var wire 1 A Q11~output_o $end
+$var wire 1 B cp~input_o $end
+$var wire 1 C cp~inputclkctrl_outclk $end
+$var wire 1 D inst1~0_combout $end
+$var wire 1 E inst1~q $end
+$var wire 1 F inst2~feeder_combout $end
+$var wire 1 G inst2~q $end
+$var wire 1 H inst3~feeder_combout $end
+$var wire 1 I inst3~q $end
+$var wire 1 J inst12~feeder_combout $end
+$var wire 1 K inst12~q $end
+$var wire 1 L inst5~feeder_combout $end
+$var wire 1 M inst5~q $end
+$var wire 1 N inst7~feeder_combout $end
+$var wire 1 O inst7~q $end
+$var wire 1 P inst6~feeder_combout $end
+$var wire 1 Q inst6~q $end
+$var wire 1 R inst8~feeder_combout $end
+$var wire 1 S inst8~q $end
+$var wire 1 T inst9~feeder_combout $end
+$var wire 1 U inst9~q $end
+$var wire 1 V inst13~feeder_combout $end
+$var wire 1 W inst13~q $end
+$var wire 1 X inst14~feeder_combout $end
+$var wire 1 Y inst14~q $end
+$var wire 1 Z inst~0_combout $end
+$var wire 1 [ DRN0~input_o $end
+$var wire 1 \ inst~q $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0!
+1"
+1#
+0$
+0%
+0&
+0'
+0(
+0)
+0*
+0+
+0,
+0-
+0.
+x/
+00
+11
+x2
+13
+14
+15
+16
+07
+08
+09
+0:
+0;
+0<
+0=
+0>
+0?
+0@
+0A
+0B
+0C
+1D
+0E
+0F
+0G
+0H
+0I
+0J
+0K
+0L
+0M
+0N
+0O
+0P
+0Q
+0R
+0S
+0T
+0U
+0V
+0W
+0X
+0Y
+1Z
+1[
+0\
+$end
+#30000
+1!
+1B
+1C
+0/
+1\
+1E
+0D
+1F
+06
+17
+0#
+1$
+#60000
+0!
+0B
+0C
+1/
+#90000
+1!
+1B
+1C
+0/
+1G
+0E
+1H
+0F
+18
+07
+1%
+0$
+#120000
+0!
+0B
+0C
+1/
+#150000
+1!
+1B
+1C
+0/
+1I
+0G
+1J
+0H
+19
+08
+1&
+0%
+#180000
+0!
+0B
+0C
+1/
+#210000
+1!
+1B
+1C
+0/
+1K
+0I
+1L
+0J
+1:
+09
+1'
+0&
+#240000
+0!
+0B
+0C
+1/
+#270000
+1!
+1B
+1C
+0/
+1M
+0K
+1N
+0L
+1;
+0:
+1(
+0'
+#300000
+0!
+0B
+0C
+1/
+#330000
+1!
+1B
+1C
+0/
+1O
+0M
+1P
+0N
+1<
+0;
+1)
+0(
+#360000
+0!
+0B
+0C
+1/
+#390000
+1!
+1B
+1C
+0/
+1Q
+0O
+1R
+0P
+1=
+0<
+1*
+0)
+#420000
+0!
+0B
+0C
+1/
+#450000
+1!
+1B
+1C
+0/
+1S
+0Q
+1T
+0R
+1>
+0=
+1+
+0*
+#480000
+0!
+0B
+0C
+1/
+#510000
+1!
+1B
+1C
+0/
+1U
+0S
+1V
+0T
+1?
+0>
+1,
+0+
+#540000
+0!
+0B
+0C
+1/
+#570000
+1!
+1B
+1C
+0/
+1W
+0U
+1X
+0V
+1@
+0?
+1-
+0,
+#600000
+0!
+0B
+0C
+1/
+#630000
+1!
+1B
+1C
+0/
+1Y
+0W
+0Z
+0X
+1A
+0@
+1.
+0-
+#660000
+0!
+0B
+0C
+1/
+#690000
+1!
+1B
+1C
+0/
+0\
+0Y
+1D
+1Z
+16
+0A
+1#
+0.
+#720000
+0!
+0B
+0C
+1/
+#750000
+1!
+1B
+1C
+0/
+1\
+1E
+0D
+1F
+06
+17
+0#
+1$
+#780000
+0!
+0B
+0C
+1/
+#810000
+1!
+1B
+1C
+0/
+1G
+0E
+1H
+0F
+18
+07
+1%
+0$
+#840000
+0!
+0B
+0C
+1/
+#870000
+1!
+1B
+1C
+0/
+1I
+0G
+1J
+0H
+19
+08
+1&
+0%
+#900000
+0!
+0B
+0C
+1/
+#930000
+1!
+1B
+1C
+0/
+1K
+0I
+1L
+0J
+1:
+09
+1'
+0&
+#960000
+0!
+0B
+0C
+1/
+#990000
+1!
+1B
+1C
+0/
+1M
+0K
+1N
+0L
+1;
+0:
+1(
+0'
+#1000000

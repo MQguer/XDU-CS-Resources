@@ -1,0 +1,11 @@
+vendor_name = ModelSim
+source_file = 1, D:/One/One.bdf
+source_file = 1, D:/One/db/One.cbx.xml
+design_name = One
+instance = comp, \S~output\, S~output, One, 1
+instance = comp, \Ci1~output\, Ci1~output, One, 1
+instance = comp, \A~input\, A~input, One, 1
+instance = comp, \C_i~input\, C_i~input, One, 1
+instance = comp, \B~input\, B~input, One, 1
+instance = comp, \inst9~0\, inst9~0, One, 1
+instance = comp, \inst16~0\, inst16~0, One, 1

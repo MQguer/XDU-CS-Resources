@@ -1,0 +1,34 @@
+|hgh
+o1 <= 74138:inst.Y0N
+in1 => 74138:inst.A
+in2 => 74138:inst.B
+pin_name4 => 74138:inst.G1
+in3 => 74138:inst.C
+in5 => 74138:inst.G2AN
+in6 => 74138:inst.G2BN
+o2 <= 74138:inst.Y1N
+o3 <= 74138:inst.Y2N
+o4 <= 74138:inst.Y3N
+o5 <= 74138:inst.Y4N
+o6 <= 74138:inst.Y5N
+o7 <= 74138:inst.Y6N
+o8 <= 74138:inst.Y7N
+
+
+|hgh|74138:inst
+Y7N <= 22.DB_MAX_OUTPUT_PORT_TYPE
+G1 => 8.IN0
+G2BN => 1.IN1
+G2AN => 1.IN2
+B => 10.IN0
+A => 9.IN0
+C => 11.IN0
+Y6N <= 21.DB_MAX_OUTPUT_PORT_TYPE
+Y5N <= 20.DB_MAX_OUTPUT_PORT_TYPE
+Y4N <= 19.DB_MAX_OUTPUT_PORT_TYPE
+Y3N <= 18.DB_MAX_OUTPUT_PORT_TYPE
+Y2N <= 17.DB_MAX_OUTPUT_PORT_TYPE
+Y1N <= 16.DB_MAX_OUTPUT_PORT_TYPE
+Y0N <= 15.DB_MAX_OUTPUT_PORT_TYPE
+
+
