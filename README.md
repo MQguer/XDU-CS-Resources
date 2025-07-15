@@ -55,7 +55,7 @@ PS：点击上面的标题**XDU-CS-Resources**即可进入对应的Github库
 
 你只需先在Github上打开你想下载的文件夹，复制此时的网址，然后进入下面这个网站：
 
-https://www.itsvse.com/downgit/#/home
+[https://www.itsvse.com/downgit/#/home](https://minhaskamal.github.io/DownGit/#/home)
 
 在输入框里输入复制的网址，然后点击“下载”就可以直接打包下载对应的文件夹了
 
